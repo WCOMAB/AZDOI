@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/" Id="02ea681e-c7d8-13c7-8484-4ac65e1b71e8">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="AZDOI.Tests/AZDOI.Tests.csproj" />
+  <Project Path="AZDOI/AZDOI.csproj" />
+</Solution>

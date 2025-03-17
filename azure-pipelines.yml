@@ -1,0 +1,80 @@
+name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+trigger:
+  - main
+
+variables:
+  - group: common-build-variables
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      endpoint: GitHubPublic
+      name: WCOMAB/WCOM.AzurePipelines.YamlTemplates
+      ref: refs/heads/main
+
+stages:
+  - template: dotnet/stages.yml@templates
+    parameters:
+      shouldPublish: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+      dpi:
+        report: true
+        WorkspaceId: $(DPI.WorkspaceId)
+        SharedKey: $(DPI.Key)
+      postBuildScript:
+        displayName: "AZDOI Integration tests"
+        azureSubscription: azdo-wcom-intern-azdoi
+        scriptType: pscore
+        targetType: inline
+        script: |
+          # Change to artifacts staging directory
+          Set-Location "$(build.artifactstagingdirectory)"
+          
+          # Set output path for test results
+          $outputPath = Join-Path "$(build.artifactstagingdirectory)" "output"
+          Write-Host "Executing integration test to output path: $outputPath"
+          
+          # Create output directory
+          New-Item -Path $outputPath -ItemType Directory -Force
+          [int]$exitCode = 0
+          
+          # Create new tool manifest
+          dotnet new tool-manifest
+          $exitCode += $LASTEXITCODE
+
+          # Install AZDOI tool from local artifacts
+          Get-ChildItem -Path "$(build.artifactstagingdirectory)" -Recurse -Include "AZDOI.*.nupkg" | ForEach-Object {  
+            Write-Host "Installing AZDOI tool from $(build.artifactstagingdirectory) $(Build.BuildNumber) $($_.FullName) from source $($_.Directory.FullName)"
+            dotnet tool install AZDOI --add-source "$($_.Directory.FullName)" --version "$(Build.BuildNumber)"
+            $exitCode += $LASTEXITCODE
+          }
+
+          # Run AZDOI inventory command
+          dotnet AZDOI inventory repositories AZDOI $outputPath --entra-id-auth
+          $exitCode += $LASTEXITCODE
+
+          # Zip and upload test results
+          $zipItems = Get-ChildItem $outputPath
+          Compress-Archive -Path $zipItems.FullName -DestinationPath $(Build.ArtifactStagingDirectory)/AzureDevOpsDocs.zip -CompressionLevel Optimal
+          echo '##vso[artifact.upload artifactname=AzureDevOpsDocs]$(Build.ArtifactStagingDirectory)/AzureDevOpsDocs.zip'
+
+          # Check for test failures
+          if ($exitCode -ne 0) {
+            throw "Integration tests failed with exit code $exitCode"
+            exit $exitCode
+          }
+
+          # Report success
+          Write-Host "Integration tests passed"
+          exit 0
+
+      build: Development
+      buildParameters:
+        - '-c Release'      
+      environments:
+        - env: dev
+          name: Development

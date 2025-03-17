@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>AZDOI.Tests</RootNamespace>
+		<TargetFramework>net9.0</TargetFramework>
+		<!--
+    To enable the Microsoft Testing Platform 'dotnet test' experience, add property:
+      <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+
+    To enable the Microsoft Testing Platform native command line experience, add property:
+      <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+
+    For more information on Microsoft Testing Platform support in xUnit.net, please visit:
+      https://xunit.net/docs/getting-started/v3/microsoft-testing-platform
+    -->
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Resources\Authorized\AnnotatedTags.json" />
+		<None Remove="Resources\Authorized\Branches.json" />
+		<None Remove="Resources\Authorized\Projects.json" />
+		<None Remove="Resources\Authorized\README.md" />
+		<None Remove="Resources\Authorized\Repositories.json" />
+		<None Remove="Resources\Authorized\Tags.json" />
+		<None Remove="Resources\Routes.json" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Authorized\AnnotatedTags.json" />
+		<EmbeddedResource Include="Resources\Authorized\Branches.json" />
+		<EmbeddedResource Include="Resources\Authorized\Projects.json" />
+		<EmbeddedResource Include="Resources\Authorized\README.md" />
+		<EmbeddedResource Include="Resources\Authorized\Repositories.json" />
+		<EmbeddedResource Include="Resources\Authorized\Tags.json" />
+		<EmbeddedResource Include="Resources\Routes.json" />
+	</ItemGroup>
+	<ItemGroup>
+		<Using Include="Xunit" />
+		<Using Include="AZDOI.Tests.Extensions" />
+		<Using Include="AZDOI.Services.Markdown" />
+		<Using Include="AZDOI.Models" />
+		<Using Include="Cake.Testing" />
+		<Using Include="AZDOI.Commands" />
+		<Using Include="AZDOI.Tests.Services;" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Cake.Testing" />
+		<PackageReference Include="coverlet.collector">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Devlead.Testing.MockHttp" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.Testing" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+		<PackageReference Include="NSubstitute" />
+		<PackageReference Include="Spectre.Console.Testing" />
+		<PackageReference Include="Verify.XunitV3" />
+		<PackageReference Include="xunit.v3" />
+		<PackageReference Include="xunit.runner.visualstudio" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\AZDOI\AZDOI.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Resources\Unauthorized\" />
+	</ItemGroup>
+</Project>

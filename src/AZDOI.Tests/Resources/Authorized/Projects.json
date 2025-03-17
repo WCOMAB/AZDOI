@@ -1,0 +1,28 @@
+{
+    "value": [
+        {
+            "id": "123",
+            "name": "Test Project",
+            "description": "This is a test project in Azure DevOps",
+            "url": "https://dev.azure.com/test-org/_apis/projects/123"
+        },
+        {
+            "id": "321",
+            "name": "Test Project2",
+            "description": "This is a test project in Azure DevOps",
+            "url": "https://dev.azure.com/test-org/_apis/projects/321"
+        },
+        {
+            "id": "999",
+            "name": "Test Project3",
+            "description": "This is a test project in Azure DevOps",
+            "url": "https://dev.azure.com/test-org/_apis/projects/999"
+        },
+        {
+            "id": "888",
+            "name": "Test Project4",
+            "description": "This is a test project in Azure DevOps",
+            "url": "https://dev.azure.com/test-org/_apis/projects/888"
+        }
+    ]
+}

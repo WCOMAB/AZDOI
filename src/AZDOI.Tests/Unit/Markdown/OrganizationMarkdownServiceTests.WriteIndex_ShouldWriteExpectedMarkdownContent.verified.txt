@@ -1,0 +1,14 @@
+﻿---
+title: DevOps Organization
+summary: DevOps Organization
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# DevOps Organization DevOps Organization
+
+## Projects
+
+| Project                          | Description                      |
+|----------------------------------|----------------------------------|
+| [MyProject](MyProject)           | MyProject Description            |
+

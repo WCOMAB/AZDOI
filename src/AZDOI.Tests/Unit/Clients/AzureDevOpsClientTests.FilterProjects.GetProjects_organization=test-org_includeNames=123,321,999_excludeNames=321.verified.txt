@@ -1,0 +1,14 @@
+﻿[
+  {
+    Id: 123,
+    Name: Test Project,
+    Description: This is a test project in Azure DevOps,
+    Url: https://dev.azure.com/test-org/_apis/projects/123
+  },
+  {
+    Id: 999,
+    Name: Test Project3,
+    Description: This is a test project in Azure DevOps,
+    Url: https://dev.azure.com/test-org/_apis/projects/999
+  }
+]

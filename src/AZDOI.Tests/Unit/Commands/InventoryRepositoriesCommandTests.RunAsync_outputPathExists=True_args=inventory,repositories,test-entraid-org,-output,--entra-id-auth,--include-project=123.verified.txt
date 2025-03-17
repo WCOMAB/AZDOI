@@ -1,0 +1,122 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput: ,
+  LogOutput: [
+    {
+      Information: Executing Inventory Repositories Command...,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          {OriginalFormat}: Executing Inventory Repositories Command...
+        }
+      ]
+    },
+    {
+      Information: Cleaning directory /output/test-entraid-org...,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          TargetPath: /output/test-entraid-org
+        },
+        {
+          {OriginalFormat}: Cleaning directory {TargetPath}...
+        }
+      ]
+    },
+    {
+      Information: Done cleaning directory /output/test-entraid-org.,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          TargetPath: /output/test-entraid-org
+        },
+        {
+          {OriginalFormat}: Done cleaning directory {TargetPath}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Done executing Inventory Repositories,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          {OriginalFormat}: Done executing Inventory Repositories
+        }
+      ]
+    }
+  ],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-entraid-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-entraid-org/Test Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-entraid-org/Test Project/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [],
+                Files: []
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-entraid-org/Test Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 677
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-entraid-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 455
+          }
+        ]
+      }
+    ],
+    Files: []
+  }
+}

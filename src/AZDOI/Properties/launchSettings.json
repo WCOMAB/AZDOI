@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "AZDOIPat": {
+      "commandName": "Project",
+      "commandLineArgs": "inventory repositories AZDOI /temp/output"
+    },
+    "AZDOIEntraId": {
+      "commandName": "Project",
+      "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth"
+    }
+  }
+}

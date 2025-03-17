@@ -1,0 +1,17 @@
+﻿{
+  ExitCode: -1,
+  ConsoleOutput:
+Spectre.Console.Cli.CommandRuntimeException: VS850015: The specified name 
+'test-org!' is not allowed. It must be between 3 and 50 characters long, start 
+and end with a letter or number, and may only contain letters, numbers, and 
+hyphens (-).
+,
+  LogOutput: [],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [],
+    Files: []
+  }
+}

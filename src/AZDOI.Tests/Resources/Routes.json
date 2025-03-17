@@ -1,0 +1,170 @@
+[
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/_apis/projects?api-version=7.1-preview.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Projects.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/git/repositories?api-version=7.1-preview.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Repositories.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/git/repositories/456/items?path=README.md&api-version=7.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.README.md",
+                "ContentType": "application/md",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/git/repositories/456/refs?filter=heads&api-version=7.1-preview.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Branches.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-entraid-org/_apis/projects?api-version=7.1-preview.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Projects.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Bearer fake-entraid-token"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/git/repositories/456/refs?filter=tags&api-version=7.1-preview.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Tags.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/git/repositories/456/annotatedtags/jdaosyn3u23jas82jssa8?api-version=7.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.AnnotatedTags.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
+    }
+]

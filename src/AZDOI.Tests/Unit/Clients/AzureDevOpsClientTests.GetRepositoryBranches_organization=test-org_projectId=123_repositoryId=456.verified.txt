@@ -1,0 +1,8 @@
+﻿[
+  {
+    ChildName: develop,
+    ObjectId: 67cae2b029dff7eb3dc062b49403aaedca5bad8d,
+    Name: refs/heads/develop,
+    Url: https://dev.azure.com/test-branch
+  }
+]

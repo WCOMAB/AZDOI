@@ -1,0 +1,9 @@
+{
+    "value": [
+        {
+            "name": "refs/heads/develop",
+            "objectId": "67cae2b029dff7eb3dc062b49403aaedca5bad8d",
+            "url": "https://dev.azure.com/test-branch"
+        } 
+    ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  ExitCode: -1,
+  ConsoleOutput:
+Spectre.Console.Cli.CommandRuntimeException: Command 'repositories' is missing 
+required argument 'devopsorg'.
+,
+  LogOutput: [],
+  FileSystem: {
+    Path: /output,
+    Exists: false,
+    Hidden: false,
+    Directories: [],
+    Files: []
+  }
+}
