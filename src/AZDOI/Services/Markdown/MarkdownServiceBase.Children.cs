@@ -8,11 +8,12 @@ public abstract partial class MarkdownServiceBase<TValue>
     string column,
     string? title = null,
     string description = "Description",
-    Func<TChildrenValue, string>? urlSelector = null
+    Func<TChildrenValue, string>? urlSelector = null,
+    int headingLevel = 2
 )
     where TChildrenValue : IAzureDevOpsBase
     {
-        await writer.WriteLineAsync($"## {title ?? column + "s"}");
+        await writer.WriteLineAsync($"{new string('#', headingLevel)} {title ?? column + "s"}");
         await writer.WriteLineAsync();
         await WriteTable(
             writer,

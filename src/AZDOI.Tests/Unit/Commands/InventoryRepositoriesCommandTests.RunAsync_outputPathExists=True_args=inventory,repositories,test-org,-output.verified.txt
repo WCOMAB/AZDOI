@@ -490,7 +490,14 @@
                     ]
                   }
                 ],
-                Files: []
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 873
+                  }
+                ]
               }
             ],
             Files: [
@@ -512,7 +519,14 @@
                 Exists: true,
                 Hidden: false,
                 Directories: [],
-                Files: []
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project2/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 63
+                  }
+                ]
               }
             ],
             Files: [
@@ -534,7 +548,14 @@
                 Exists: true,
                 Hidden: false,
                 Directories: [],
-                Files: []
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project3/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 63
+                  }
+                ]
               }
             ],
             Files: [
@@ -556,7 +577,14 @@
                 Exists: true,
                 Hidden: false,
                 Directories: [],
-                Files: []
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project4/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 63
+                  }
+                ]
               }
             ],
             Files: [

@@ -94,7 +94,14 @@
                 Exists: true,
                 Hidden: false,
                 Directories: [],
-                Files: []
+                Files: [
+                  {
+                    Path: /output/test-entraid-org/Test Project/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 63
+                  }
+                ]
               }
             ],
             Files: [
