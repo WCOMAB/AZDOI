@@ -28,7 +28,7 @@ stages:
         SharedKey: $(DPI.Key)
       postBuildScript:
         displayName: "AZDOI Integration tests"
-        azureSubscription: azdo-wcom-intern-azdoi
+        azureSubscription: "AZDOI Integration Tests"
         scriptType: pscore
         targetType: inline
         script: |
