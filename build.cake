@@ -266,6 +266,14 @@ Task("Clean")
                 .AppendSwitchQuoted("--port", " ", port)
                 .AppendSwitchQuoted("--virtual-dir", " ", "/AZDOI"),
         });
+        
+        if (!context.IsRunningOnWindows())
+        {
+            context.CopyFile(
+                data.StatiqWebOutputPath.CombineWithFilePath("Index.html"),
+                data.StatiqWebOutputPath.CombineWithFilePath("index.html")
+            );
+        }
     })
 .Then("Generate-Static-Site-Index")
     .Does<BuildData>(
