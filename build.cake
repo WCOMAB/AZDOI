@@ -262,7 +262,8 @@ Task("Clean")
                 .AppendSwitchQuoted("-i", " ", "./src/site/theme")
                 .AppendSwitchQuoted("-i", " ", data.IntegrationTestPath.FullPath)
                 .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
-                .AppendSwitchQuoted("--port", " ", port),
+                .AppendSwitchQuoted("--port", " ", port)
+                .AppendSwitchQuoted("--virtual-dir", " ", "/AZDOI"),
         });
     })
 .Then("Generate-Static-Site-Index")
