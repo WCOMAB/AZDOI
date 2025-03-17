@@ -260,6 +260,7 @@ Task("Clean")
             ArgumentCustomization = args => args
                 .Append(preview ? "preview" : string.Empty)
                 .AppendSwitchQuoted("-i", " ", "./src/site/theme")
+                .AppendSwitchQuoted("-i", " ", "./src/site/AZDOI")
                 .AppendSwitchQuoted("-i", " ", data.IntegrationTestPath.FullPath)
                 .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
                 .AppendSwitchQuoted("--port", " ", port)
