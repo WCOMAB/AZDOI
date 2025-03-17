@@ -1,0 +1,56 @@
+.site-page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 6px;
+}
+
+.site-content-wrap {
+  padding-top: 0 !important;
+  padding-bottom: 304px !important; /* Footer height */
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.table th,
+.table td {
+  padding: 1rem 1rem;
+  border-left: 1px solid  #e5e5e5 !important;
+  font-size: 0.875rem; }
+
+.nav-item .nav-link-container::after {
+  position: relative;
+  content: "\ebfa";
+  width: 1em;
+  line-height: 1.2em;
+  margin-right: 10px;
+  font-family: 'icomoon' !important;
+  font-size: 1.2rem;
+  color:#999999;
+  text-align: right;
+  float: right;
+}
+.nav-item.active > .nav-link-container::after {
+  transform: rotate(180deg);
+}
+.nav-item > .collapse > ul {
+  padding-left: 0.5em;
+}
+.nav-vertical-2 .nav-item.active {
+  padding-bottom: inherit !important;
+}
+.nav-vertical-2 .nav-item.active > .nav-link {
+  border-right: 2px solid #064CDB;
+}
+.nav-vertical-2 > .nav-item > .nav-link-container::after {
+  margin-right: 0px !important;
+}
+.container-fluid {
+  max-width: none !important; /* Removes any max-width limitation */
+  /* Or set a larger specific max-width if preferred: */
+  /* max-width: 2400px !important; */
+}

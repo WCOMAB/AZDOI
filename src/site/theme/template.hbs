@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/css/vendor.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/scss/TabGroup.css" />
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/default.min.css" integrity="sha384-4Y0nObtF3CbKnh+lpzmAVdAMtQXl+ganWiiv73RcGVdRdfVIya8Cao1C8ZsVRRDz" crossorigin="anonymous">
+
+  <title>{{title}}</title>
+</head>
+
+<body data-spy="scroll" data-target="#toc" commit-hash="{{commitHash}}" class="site-page-container">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <div id="search"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
+
+  <section class="site-content-wrap">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+
+        <!-- navigation -->
+        <aside class="col-lg-3 p-3 doc-sidebar">
+          <div class="sticky">
+            <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+              <div>
+                <a href="/" class="navbar-brand"><img src="/assets/images/logo-black.png" alt="Logo"><span
+                    class="badge badge-green ml-2">{{siteVersion}}</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="page-nav" class="nav flex-column nav-vertical-2">
+                  {{#each navigation}}
+                    {{> navigation}}
+                  {{/each}}
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </aside>
+        <!-- / navigation -->
+
+
+        <!-- content -->
+        <article class="col-lg-9 doc-content">
+
+          <div class="row">
+            <div class="col">
+              <div class="doc-content-header">
+                <div class="row align-items-center">
+                  <div class="col-6 col-lg-8">
+                    <nav aria-label="breadcrumb d-none d-inline-flex-lg">
+                      <a href="../" class="breadcrumb-back" title="Back"></a>
+                      <ol class="breadcrumb d-none d-lg-inline-flex">
+                        {{#each paths}}
+                        <li class="breadcrumb-item"><a href="{{link}}">{{name}}</a></li>
+                        {{/each}}
+                        {{#unless isRoot}}
+                        <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                        {{/unless}}
+                      </ol>
+                    </nav>
+                  </div>
+                  <div class="col text-right">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row doc-content-body">
+            <article class="col-md-9">
+              {{{body}}}
+            </article>
+
+            <aside class="col-md-3 d-none d-md-block">
+              <div class="sticky">
+                <ul id="toc" class="nav flex-column toc">
+                  {{#each headings}}
+                  <li class="nav-item">
+                    <a data-scroll class="nav-link" href="#{{link}}">{{name}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </aside>
+
+          </div>
+
+        </article>
+        <!-- / content -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer class="bg-dark site-footer">
+  <div class="row gutter-3">
+      <div class="col-12 text-white text-md-center">
+          <p><strong>Last modified:</strong> {{modified}} <strong>by</strong> {{modifiedBy}}</p>
+        </div>
+    </div>
+    {{!-- <div class="container">
+      <div class="row gutter-3">
+        <div class="col-12 col-md-2">
+          <a href="/"><img src="/assets/images/logo-white.png" alt="Logo"></a>
+        </div>
+        <div class="col-12 col-md-6 text-white">
+          <p><strong>Author: </strong>{{author}}</p>
+          <p><strong>Last modified:</strong><br />{{modified}} - {{modifiedBy}} (<a
+              href="mailto:{{modifiedByEmail}}">{{modifiedByEmail}}</a>)</p>
+        </div>
+        <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right">
+          <div class="dropdown">
+            <button class="btn btn-inverted btn-block dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">French</a>
+              <a class="dropdown-item" href="#">German</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+  </footer>
+  <!-- / footer -->
+
+  <script src="/assets/js/vendor.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="https://unpkg.com/mermaid@11.3.0/dist/mermaid.min.js" integrity="sha384-B2tp/GqmE6VfDRB3JPTsesr0+SXypThjLSvQEQH7iv3f3/PYKCm5Q4+SGPcitStz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js" integrity="sha384-GdEWAbCjn+ghjX0gLx7/N1hyTVmPAjdC2OvoAA0RyNcAOhqwtT8qnbCxWle2+uJX" crossorigin="anonymous"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>

@@ -364,3 +364,7 @@ FodyWeavers.xsd
 # Verify
 *.received.*
 *.received/
+
+
+# Static Site
+cache/

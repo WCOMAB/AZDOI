@@ -1,0 +1,26 @@
+{{#if hasChildren}}
+    {{#if childIsActive}}
+    <li class="nav-item active">
+    {{else if active}}
+    <li class="nav-item active">
+    {{else}}
+    <li class="nav-item">
+    {{/if}}
+        <a class="nav-link nav-link-container" href="{{link}}">{{name}}</a>
+        <div class="collapse show">
+            <ul class="nav flex-column">
+                {{#each this.children}}
+                {{> navigation}}
+                {{/each}}
+            </ul>
+        </div>
+    </li>
+{{else}}
+    <li class="nav-item">
+    {{#if active}}
+        <a class="nav-link active" href="{{link}}">{{name}}</a>
+    {{else}}
+        <a class="nav-link" href="{{link}}">{{name}}</a>
+    {{/if}}
+    </li>
+{{/if}}
