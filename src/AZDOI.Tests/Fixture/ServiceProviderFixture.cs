@@ -54,9 +54,7 @@ public static partial class ServiceProviderFixture
             .AddMockHttpClient<Constants>()
             .AddSingleton<AzureDevOpsClient>()
             .AddSingleton<TestMarkdownService>()
-            .AddSingleton<OrganizationMarkdownService>()
-            .AddSingleton<ProjectMarkdownService>()
-            .AddSingleton<RepositoryMarkdownService>();
+            .AddMarkdownServices();
 
         services
             .AddSingleton(logger)
