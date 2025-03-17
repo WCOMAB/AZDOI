@@ -229,6 +229,53 @@ Task("Clean")
     )
 .Then("Integration-Tests")
 .Default()
+.Then("Generate-Static-Site-Install-PageFind")
+    .Does(static context=>{
+        FilePath PageFindPath = context.Tools.Resolve("pagefind") 
+                                ??
+                                context.Tools.Resolve("pagefind.cmd");
+        
+        if (PageFindPath == null)
+        {
+            context.Command(
+                ["npm.cmd", "npm"],
+                "install -g pagefind"
+            );
+
+            context.Command(
+                ["pagefind", "pagefind.cmd"],
+                "--version"
+            );
+        }
+    })
+.Then("Generate-Static-Site-Build")
+    .Does<BuildData>(
+        static (context, data) =>
+    {
+        var preview = context.Argument<bool>("preview", false);
+        var port = context.Argument("port", "5080");
+        context.EnsureDirectoryExists(data.StatiqWebOutputPath.FullPath);
+        context.DotNetTool("wcomsite", new DotNetToolSettings
+        {
+            ArgumentCustomization = args => args
+                .Append(preview ? "preview" : string.Empty)
+                .AppendSwitchQuoted("-i", " ", "./src/site/theme")
+                .AppendSwitchQuoted("-i", " ", data.IntegrationTestPath.FullPath)
+                .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
+                .AppendSwitchQuoted("--port", " ", port),
+        });
+    })
+.Then("Generate-Static-Site-Index")
+    .Does<BuildData>(
+        static (context, data) =>
+    {
+        context.Command(
+            ["pagefind", "pagefind.cmd"],
+            new ProcessArgumentBuilder()
+                .AppendSwitchQuoted("--site", data.StatiqWebOutputPath.FullPath)
+        );
+    }
+)
 .Then("Push-GitHub-Packages")
     .WithCriteria<BuildData>( (context, data) => data.ShouldPushGitHubPackages())
     .DoesForEach<BuildData, FilePath>(
