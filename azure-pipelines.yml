@@ -5,6 +5,7 @@ pool:
 
 trigger:
   - main
+  - develop
 
 variables:
   - group: common-build-variables
