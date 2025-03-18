@@ -15,3 +15,5 @@ The source code for AZDOI is available on GitHub at [WCOMAB/AZDOI](https://githu
 ### NuGet Package
 
 AZDOI is distributed as a .NET tool through NuGet. You can find the package at [nuget.org/packages/azdoi](https://www.nuget.org/packages/azdoi). 
+
+<?! Include "./../../../README.md" /?>
