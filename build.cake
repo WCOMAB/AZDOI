@@ -265,6 +265,9 @@ Task("Clean")
                 .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
                 .AppendSwitchQuoted("--port", " ", port)
                 .AppendSwitchQuoted("--virtual-dir", " ", "/AZDOI"),
+                EnvironmentVariables = { 
+                                            { "BUILD_BUILDNUMBER", data.Version } 
+                                        }
         });
         
         if (!context.IsRunningOnWindows())
