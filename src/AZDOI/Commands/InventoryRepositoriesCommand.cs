@@ -60,7 +60,7 @@ public class InventoryRepositoriesCommand(
                 )
         };
 
-        foreach (var project in organization.Children)
+        foreach (var project in organization.Children.OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase))
         {
             var projectOutputDirectory = context.OutputDirectory.Combine(project.Name);
 
