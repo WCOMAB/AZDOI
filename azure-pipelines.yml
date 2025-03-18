@@ -4,8 +4,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 trigger:
-  - main
-  - develop
+  branches:
+    include:
+      - main
+      - develop
+      - feature/*
 
 variables:
   - group: common-build-variables
