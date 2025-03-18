@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/AZDOI/AZDOI/_apis/build/status%2FWCOMAB.AZDOI?repoName=WCOMAB%2FAZDOI&branchName=main)](https://dev.azure.com/AZDOI/AZDOI/_build/latest?definitionId=2&repoName=WCOMAB%2FAZDOI&branchName=main)
+
 # AZDOI
 
 Azure DevOps Inventory .NET Tool – Inventories and documents an Azure DevOps organization by generating a set of Markdown files for the specified organization and saving them to a specified folder.
