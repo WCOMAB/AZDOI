@@ -55,12 +55,12 @@ public class InventoryRepositoriesCommand(
             Name = context.Settings.DevOpsOrg,
             Url = string.Empty,
 
-            Children = await context.InvokeDevOpsClient(
+            Children = (await context.InvokeDevOpsClient(
                 (client, settings) => client.GetProjects(settings.DevOpsOrg, settings.IncludeProjects, settings.ExcludeProjects)
-                )
+                )).OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase).ToArray()
         };
 
-        foreach (var project in organization.Children.OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase))
+        foreach (var project in organization.Children)
         {
             var projectOutputDirectory = context.OutputDirectory.Combine(project.Name);
 
