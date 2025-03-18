@@ -56,8 +56,8 @@ public partial class InventoryRepositoriesCommand
                                     await client.EnumerateTagsAsync(settings.DevOpsOrg, project.Id, repo.Id)
                                         .SelectAwait(async tag => tag with
                                         {
-                                            Message = (await client.GetAnnotatedTagsAsync(settings.DevOpsOrg, project.Id, repo.Id, tag.ObjectId))
-                                                        .FirstOrDefault()?.Message
+                                            Message = $"*{(await client.GetAnnotatedTagsAsync(settings.DevOpsOrg, project.Id, repo.Id, tag.ObjectId))
+                                                        .FirstOrDefault()?.Message}*"
                                         }
                                         )
                                         .ToArrayAsync()
