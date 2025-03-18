@@ -1,6 +1,7 @@
 [![Build Status](https://dev.azure.com/AZDOI/AZDOI/_apis/build/status%2FWCOMAB.AZDOI?repoName=WCOMAB%2FAZDOI&branchName=main)](https://dev.azure.com/AZDOI/AZDOI/_build/latest?definitionId=2&repoName=WCOMAB%2FAZDOI&branchName=main)
 [![Build](https://github.com/WCOMAB/AZDOI/actions/workflows/build.yml/badge.svg)](https://github.com/WCOMAB/AZDOI/actions/workflows/build.yml)
 [![NuGet Version](https://img.shields.io/nuget/v/azdoi)](https://www.nuget.org/packages/AZDOI/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 # AZDOI
 
