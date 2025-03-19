@@ -50,4 +50,8 @@ public class AZDOISettings(ICakeEnvironment environment) : CommandSettings, Serv
     [Description("Exclude specific repository README")]
     [CommandOption("--exclude-repository--readme")]
     public string[]? ExcludeRepositoriesReadme { get; set; }
+
+    [CommandOption("--run-in-parallel")]
+    [Description("Flag for if generation should be parallelized.")]
+    public bool RunInParallel { get; set; }
 }
