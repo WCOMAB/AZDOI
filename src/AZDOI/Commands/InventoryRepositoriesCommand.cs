@@ -1,4 +1,5 @@
-﻿using AZDOI.Commands.Settings;
+﻿using System.Diagnostics;
+using AZDOI.Commands.Settings;
 using AZDOI.Services.Markdown;
 
 namespace AZDOI.Commands;
@@ -15,6 +16,7 @@ public partial class InventoryRepositoriesCommand(
 {
     public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOISettings settings)
     {
+        var sw = Stopwatch.StartNew();
         try
         {
             var shouldProcessRepoReadme = (
@@ -39,6 +41,11 @@ public partial class InventoryRepositoriesCommand(
         {
             logger.LogError(ex, "Failure during executing Inventory Repositories Command.");
             return 1;
+        }
+        finally
+        {
+            sw.Stop();
+            logger.LogInformation("Processed inventory in {Elapsed}.", sw.Elapsed);
         }
     }
 }
