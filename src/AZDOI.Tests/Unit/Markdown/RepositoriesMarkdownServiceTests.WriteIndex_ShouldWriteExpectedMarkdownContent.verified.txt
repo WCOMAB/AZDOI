@@ -6,6 +6,6 @@ modified: 2000-01-01 00:00
 
 | Repository                                                       | Description                      |
 |------------------------------------------------------------------|----------------------------------|
-| [MyRepository.One](MyRepository.One)                             | MyRepository One Description     |
-| [MyRepository.Two](MyRepository.Two)                             | MyRepository Two Description     |
+| [MyRepository.One](<MyRepository.One>)                           | MyRepository One Description     |
+| [MyRepository.Two](<MyRepository.Two>)                           | MyRepository Two Description     |
 

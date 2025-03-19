@@ -18,5 +18,5 @@ modified: 2000-01-01 00:00
 
 | Repository                                                       | Description                      |
 |------------------------------------------------------------------|----------------------------------|
-| [MyRepository](Repositories/MyRepository)                        | MyRepository Description         |
+| [MyRepository](<Repositories/MyRepository>)                      | MyRepository Description         |
 
