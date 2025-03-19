@@ -1,4 +1,4 @@
-{
+﻿{
   ExitCode: -1,
   ConsoleOutput:
 Spectre.Console.Cli.CommandRuntimeException: Invalid OutputPath (/output) 
