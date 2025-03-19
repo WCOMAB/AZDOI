@@ -3,11 +3,11 @@
 public class RepositoriesMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsRepository[]>(cakeContext, timeProvider)
 {
-    protected override async Task WriteIndex(FileTextWriter writer, AzureDevOpsRepository[] childeren)
+    protected override async Task WriteIndex(FileTextWriter writer, AzureDevOpsRepository[] children)
     {
         await WriteChildren(
            writer,
-           childeren,
+           children,
            "Repository",
            "Repositories",
            headingLevel: 1
