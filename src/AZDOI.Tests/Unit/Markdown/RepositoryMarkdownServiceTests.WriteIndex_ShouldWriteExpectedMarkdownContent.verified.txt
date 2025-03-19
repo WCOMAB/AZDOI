@@ -21,17 +21,17 @@ modified: 2000-01-01 00:00
 
 | Branch                                                           | ObjectId                         |
 |------------------------------------------------------------------|----------------------------------|
-| [main](https://myproject.com?version=GBmain)                     | 1573218                          |
-| [develop](https://myproject.com?version=GBdevelop)               | 12345                            |
-| [feature/450](https://myproject.com?version=GBfeature%2F450)     | 54321                            |
+| [main](<https://myproject.com?version=GBmain>)                   | 1573218                          |
+| [develop](<https://myproject.com?version=GBdevelop>)             | 12345                            |
+| [feature/450](<https://myproject.com?version=GBfeature%2F450>)   | 54321                            |
 
 ## Tags
 
 | Tag                                                              | ObjectId                         |
 |------------------------------------------------------------------|----------------------------------|
-| [v0.1](https://myproject.com?version=GTv0.1)                     | 12345                            |
-| [2025.11.11](https://myproject.com?version=GT2025.11.11)         | 54321                            |
-| [2025.03.11](https://myproject.com?version=GT2025.03.11)         | 98765 (Initial commit message)   |
+| [v0.1](<https://myproject.com?version=GTv0.1>)                   | 12345                            |
+| [2025.11.11](<https://myproject.com?version=GT2025.11.11>)       | 54321                            |
+| [2025.03.11](<https://myproject.com?version=GT2025.03.11>)       | 98765 (Initial commit message)   |
 
 ## README
 
