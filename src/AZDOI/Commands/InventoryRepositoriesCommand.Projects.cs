@@ -21,7 +21,9 @@ public partial class InventoryRepositoriesCommand
                 )).OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase).ToArray()
         };
 
-        foreach (var project in organization.Children)
+        await context.ForEachAsync(
+        organization.Children,
+        async (project, ct) =>
         {
             var projectOutputDirectory = context.OutputDirectory.Combine(project.Name);
 
@@ -42,6 +44,7 @@ public partial class InventoryRepositoriesCommand
                 );
             logger.LogInformation("Markdown index created for project: {ProjectName}", project.Name);
         }
+        );
         await organizationMarkdownService.WriteIndex(context.OutputDirectory, organization);
 
         logger.LogInformation("Done executing Inventory Repositories");

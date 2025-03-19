@@ -44,10 +44,14 @@ public class AZDOISettings(ICakeEnvironment environment) : CommandSettings, Serv
     public string[]? ExcludeRepositories { get; set; }
 
     [Description("Include specific repository README")]
-    [CommandOption("--include-repository--readme")]
+    [CommandOption("--include-repository-readme")]
     public string[]? IncludeRepositoriesReadme { get; set; }
 
     [Description("Exclude specific repository README")]
-    [CommandOption("--exclude-repository--readme")]
+    [CommandOption("--exclude-repository-readme")]
     public string[]? ExcludeRepositoriesReadme { get; set; }
+
+    [CommandOption("--run-in-parallel")]
+    [Description("Flag for if generation should be parallelized.")]
+    public bool RunInParallel { get; set; }
 }

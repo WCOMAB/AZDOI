@@ -71,8 +71,9 @@ AZDOI uses the following environment variables for configuration:
 | `--exclude-project`            | Exclude specific projects                   |                                                 |
 | `--include-repository`         | Include specific repositories               |                                                 |
 | `--exclude-repository`         | Exclude specific repositories               |                                                 |
-| `--include-repository--readme` | Include specific repository README          |                                                 |
-| `--exclude-repository--readme` | Exclude specific repository README          |                                                 |
+| `--include-repository-readme`  | Include specific repository README          |                                                 |
+| `--exclude-repository-readme`  | Exclude specific repository README          |                                                 |
+| `--run-in-parallel`            | Enable parallel processing of projects      | False                                           |
 
 ## Setting environment variables
 
