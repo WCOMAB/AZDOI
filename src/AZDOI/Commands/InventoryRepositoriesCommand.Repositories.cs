@@ -41,16 +41,21 @@ public partial class InventoryRepositoriesCommand
                                 ReadmeContent = shouldProcessRepoReadme
                                                     ? await client.GetRepositoryReadme(settings.DevOpsOrg, project.Id, sourceRepo.Id)
                                                     : "> ℹ️ Readme excluded",
-                                Children = await client.GetBranchesAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id),
-                                Tags = await client.EnumerateTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
+                                Children = await client
+                                            .GetBranchesAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
+                                            .OrderBy(_ => !StringComparer.OrdinalIgnoreCase.Equals(sourceRepo.DefaultBranch,  _.Name))
+                                            .ThenBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
+                                            .ToArrayAsync(),
+                                Tags = await client
+                                        .GetTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
                                         .SelectAwait(
                                             async tag => tag with
                                                            {
                                                                Message = (await client.GetAnnotatedTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id, tag.ObjectId))
-                                                                            .Select(aTag => $"*{aTag.Message}*")
-                                                                            .FirstOrDefault()
-                                                           }
+                                                                            ?.Message
+                                            }
                                         )
+                                        .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
                                         .ToArrayAsync()
                             }
                     );
