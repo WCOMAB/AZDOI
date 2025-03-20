@@ -97,3 +97,68 @@ Linux/macOS (Bash)
 export AZDOI_PAT="your_token_here"
 export AZURE_TENANT_ID="your_tenant_id_here"
 ```
+
+### Tool flow
+
+ ```mermaid
+    graph TD
+        Org_AZDOI(AZDOI)
+            
+        %% AZDOI project
+        subgraph Proj_AZDOI[AZDOI]
+            direction TB
+            %% AZDOI repos
+            subgraph Repos_AZDOI[Repositories]
+                Repo_AZDOI[AZDOI]
+            end
+        end
+            
+        %% Babbage project
+        subgraph Proj_Babbage[Babbage]
+            %% Babbage repos
+            subgraph Repos_Babbage[Repositories]
+                Repo_Babbage_AnalyticalEngine[Babbage.AnalyticalEngine]
+                Repo_Babbage_Debugger[Babbage.Debugger]
+                Repo_Babbage_DifferenceEngine[Babbage.DifferenceEngine]
+            end
+        end
+            
+        %% Lovelace project
+        subgraph Proj_Lovelace[Lovelace]
+            direction TB
+            %% Lovelace repos
+            subgraph Repos_Lovelace[Repositories]
+                Repo_Lovelace_Algorithm[Lovelace.Algorithm]
+                Repo_Lovelace_Loop[Lovelace.Loop]
+                Repo_Lovelace_Poetry[Lovelace.Poetry]
+            end
+        end
+            
+        %% Turing project
+        subgraph Proj_Turing[Turing]
+            direction TB
+            %% Turing repos
+            subgraph Repos_Turing[Repositories]
+                Repo_Turing_Machine[Turing.Machine]
+                Repo_Turing_Paradox[Turing.Paradox]
+                Repo_Turing_Test[Turing.Test]
+            end
+        end
+            
+        %% VonNeumann project
+        subgraph Proj_VonNeumann[VonNeumann]
+            direction TB
+            %% VonNeumann repos
+            subgraph Repos_VonNeumann[Repositories]
+                Repo_VonNeumann_Architecture[VonNeumann.Architecture]
+                Repo_VonNeumann_Bottleneck[VonNeumann.Bottleneck]
+                Repo_VonNeumann_SelfReplicator[VonNeumann.SelfReplicator]
+            end
+        end
+
+        Org_AZDOI --> Proj_AZDOI
+        Org_AZDOI --> Proj_Babbage
+        Org_AZDOI --> Proj_Lovelace
+        Org_AZDOI --> Proj_Turing
+        Org_AZDOI --> Proj_VonNeumann
+    ```
