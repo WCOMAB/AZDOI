@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using AZDOI.Commands.Settings;
+﻿using AZDOI.Commands.Settings;
 using AZDOI.Services.Markdown;
 
 namespace AZDOI.Commands;
@@ -11,12 +10,14 @@ public partial class InventoryRepositoriesCommand(
     ProjectMarkdownService projectMarkdownService,
     RepositoriesMarkdownService repositoriesMarkdownService,
     RepositoryMarkdownService repositoryMarkdownService,
+    StopwatchProvider stopwatchProvider,
     ILogger<InventoryRepositoriesCommand> logger)
     : AsyncCommand<AZDOISettings>
 {
     public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOISettings settings)
     {
-        var sw = Stopwatch.StartNew();
+        stopwatchProvider.Start();
+
         try
         {
             var shouldProcessRepoReadme = (
@@ -44,8 +45,8 @@ public partial class InventoryRepositoriesCommand(
         }
         finally
         {
-            sw.Stop();
-            logger.LogInformation("Processed inventory in {Elapsed}.", sw.Elapsed);
+            stopwatchProvider.Stop();
+            logger.LogInformation("Processed inventory in {Elapsed}.", stopwatchProvider.Elapsed);
         }
     }
 }
