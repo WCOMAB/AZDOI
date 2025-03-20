@@ -10,11 +10,14 @@ public partial class InventoryRepositoriesCommand(
     ProjectMarkdownService projectMarkdownService,
     RepositoriesMarkdownService repositoriesMarkdownService,
     RepositoryMarkdownService repositoryMarkdownService,
+    StopwatchProvider stopwatchProvider,
     ILogger<InventoryRepositoriesCommand> logger)
     : AsyncCommand<AZDOISettings>
 {
     public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOISettings settings)
     {
+        stopwatchProvider.Start();
+
         try
         {
             var shouldProcessRepoReadme = (
@@ -39,6 +42,11 @@ public partial class InventoryRepositoriesCommand(
         {
             logger.LogError(ex, "Failure during executing Inventory Repositories Command.");
             return 1;
+        }
+        finally
+        {
+            stopwatchProvider.Stop();
+            logger.LogInformation("Processed inventory in {Elapsed}.", stopwatchProvider.Elapsed);
         }
     }
 }

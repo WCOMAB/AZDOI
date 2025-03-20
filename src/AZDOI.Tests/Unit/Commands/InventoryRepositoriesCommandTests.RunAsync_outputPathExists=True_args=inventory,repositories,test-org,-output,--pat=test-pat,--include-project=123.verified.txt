@@ -324,6 +324,18 @@
           {OriginalFormat}: Done executing Inventory Repositories
         }
       ]
+    },
+    {
+      Information: Processed inventory in 00:00:00.,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          Elapsed: 00:00:00
+        },
+        {
+          {OriginalFormat}: Processed inventory in {Elapsed}.
+        }
+      ]
     }
   ],
   FileSystem: {

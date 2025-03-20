@@ -1,4 +1,5 @@
 ﻿using AZDOI.Extensions;
+using AZDOI.Services;
 using AZDOI.Services.AzureDevOps;
 using AZDOI.Tests;
 using Cake.Core;
@@ -54,7 +55,9 @@ public static partial class ServiceProviderFixture
             .AddMockHttpClient<Constants>()
             .AddSingleton<AzureDevOpsClient>()
             .AddSingleton<TestMarkdownService>()
-            .AddMarkdownServices();
+            .AddMarkdownServices()
+            .AddSingleton<FakeStopwatch>()
+            .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>());
 
         services
             .AddSingleton(logger)
@@ -73,7 +76,7 @@ public static partial class ServiceProviderFixture
     {
         return services.ConfigureMockHttpClient<Constants>(
                 client =>
-                {})
+                { })
             .AddAzureDevOpsClient((sp, settings, ct) => Task.FromResult("fake-entraid-token"));
     }
     private static IServiceCollection ConfigureMockHttpClient(IServiceCollection services)
