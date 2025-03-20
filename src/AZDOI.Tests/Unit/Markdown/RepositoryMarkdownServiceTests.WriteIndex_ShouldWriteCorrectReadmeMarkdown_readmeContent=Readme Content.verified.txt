@@ -1,0 +1,34 @@
+﻿---
+title: MyRepository
+summary: MyRepository
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# MyRepository
+
+## Repository Details
+
+|                                  |                                                                  |
+|----------------------------------|------------------------------------------------------------------|
+| Name                             | MyRepository                                                     |
+| Id                               | 1                                                                |
+| Size                             | 1.9 MB                                                           |
+| RemoteUrl                        | [myproject.com](https://myproject.com)                           |
+| WebUrl                           | [myproject.com](https://myproject.com)                           |
+| DefaultBranch                    | [main](https://myproject.com?version=GBmain)                     |
+
+## Branches
+
+| Branch                                                           | ObjectId                         |
+|------------------------------------------------------------------|----------------------------------|
+| [main](<https://myproject.com?version=GBmain>)                   | 1573218                          |
+
+## Tags
+
+| Tag                                                              | ObjectId                         |
+|------------------------------------------------------------------|----------------------------------|
+| [v0.1](<https://myproject.com?version=GTv0.1>)                   | 12345                            |
+
+## README
+
+Readme Content
