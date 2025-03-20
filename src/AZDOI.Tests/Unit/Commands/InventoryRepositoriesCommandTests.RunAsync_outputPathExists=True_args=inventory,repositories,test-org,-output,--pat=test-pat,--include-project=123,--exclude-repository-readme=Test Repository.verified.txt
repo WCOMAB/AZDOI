@@ -53,7 +53,7 @@
       ]
     },
     {
-      Information:  - Repository: Test Repository,
+      Information: Project: Test Project - Repository: Test Repository,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -65,15 +65,18 @@
       ],
       State: [
         {
+          ProjectName: Test Project
+        },
+        {
           RepoName: Test Repository
         },
         {
-          {OriginalFormat}:  - Repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName}
         }
       ]
     },
     {
-      Information: Excluded repository: Test Repository,
+      Information: Project: Test Project - Repository: Test Repository - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -85,15 +88,41 @@
       ],
       State: [
         {
+          ProjectName: Test Project
+        },
+        {
           RepoName: Test Repository
         },
         {
-          {OriginalFormat}: Excluded repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - Markdown index created.
         }
       ]
     },
     {
-      Information:  - Repository: Test Repository2,
+      Information: Project: Test Project - Repository: Test Repository - README Excluded.,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Repository: 456
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          RepoName: Test Repository
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Excluded.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Repository: Test Repository2,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -104,16 +133,19 @@
         }
       ],
       State: [
+        {
+          ProjectName: Test Project
+        },
         {
           RepoName: Test Repository2
         },
         {
-          {OriginalFormat}:  - Repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName}
         }
       ]
     },
     {
-      Information: Markdown index created for repository: Test Repository2,
+      Information: Project: Test Project - Repository: Test Repository2 - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -124,16 +156,19 @@
         }
       ],
       State: [
+        {
+          ProjectName: Test Project
+        },
         {
           RepoName: Test Repository2
         },
         {
-          {OriginalFormat}: Markdown index created for repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - Markdown index created.
         }
       ]
     },
     {
-      Information: README Exists: False, Length: 0 characters,
+      Information: Project: Test Project - Repository: Test Repository2 - README Exists: False, Length: 0 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -145,18 +180,24 @@
       ],
       State: [
         {
+          ProjectName: Test Project
+        },
+        {
+          RepoName: Test Repository2
+        },
+        {
           Exists: False
         },
         {
           Length: 0
         },
         {
-          {OriginalFormat}: README Exists: {Exists}, Length: {Length} characters
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Exists: {Exists}, Length: {Length} characters
         }
       ]
     },
     {
-      Information:  - Repository: Test Repository3,
+      Information: Project: Test Project - Repository: Test Repository3,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -167,16 +208,19 @@
         }
       ],
       State: [
+        {
+          ProjectName: Test Project
+        },
         {
           RepoName: Test Repository3
         },
         {
-          {OriginalFormat}:  - Repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName}
         }
       ]
     },
     {
-      Information: Markdown index created for repository: Test Repository3,
+      Information: Project: Test Project - Repository: Test Repository3 - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -187,16 +231,19 @@
         }
       ],
       State: [
+        {
+          ProjectName: Test Project
+        },
         {
           RepoName: Test Repository3
         },
         {
-          {OriginalFormat}: Markdown index created for repository: {RepoName}
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - Markdown index created.
         }
       ]
     },
     {
-      Information: README Exists: False, Length: 0 characters,
+      Information: Project: Test Project - Repository: Test Repository3 - README Exists: False, Length: 0 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       Scopes: [
         {
@@ -208,68 +255,11 @@
       ],
       State: [
         {
-          Exists: False
+          ProjectName: Test Project
         },
         {
-          Length: 0
+          RepoName: Test Repository3
         },
-        {
-          {OriginalFormat}: README Exists: {Exists}, Length: {Length} characters
-        }
-      ]
-    },
-    {
-      Information:  - Repository: Test Repository4,
-      Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
-      State: [
-        {
-          RepoName: Test Repository4
-        },
-        {
-          {OriginalFormat}:  - Repository: {RepoName}
-        }
-      ]
-    },
-    {
-      Information: Markdown index created for repository: Test Repository4,
-      Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
-      State: [
-        {
-          RepoName: Test Repository4
-        },
-        {
-          {OriginalFormat}: Markdown index created for repository: {RepoName}
-        }
-      ]
-    },
-    {
-      Information: README Exists: False, Length: 0 characters,
-      Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
-      State: [
         {
           Exists: False
         },
@@ -277,13 +267,93 @@
           Length: 0
         },
         {
-          {OriginalFormat}: README Exists: {Exists}, Length: {Length} characters
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Exists: {Exists}, Length: {Length} characters
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Repository: Test Repository4,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Repository: 777
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          RepoName: Test Repository4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Repository: Test Repository4 - Markdown index created.,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Repository: 777
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          RepoName: Test Repository4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Repository: Test Repository4 - README Exists: False, Length: 0 characters,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Repository: 777
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          RepoName: Test Repository4
+        },
+        {
+          Exists: False
+        },
+        {
+          Length: 0
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Exists: {Exists}, Length: {Length} characters
         }
       ]
     },
     {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
       State: [
         {
           ProjectName: Test Project
@@ -335,6 +405,20 @@
                 Exists: true,
                 Hidden: false,
                 Directories: [
+                  {
+                    Path: /output/test-org/Test Project/Repositories/Test Repository,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project/Repositories/Test Repository/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 2544
+                      }
+                    ]
+                  },
                   {
                     Path: /output/test-org/Test Project/Repositories/Test Repository2,
                     Exists: true,
