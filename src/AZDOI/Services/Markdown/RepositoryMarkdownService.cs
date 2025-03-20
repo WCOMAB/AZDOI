@@ -50,7 +50,7 @@ public class RepositoryMarkdownService(ICakeContext cakeContext, TimeProvider ti
            $$"""
             ## README
 
-            {{repository.ReadmeContent.IncreaseMarkdownHeaders()}}
+            {{repository.ReadmeContent.IncreaseMarkdownHeaders().FallbackIfEmpty("> 🛑 Repository README missing")}}
             """
        );
     }

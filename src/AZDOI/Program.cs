@@ -8,7 +8,8 @@ public partial class Program
             .AddCakeCore()
             .AddMarkdownServices()
             .AddSingleton(TimeProvider.System)
-            .AddAzureDevOpsClient();
+            .AddAzureDevOpsClient()
+            .AddSingleton<StopwatchProvider, SystemStopwatch>();
     }
     static partial void ConfigureApp(AppServiceConfig appServiceConfig)
     {

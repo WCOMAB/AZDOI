@@ -202,7 +202,8 @@ Task("Clean")
                                                         .Append("repositories")
                                                         .Append("AZDOI")
                                                         .AppendQuoted(data.IntegrationTestPath.FullPath)
-                                                        .Append("--entra-id-auth"),
+                                                        .Append("--entra-id-auth")
+                                                        .Append("--run-in-parallel"),
                     WorkingDirectory = data.IntegrationTestPath
                 }
             )

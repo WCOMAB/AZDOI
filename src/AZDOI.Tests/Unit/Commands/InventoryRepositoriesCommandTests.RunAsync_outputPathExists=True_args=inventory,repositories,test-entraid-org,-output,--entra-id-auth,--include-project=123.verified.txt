@@ -55,6 +55,11 @@
     {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
       State: [
         {
           ProjectName: Test Project
@@ -70,6 +75,18 @@
       State: [
         {
           {OriginalFormat}: Done executing Inventory Repositories
+        }
+      ]
+    },
+    {
+      Information: Processed inventory in 00:00:00.,
+      Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      State: [
+        {
+          Elapsed: 00:00:00
+        },
+        {
+          {OriginalFormat}: Processed inventory in {Elapsed}.
         }
       ]
     }

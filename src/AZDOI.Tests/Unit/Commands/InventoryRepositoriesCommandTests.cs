@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging.Testing;
+﻿using AZDOI.Services;
+using Microsoft.Extensions.Logging.Testing;
 using Spectre.Console.Cli;
 using Spectre.Console.Testing;
 
@@ -29,8 +30,8 @@ public class InventoryRepositoriesCommandTests
     public async Task RunAsync(bool outputPathExists, params string[] args)
     {
         // Given
-        var (commandApp, testConsole, fakeLog, fakeFileSystem, fakeEnvironment) = ServiceProviderFixture
-                                           .GetRequiredService<ICommandApp, TestConsole, FakeLogger<InventoryRepositoriesCommand>, FakeFileSystem, FakeEnvironment>(
+        var (commandApp, testConsole, fakeLog, fakeFileSystem, fakeEnvironment, stopwatchProvider) = ServiceProviderFixture
+                                           .GetRequiredService<ICommandApp, TestConsole, FakeLogger<InventoryRepositoriesCommand>, FakeFileSystem, FakeEnvironment, StopwatchProvider>(
                                                services => services.AuthorizedClient()
                                                                    .EntraIdAuthorizedClient()
                                            );

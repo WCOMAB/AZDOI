@@ -7,6 +7,14 @@
     "AZDOIEntraId": {
       "commandName": "Project",
       "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth"
+    },
+    "AZDOIPatParallel": {
+      "commandName": "Project",
+      "commandLineArgs": "inventory repositories AZDOI /temp/output --run-in-parallel"
+    },
+    "AZDOIEntraIdParallel": {
+      "commandName": "Project",
+      "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --run-in-parallel"
     }
   }
 }

@@ -10,6 +10,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>WCOM128x128_squares.png</PackageIcon>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://wcomab.github.io/AZDOI/</PackageProjectUrl>
 	</PropertyGroup>
 
 	<ItemGroup>

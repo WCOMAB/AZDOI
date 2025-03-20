@@ -7,6 +7,10 @@
 
 Azure DevOps Inventory .NET Tool – Inventories and documents an Azure DevOps organization by generating a set of Markdown files for the specified organization and saving them to a specified folder.
 
+## Example Result
+
+An example of the generated documentation can be viewed here: [AZDOI Example Documentation](https://wcomab.github.io/AZDOI/)
+
 ## Installation
 
 ### Global
