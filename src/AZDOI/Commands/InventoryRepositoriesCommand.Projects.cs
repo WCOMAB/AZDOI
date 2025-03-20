@@ -20,8 +20,7 @@ public partial class InventoryRepositoriesCommand
                             await context.InvokeDevOpsClient(
                                 (client, settings) => client.GetProjects(settings.DevOpsOrg, settings.IncludeProjects, settings.ExcludeProjects)
                             )
-                        )
-                        .OrderBy(p => p.Name, StringComparer.OrdinalIgnoreCase),
+                        ),
                         async (sourceProject, ct) =>
                         {
                             using var _ = logger.BeginScope(new { ProjectId = sourceProject.Id });
@@ -37,6 +36,7 @@ public partial class InventoryRepositoriesCommand
                                                     },
                                                     sourceProject
                                                 )
+                                                .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
                                                 .ToArrayAsync(ct)
                             };
 
@@ -50,7 +50,9 @@ public partial class InventoryRepositoriesCommand
                             return project;
                         }
                     )
+                    .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
                     .ToArrayAsync()
+
         };
 
         await organizationMarkdownService.WriteIndex(context.OutputDirectory, organization);

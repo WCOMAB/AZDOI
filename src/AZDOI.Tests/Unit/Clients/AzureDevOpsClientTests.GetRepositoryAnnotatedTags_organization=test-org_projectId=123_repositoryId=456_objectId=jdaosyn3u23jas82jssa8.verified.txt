@@ -1,6 +1,4 @@
-[
-  {
-    Message: Initial commit,
-    ObjectId: 384123
-  }
-]
+{
+  Message: Initial commit,
+  ObjectId: 384123
+}

@@ -67,7 +67,8 @@ public class AzureDevOpsClientTests
         var azureDevOpsClient = ServiceProviderFixture
                                     .GetRequiredService<AzureDevOpsClient>(services => services.AuthorizedClient());
         // When
-        var result = await azureDevOpsClient.GetBranchesAsync(organization, projectId, repositoryId);
+        var result = await azureDevOpsClient.GetBranchesAsync(organization, projectId, repositoryId)
+                        .ToArrayAsync(cancellationToken: TestContext.Current.CancellationToken);
         // Then
         await Verify(result);
     }
@@ -81,11 +82,8 @@ public class AzureDevOpsClientTests
                                     .GetRequiredService<AzureDevOpsClient>(services => services.AuthorizedClient());
 
         // When
-        var result = new List<AzureDevOpsRepositoryTag>();
-        await foreach (var tag in azureDevOpsClient.EnumerateTagsAsync(organization, projectId, repositoryId))
-        {
-            result.Add(tag);
-        }
+        var result = await azureDevOpsClient.GetTagsAsync(organization, projectId, repositoryId)
+                        .ToListAsync(cancellationToken: TestContext.Current.CancellationToken);
 
         // Then
         await Verify(result);
