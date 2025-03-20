@@ -31,7 +31,7 @@ modified: 2000-01-01 00:00
 |------------------------------------------------------------------|----------------------------------|
 | [v0.1](<https://myproject.com?version=GTv0.1>)                   | 12345                            |
 | [2025.11.11](<https://myproject.com?version=GT2025.11.11>)       | 54321                            |
-| [2025.03.11](<https://myproject.com?version=GT2025.03.11>)       | 98765 (Initial commit message)   |
+| [2025.03.11](<https://myproject.com?version=GT2025.03.11>)       | 98765 (*Initial commit message*) |
 
 ## README
 

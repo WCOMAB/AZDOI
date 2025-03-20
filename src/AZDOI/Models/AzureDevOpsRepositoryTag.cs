@@ -20,7 +20,7 @@
     // Implicit interface implementation
     string IAzureDevOpsBase.Description => string.IsNullOrWhiteSpace(Message)
                                             ? ObjectId
-                                            : $"{ObjectId} ({Message})";
+                                            : $"{ObjectId} (*{Message}*)";
     string IAzureDevOpsBase.Id => ObjectId;
     string IAzureDevOpsBase.ChildUrl => Url;
     string IAzureDevOpsBase.Name => ChildName;
