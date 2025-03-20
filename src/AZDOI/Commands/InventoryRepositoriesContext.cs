@@ -5,11 +5,17 @@ namespace AZDOI.Commands;
 
 public record InventoryRepositoriesContext(
     AZDOISettings Settings,
-    FilterHandler ShouldProcessRepoReadme,
     DirectoryPath OutputDirectory,
     AzureDevOpsClientHandler AzureDevOpsClientHandler
 )
 {
+    public FilterHandler ShouldProcessRepoReadme { get; init; } = 
+    (
+        Settings.IncludeRepositoriesReadme,
+        Settings.ExcludeRepositoriesReadme
+    )
+    .ToFilterPredicate();
+
     public async Task<TResult> InvokeDevOpsClient<TResult>(
         Func<AzureDevOpsClient, AZDOISettings, Task<TResult>> clientFunc)
     {
