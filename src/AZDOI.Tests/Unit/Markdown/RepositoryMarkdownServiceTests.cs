@@ -84,4 +84,49 @@ public class RepositoryMarkdownServiceTests
         // Then
         await Verify(result);
     }
+
+    [Theory]
+    [InlineData("Readme Content")]
+    [InlineData(null)]
+    [InlineData("")]
+    public async Task WriteIndex_ShouldWriteCorrectReadmeMarkdown(string? readmeContent)
+    {
+        // Given
+        var (fileSystem, service) = ServiceProviderFixture
+            .GetRequiredService<FakeFileSystem, RepositoryMarkdownService>();
+
+        var repository = new AzureDevOpsRepository
+        {
+            Id = "1",
+            Name = "MyRepository",
+            Size = 2000000,
+            RemoteUrl = "https://myproject.com",
+            WebUrl = "https://myproject.com",
+            ReadmeContent = readmeContent,
+            Url = "https://myproject.com",
+            DefaultBranch = "refs/heads/main",
+            Children = [
+                new AzureDevOpsRepositoryBranch
+                {
+                    Name = "main",
+                    ObjectId = "1573218",
+                    Url = "https://mybranch.com"
+                }
+            ],
+            Tags = [
+                new AzureDevOpsRepositoryTag
+                {
+                    Name = "refs/tags/v0.1",
+                    ObjectId = "12345",
+                    Url = "https://google.com"
+                }
+            ],
+        };
+
+        // When
+        var result = await service.TestWriteIndex(repository);
+
+        // Then
+        await Verify(result);
+    }
 }

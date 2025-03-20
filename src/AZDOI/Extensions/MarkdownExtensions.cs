@@ -75,4 +75,9 @@ public static partial class MarkdownExtensions
 
         return $"{flooredValue.ToString("0.0", CultureInfo.InvariantCulture)} {units[unitIndex]}";
     }
+
+    public static string FallbackIfEmpty(this string value, string fallback)
+    {
+        return !string.IsNullOrWhiteSpace(value) ? value : fallback;
+    }
 }
