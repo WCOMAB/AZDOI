@@ -20,17 +20,10 @@ public partial class InventoryRepositoriesCommand(
 
         try
         {
-            var shouldProcessRepoReadme = (
-                    settings.IncludeRepositoriesReadme,
-                    settings.ExcludeRepositoriesReadme
-                )
-                .ToFilterPredicate();
-
             var orgOutputDirectory = settings.OutputPath.Combine(settings.DevOpsOrg);
 
             var context = new InventoryRepositoriesContext(
                 settings,
-                shouldProcessRepoReadme,
                 orgOutputDirectory,
                 clientHandler
             );
