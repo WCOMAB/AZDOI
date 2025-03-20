@@ -55,6 +55,11 @@
     {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
       State: [
         {
           ProjectName: Test Project

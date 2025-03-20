@@ -1,4 +1,5 @@
-﻿using AZDOI.Commands;
+﻿using System.Runtime.CompilerServices;
+using AZDOI.Commands;
 using AZDOI.Commands.Settings;
 using AZDOI.Services.AzureDevOps;
 
@@ -13,28 +14,70 @@ public static class InventoryRepositoriesContextExtensions
         using var client = await context.AzureDevOpsClientHandler(context.Settings);
         return await clientFunc(client, context.Settings);
     }
-    public static async Task ForEachAsync<TSource>(
-      this InventoryRepositoriesContext context,
-      IEnumerable<TSource> source,
-      Func<TSource, CancellationToken, ValueTask> body)
+
+    static readonly int maxDegreeOfParallelism = Environment.ProcessorCount;
+
+    public static async IAsyncEnumerable<TSource> ForEachAsync<TSource>(
+        this InventoryRepositoriesContext context,
+        IEnumerable<TSource> source,
+        Func<TSource, CancellationToken, Task<TSource>> body,
+        [EnumeratorCancellation] CancellationToken cancellationToken = default
+        )
     {
         if (context.Settings.RunInParallel)
         {
-            await Parallel.ForEachAsync(source, body);
+            await foreach (var result in source.ProcessResultsAsTheyCompleteAsync(body, maxDegreeOfParallelism, cancellationToken))
+            {
+                yield return result;
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+            }
         }
         else
         {
-            using var cts = new CancellationTokenSource();
-            var ct = cts.Token;
             foreach (var v in source)
             {
-                await body(v, ct);
-                if (ct.IsCancellationRequested)
+                await body(v, cancellationToken);
+                yield return v; // Yield the current item
+                if (cancellationToken.IsCancellationRequested)
                 {
-                    return;
+                    break;
                 }
             }
-            return;
+        }
+    }
+
+    public static async IAsyncEnumerable<TSource> ForEachAsync<TSource>(
+        this InventoryRepositoriesContext context,
+        IAsyncEnumerable<TSource> source,
+        Func<TSource, CancellationToken, Task<TSource>> body,
+        [EnumeratorCancellation] CancellationToken cancellationToken = default
+        )
+    {
+        if (context.Settings.RunInParallel)
+        {
+            await foreach (var result in source.ProcessResultsAsTheyCompleteAsync(body, maxDegreeOfParallelism, cancellationToken))
+            {
+                yield return result;
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            await foreach (var v in source)
+            {
+                await body(v, cancellationToken);
+                yield return v; // Yield the current item
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+            }
         }
     }
 }

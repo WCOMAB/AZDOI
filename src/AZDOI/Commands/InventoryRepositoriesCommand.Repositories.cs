@@ -2,76 +2,93 @@
 
 public partial class InventoryRepositoriesCommand
 {
-    private async Task<AzureDevOpsRepository[]> ProcessRepositories(InventoryRepositoriesContext context, AzureDevOpsProject project)
+    private async IAsyncEnumerable<AzureDevOpsRepository> ProcessRepositories(InventoryRepositoriesContext context, AzureDevOpsProject project)
     {
-        using (logger.BeginScope(new { ProjectId = project.Id }))
+        logger.LogInformation("Project: {ProjectName}", project.Name);
+
+        var repositoriesDirectory = context.OutputDirectory.Combine("Repositories");
+
+        var repositories = await context.InvokeDevOpsClient((client, settings) =>
+            client.GetRepositories(settings.DevOpsOrg, project.Id, settings.IncludeRepositories, settings.ExcludeRepositories));
+
+        await repositoriesMarkdownService.WriteIndex(repositoriesDirectory, repositories);
+
+        foreach (var repo in repositories)
         {
-            logger.LogInformation("Project: {ProjectName}", project.Name);
-
-            var repositoriesDirectory = context.OutputDirectory.Combine("Repositories");
-
-            var repositories = await context.InvokeDevOpsClient((client, settings) =>
-                client.GetRepositories(settings.DevOpsOrg, project.Id, settings.IncludeRepositories, settings.ExcludeRepositories));
-
-            await repositoriesMarkdownService.WriteIndex(repositoriesDirectory, repositories);
-
-            foreach (var repo in repositories)
-            {
-                await ProcessRepository(context, project, repo, repositoriesDirectory);
-            }
-
-            return repositories;
+            yield return await ProcessRepository(
+                context with
+                {
+                    OutputDirectory = repositoriesDirectory,
+                },
+                project,
+                repo
+            );
         }
     }
 
-    private async Task ProcessRepository(InventoryRepositoriesContext context, AzureDevOpsProject project, AzureDevOpsRepository repo, DirectoryPath repositoriesDirectory)
+    private async Task<AzureDevOpsRepository> ProcessRepository(InventoryRepositoriesContext context, AzureDevOpsProject project, AzureDevOpsRepository sourceRepo)
     {
-        using (logger.BeginScope(new { Repository = repo.Id }))
+        using (logger.BeginScope(new { Repository = sourceRepo.Id }))
         {
-            logger.LogInformation(" - Repository: {RepoName}", repo.Name);
+            logger.LogInformation("Project: {ProjectName} - Repository: {RepoName}", project.Name, sourceRepo.Name);
 
-            if (!context.ShouldProcessRepoReadme(repo.Name))
-            {
-                logger.LogInformation("Excluded repository: {RepoName}", repo.Name);
-                return;
-            }
+            var shouldProcessRepoReadme = context.ShouldProcessRepoReadme(sourceRepo.Name);
 
-            var readmeContent = string.Empty;
-            var repoOutputDirectory = repositoriesDirectory.Combine(repo.Name);
-            var (Exists, Length) = ((await context.InvokeDevOpsClient((client, settings) =>
-                client.GetRepositoryReadme(settings.DevOpsOrg, project.Id, repo.Id)))
-                ?.ReplaceLineEndings("\n")) is string c && c.Length > 0
-                ? (true, (readmeContent = c).Length)
-                : (false, 0);
-
-            await repositoryMarkdownService.WriteIndex(
-                repoOutputDirectory,
-                repo with
-                {
-                    ReadmeContent = readmeContent,
-                    Children = await context.InvokeDevOpsClient((client, settings) =>
-                    client.GetBranchesAsync(settings.DevOpsOrg, project.Id, repo.Id)),
-                    Tags = await context.InvokeDevOpsClient(
-                            async (client, settings) =>
-                                    await client.EnumerateTagsAsync(settings.DevOpsOrg, project.Id, repo.Id)
-                                        .SelectAwait(async tag => tag with
-                                        {
-                                            Message = $"*{(await client.GetAnnotatedTagsAsync(settings.DevOpsOrg, project.Id, repo.Id, tag.ObjectId))
-                                                        .FirstOrDefault()?.Message}*"
-                                        }
+            var repo = await context.InvokeDevOpsClient(
+                        async (client, settings) =>
+                            sourceRepo with
+                            {
+                                ReadmeContent = shouldProcessRepoReadme
+                                                    ? await client.GetRepositoryReadme(settings.DevOpsOrg, project.Id, sourceRepo.Id)
+                                                    : "> ℹ️ Readme excluded",
+                                Children = await client.GetBranchesAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id),
+                                Tags = await client.EnumerateTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
+                                        .SelectAwait(
+                                            async tag => tag with
+                                                           {
+                                                               Message = (await client.GetAnnotatedTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id, tag.ObjectId))
+                                                                            .Select(aTag => $"*{aTag.Message}*")
+                                                                            .FirstOrDefault()
+                                                           }
                                         )
                                         .ToArrayAsync()
-                    )
-                }
+                            }
+                    );
+
+            await repositoryMarkdownService.WriteIndex(
+                context.OutputDirectory.Combine(repo.Name),
+                repo
             );
 
-            logger.LogInformation("Markdown index created for repository: {RepoName}", repo.Name);
+            logger.LogInformation("Project: {ProjectName} - Repository: {RepoName} - Markdown index created.", project.Name, repo.Name);
 
-            logger.LogInformation(
-                "README Exists: {Exists}, Length: {Length} characters",
-                Exists,
-                Length
-            );
+            if (shouldProcessRepoReadme)
+            {
+
+                var (Exists, Length) =  repo.ReadmeContent?.ReplaceLineEndings("\n").Length is int length
+                                        &&
+                                        length > 0
+                    ? (true, length)
+                    : (false, 0);
+
+                logger.LogInformation(
+                    "Project: {ProjectName} - Repository: {RepoName} - README Exists: {Exists}, Length: {Length} characters",
+                    project.Name,
+                    repo.Name,
+                    Exists,
+                    Length
+                );
+            }
+            else
+            {
+                logger.LogInformation(
+                    "Project: {ProjectName} - Repository: {RepoName} - README Excluded.",
+                    project.Name,
+                    repo.Name
+                );
+            }
+
+            return repo;
         }
     }
 }
