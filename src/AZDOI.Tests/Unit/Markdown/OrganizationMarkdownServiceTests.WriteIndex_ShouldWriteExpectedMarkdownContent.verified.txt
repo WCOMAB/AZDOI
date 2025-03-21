@@ -12,3 +12,14 @@ modified: 2000-01-01 00:00
 |----------------------------------|----------------------------------|
 | [MyProject](<MyProject>)         | MyProject Description            |
 
+```mermaid
+graph TD
+    Org_1(DevOps Organization)
+
+    %% MyProject project
+    subgraph Proj_1[MyProject]
+        subgraph Repos_1[Repositories]
+        end
+    end
+    Org_1 --> Proj_1
+```
