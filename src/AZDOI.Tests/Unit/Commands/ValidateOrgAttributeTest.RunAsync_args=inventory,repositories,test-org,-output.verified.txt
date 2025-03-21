@@ -537,7 +537,7 @@
                         Path: /output/test-org/Test Project/Repositories/Test Repository2/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 1554
+                        Length: 1596
                       }
                     ]
                   },
@@ -551,7 +551,7 @@
                         Path: /output/test-org/Test Project/Repositories/Test Repository3/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 1554
+                        Length: 1596
                       }
                     ]
                   },
@@ -565,7 +565,7 @@
                         Path: /output/test-org/Test Project/Repositories/Test Repository4/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 1554
+                        Length: 1596
                       }
                     ]
                   }
@@ -604,7 +604,7 @@
                     Path: /output/test-org/Test Project2/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 63
+                    Length: 90
                   }
                 ]
               }
@@ -614,7 +614,7 @@
                 Path: /output/test-org/Test Project2/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 679
+                Length: 706
               }
             ]
           },
@@ -633,7 +633,7 @@
                     Path: /output/test-org/Test Project3/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 63
+                    Length: 90
                   }
                 ]
               }
@@ -643,7 +643,7 @@
                 Path: /output/test-org/Test Project3/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 679
+                Length: 706
               }
             ]
           },
@@ -662,7 +662,7 @@
                     Path: /output/test-org/Test Project4/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 63
+                    Length: 90
                   }
                 ]
               }
@@ -672,7 +672,7 @@
                 Path: /output/test-org/Test Project4/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 679
+                Length: 706
               }
             ]
           }
@@ -682,7 +682,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 740
+            Length: 2153
           }
         ]
       }

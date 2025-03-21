@@ -17,7 +17,8 @@ public class TestMarkdownServiceTests
             new
             {
                 Content = result,
-                Equal = markdownContent == result
+                Equal = markdownContent == result,
+                FileExists = fileSystem.GetFile("/index.md").Exists
             }
             );
     }
