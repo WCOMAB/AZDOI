@@ -36,8 +36,6 @@ public partial class InventoryRepositoriesCommand
                                                     },
                                                     sourceProject
                                                 )
-                                                .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
-                                                .ToArrayAsync(ct)
                             };
 
                             await projectMarkdownService.WriteIndex(
