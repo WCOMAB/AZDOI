@@ -14,9 +14,9 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
 
         await WriteChildren(writer, organization.Children, "Project");
 
-        //var mermaid = organization.GenerateMermaidDiagram(); 
+        var mermaid = organization.GenerateMermaidDiagram();
 
-        //await writer.WriteLineAsync(mermaid);
+        await writer.WriteLineAsync(mermaid);
 
     }
 }
