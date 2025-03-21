@@ -116,7 +116,7 @@
                     Path: /output/test-entraid-org/Test Project/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 63
+                    Length: 90
                   }
                 ]
               }
@@ -126,7 +126,7 @@
                 Path: /output/test-entraid-org/Test Project/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 677
+                Length: 704
               }
             ]
           }

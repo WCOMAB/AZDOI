@@ -15,14 +15,24 @@ public abstract partial class MarkdownServiceBase<TValue>
     {
         await writer.WriteLineAsync($"{new string('#', headingLevel)} {title ?? column + "s"}");
         await writer.WriteLineAsync();
-        await (children.Length == 0
-        ? writer.WriteLineAsync($"> ℹ️ No {(title ?? column + "s").ToLowerInvariant()} found.")
-        : WriteTable(
+
+        if (children.Length == 0)
+        {
+            await writer.WriteLineAsync($"> ℹ️ No {(title ?? column + "s").ToLowerInvariant()} found.");
+            return;
+        }
+        await WriteTable(
             writer,
-            children.Select(child => new KeyValuePair<string, string>(
-                $"[{child.Name}](<{urlSelector?.Invoke(child) ?? child.ChildUrl}>)",
-                child.Description)).ToArray(),
+            children
+                .Select(child =>
+                    new KeyValuePair<string, string>(
+                        $"[{child.Name}](<{urlSelector?.Invoke(child) ?? child.ChildUrl}>)",
+                        child.Description
+                    )
+                )
+                .ToArray(),
             column,
-            description));
+            description
+        );
     }
 }
