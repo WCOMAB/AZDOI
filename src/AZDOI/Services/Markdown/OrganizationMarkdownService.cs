@@ -35,10 +35,10 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
             foreach (var repo in project.Children)
             {
                 var nodeId = $"Repo_{project.Id}_{repo.Id}";
-                var repoUrl = $"https://dev.azure.com/{organization.Id}/{project.Name}/_git/{repo.Name}";
+                var relativeUrl = $"{project.Name}/Repositories/{repo.Name}/";
 
                 await writer.WriteLineAsync($"            {nodeId}[{repo.Name}]");
-                await writer.WriteLineAsync($"            click {nodeId} href \"{repoUrl}\" \"{repo.Name}\"");
+                await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{repo.Name}\"");
             }
             await writer.WriteLineAsync("        end");
             await writer.WriteLineAsync("    end");
