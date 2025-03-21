@@ -2,28 +2,33 @@
 
 public partial class InventoryRepositoriesCommand
 {
-    private async IAsyncEnumerable<AzureDevOpsRepository> ProcessRepositories(InventoryRepositoriesContext context, AzureDevOpsProject project)
+    private async Task<AzureDevOpsRepository[]> ProcessRepositories(InventoryRepositoriesContext context, AzureDevOpsProject project)
     {
         logger.LogInformation("Project: {ProjectName}", project.Name);
 
         var repositoriesDirectory = context.OutputDirectory.Combine("Repositories");
 
-        var repositories = await context.InvokeDevOpsClient((client, settings) =>
-            client.GetRepositories(settings.DevOpsOrg, project.Id, settings.IncludeRepositories, settings.ExcludeRepositories));
+        var repositories = await context.InvokeDevOpsClient(
+                                async (client, settings) => await context.ForEachAsync(
+                                                        (
+                                                            await client.GetRepositories(settings.DevOpsOrg, project.Id, settings.IncludeRepositories, settings.ExcludeRepositories)
+                                                        ),
+                                                        (repo, ct) => ProcessRepository(
+                                                                            context with
+                                                                            {
+                                                                                OutputDirectory = repositoriesDirectory,
+                                                                            },
+                                                                            project,
+                                                                            repo
+                                                                        )
+                                                        )
+                                                        .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
+                                                        .ToArrayAsync()
+                            );
 
         await repositoriesMarkdownService.WriteIndex(repositoriesDirectory, repositories);
 
-        foreach (var repo in repositories)
-        {
-            yield return await ProcessRepository(
-                context with
-                {
-                    OutputDirectory = repositoriesDirectory,
-                },
-                project,
-                repo
-            );
-        }
+        return repositories;
     }
 
     private async Task<AzureDevOpsRepository> ProcessRepository(InventoryRepositoriesContext context, AzureDevOpsProject project, AzureDevOpsRepository sourceRepo)
