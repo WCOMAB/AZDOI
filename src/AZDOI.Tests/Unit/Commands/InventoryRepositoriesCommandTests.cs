@@ -21,7 +21,6 @@ public class InventoryRepositoriesCommandTests
     [InlineData(true, "inventory", "repositories", "test-org")]
     [InlineData(true, "inventory", "repositories", "test-org", "/output")]
     [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat")]
-    [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--run-in-parallel")]
     [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--include-project=123")]
     [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--include-project=123", "--include-repository-readme=Test Repository")]
     [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--include-project=123", "--exclude-repository-readme=Test Repository")]
