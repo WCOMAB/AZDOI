@@ -15,6 +15,12 @@ public abstract partial class MarkdownServiceBase<TValue>
     {
         await writer.WriteLineAsync($"{new string('#', headingLevel)} {title ?? column + "s"}");
         await writer.WriteLineAsync();
+
+        if (children.Length == 0)
+        {
+            await writer.WriteLineAsync($"> ℹ️ No {(title ?? column + "s").ToLowerInvariant()} found.");
+            return;
+        }
         await WriteTable(
             writer,
             children
