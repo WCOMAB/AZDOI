@@ -39,8 +39,8 @@ public static class InventoryRepositoriesContextExtensions
         {
             foreach (var v in source)
             {
-                await body(v, cancellationToken);
-                yield return v; // Yield the current item
+                
+                yield return await body(v, cancellationToken);
                 if (cancellationToken.IsCancellationRequested)
                 {
                     break;
@@ -71,8 +71,7 @@ public static class InventoryRepositoriesContextExtensions
         {
             await foreach (var v in source)
             {
-                await body(v, cancellationToken);
-                yield return v; // Yield the current item
+                yield return await body(v, cancellationToken);
                 if (cancellationToken.IsCancellationRequested)
                 {
                     break;
