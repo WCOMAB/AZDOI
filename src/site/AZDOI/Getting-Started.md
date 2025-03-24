@@ -121,7 +121,7 @@ The pipeline has a single step using the Azure CLI task that:
 
 The pipeline requires an Azure service connection named 'azure-devops-inventory-tool' with appropriate permissions to access Azure DevOps resources.
 
-### Azure DevOps Example Link
+### Azure Pipelines Example Link
 
 [https://dev.azure.com/AZDOI/_git/AZDOI](https://dev.azure.com/AZDOI/_git/AZDOI)
 
@@ -207,5 +207,5 @@ The workflow includes several steps that:
 
 The workflow requires Azure credentials stored as a GitHub secret named 'AZURE_CREDENTIALS' with appropriate permissions to access Azure DevOps resources.
 
-### GitHub Example Link
+### GitHub Actions Example Link
 [https://github.com/AZDOI/AZDOI](https://github.com/AZDOI/AZDOI)
