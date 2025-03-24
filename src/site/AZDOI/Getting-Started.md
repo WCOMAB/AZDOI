@@ -121,6 +121,10 @@ The pipeline has a single step using the Azure CLI task that:
 
 The pipeline requires an Azure service connection named 'azure-devops-inventory-tool' with appropriate permissions to access Azure DevOps resources.
 
+### Azure Pipelines Example Link
+
+[https://dev.azure.com/AZDOI/_git/AZDOI](https://dev.azure.com/AZDOI/_git/AZDOI)
+
 ## GitHub Actions
 
 Below is a GitHub Actions workflow that accomplishes the same goals as the Azure Pipeline mentioned. This workflow runs daily, generates an inventory of Azure DevOps repositories using Entra ID authentication, and uploads the results as artifacts.
@@ -202,3 +206,6 @@ The workflow includes several steps that:
 5. Uploads the generated documentation as a GitHub artifact named 'AzureDevOpsInventory'
 
 The workflow requires Azure credentials stored as a GitHub secret named 'AZURE_CREDENTIALS' with appropriate permissions to access Azure DevOps resources.
+
+### GitHub Actions Example Link
+[https://github.com/AZDOI/AZDOI](https://github.com/AZDOI/AZDOI)
