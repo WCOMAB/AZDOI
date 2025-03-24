@@ -31,7 +31,7 @@ stages:
         SharedKey: $(DPI.Key)
       postBuildScript:
         displayName: "AZDOI Integration tests"
-        azureSubscription: "AZDOI Integration Tests"
+        azureSubscription: "azure-devops-inventory-tool"
         scriptType: pscore
         targetType: inline
         script: |
