@@ -48,7 +48,8 @@ public static partial class ServiceProviderFixture
 
     static partial void InitServiceProvider(IServiceCollection services)
     {
-        var logger = new FakeLogger<InventoryRepositoriesCommand>();
+        var repoLogger = new FakeLogger<InventoryRepositoriesCommand>();
+        var pipelinesLogger = new FakeLogger<InventoryPipelinesCommand>();
 
         services
             .AddCakeFakes()
@@ -60,10 +61,16 @@ public static partial class ServiceProviderFixture
             .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>());
 
         services
-            .AddSingleton(logger)
+            .AddSingleton(repoLogger)
             .AddSingleton<ILogger<InventoryRepositoriesCommand>>(
                provider => provider.GetRequiredService<FakeLogger<InventoryRepositoriesCommand>>()
             );
+
+        services
+        .AddSingleton(pipelinesLogger)
+        .AddSingleton<ILogger<InventoryPipelinesCommand>>(
+            provider => provider.GetRequiredService<FakeLogger<InventoryPipelinesCommand>>()
+        );
 
         services
                 .AddCommandApp(new TestConsole());

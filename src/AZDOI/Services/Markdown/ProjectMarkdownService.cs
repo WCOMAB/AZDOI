@@ -23,12 +23,34 @@ public class ProjectMarkdownService(ICakeContext cakeContext, TimeProvider timeP
             ]
             );
 
-        await WriteChildren(
-            writer,
-            project.Children,
-            "Repository",
-            "Repositories",
-            urlSelector: child => $"Repositories/{child.Name}"
-        );
+        if (project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Repositories))
+        {
+            await WriteChildren(
+                writer,
+                project.Children,
+                "Repository",
+                "Repositories",
+                urlSelector: child => $"Repositories/{child.Name}"
+            );
+        }
+
+        if (project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Pipelines))
+        {
+            await writer.WriteLineAsync(
+              $$"""
+
+                ## Build
+
+                """
+            );
+
+            await WriteChildren(
+                writer,
+                project.Pipelines,
+                "Pipeline",
+                "Pipelines",
+                urlSelector: pipeline => $"Build/Pipelines/{pipeline.Name}"
+                );
+        }
     }
 }

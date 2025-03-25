@@ -11,6 +11,6 @@ public class RepositoriesMarkdownService(ICakeContext cakeContext, TimeProvider 
            "Repository",
            "Repositories",
            headingLevel: 1
-       );
+        );
     }
 }

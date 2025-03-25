@@ -1,0 +1,31 @@
+﻿---
+title: DevOps Project
+summary: DevOps Project Description
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# DevOps Project
+
+## Project Details
+
+|                                  |                                  |
+|----------------------------------|----------------------------------|
+| Name                             | DevOps Project                   |
+| Description                      | DevOps Project Description       |
+| Id                               | 1                                |
+
+## Repositories
+
+| Repository                                                       | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyRepository](<Repositories/MyRepository>)                      | MyRepository Description         |
+
+
+## Build
+
+## Pipelines
+
+| Pipeline                                                         | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyPipeline](<Build/Pipelines/MyPipeline>)                       | MyPipeline                       |
+

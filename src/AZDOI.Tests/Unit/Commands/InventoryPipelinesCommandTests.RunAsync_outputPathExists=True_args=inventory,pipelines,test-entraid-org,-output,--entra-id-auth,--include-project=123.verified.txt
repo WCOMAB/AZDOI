@@ -1,0 +1,161 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput: ,
+  LogOutput: [
+    {
+      Information: Executing Inventory Pipelines Command...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Executing Inventory Pipelines Command...
+        }
+      ]
+    },
+    {
+      Information: Cleaning directory /output/test-entraid-org...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-entraid-org
+        },
+        {
+          {OriginalFormat}: Cleaning directory {TargetPath}...
+        }
+      ]
+    },
+    {
+      Information: Done cleaning directory /output/test-entraid-org.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-entraid-org
+        },
+        {
+          {OriginalFormat}: Done cleaning directory {TargetPath}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Done executing Inventory Pipelines,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Done executing Inventory Pipelines
+        }
+      ]
+    },
+    {
+      Information: Processed inventory in 00:00:00.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          Elapsed: 00:00:00
+        },
+        {
+          {OriginalFormat}: Processed inventory in {Elapsed}.
+        }
+      ]
+    }
+  ],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-entraid-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-entraid-org/Test Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-entraid-org/Test Project/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-entraid-org/Test Project/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-entraid-org/Test Project/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 84
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-entraid-org/Test Project/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 159
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-entraid-org/Test Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 706
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-entraid-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 724
+          }
+        ]
+      }
+    ],
+    Files: []
+  }
+}

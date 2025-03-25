@@ -1,0 +1,22 @@
+﻿[
+  {
+    Id: 123,
+    Name: Test Pipeline,
+    Url: https://dev.azure.com/test-org/_apis/Pipelines/123
+  },
+  {
+    Id: 321,
+    Name: Test Pipeline2,
+    Url: https://dev.azure.com/test-org/_apis/Pipelines/321
+  },
+  {
+    Id: 999,
+    Name: Test Pipeline3,
+    Url: https://dev.azure.com/test-org/_apis/Pipelines/999
+  },
+  {
+    Id: 888,
+    Name: Test Pipeline4,
+    Url: https://dev.azure.com/test-org/_apis/Pipelines/888
+  }
+]

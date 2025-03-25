@@ -1,0 +1,11 @@
+﻿---
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# Pipelines
+
+| Pipeline                                                         | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyPipeline.One](<MyPipeline.One>)                               | MyPipeline.One                   |
+| [MyPipeline.Two](<MyPipeline.Two>)                               | MyPipeline.Two                   |
+

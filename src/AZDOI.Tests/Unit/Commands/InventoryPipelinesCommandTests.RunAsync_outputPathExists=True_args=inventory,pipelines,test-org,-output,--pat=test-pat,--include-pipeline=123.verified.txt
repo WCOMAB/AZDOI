@@ -1,0 +1,479 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput: ,
+  LogOutput: [
+    {
+      Information: Executing Inventory Pipelines Command...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Executing Inventory Pipelines Command...
+        }
+      ]
+    },
+    {
+      Information: Cleaning directory /output/test-org...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-org
+        },
+        {
+          {OriginalFormat}: Cleaning directory {TargetPath}...
+        }
+      ]
+    },
+    {
+      Information: Done cleaning directory /output/test-org.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-org
+        },
+        {
+          {OriginalFormat}: Done cleaning directory {TargetPath}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project2,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 321
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project2
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project2,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 321
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project2
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project3,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project3
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project3,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project3
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project4,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project4,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project4
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Done executing Inventory Pipelines,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Done executing Inventory Pipelines
+        }
+      ]
+    },
+    {
+      Information: Processed inventory in 00:00:00.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          Elapsed: 00:00:00
+        },
+        {
+          {OriginalFormat}: Processed inventory in {Elapsed}.
+        }
+      ]
+    }
+  ],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-org/Test Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test Project/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test Project/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 758
+                          }
+                        ]
+                      }
+                    ],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 273
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 444
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 991
+              }
+            ]
+          },
+          {
+            Path: /output/test-org/Test Project2,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test Project2/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test Project2/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project2/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 84
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project2/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 160
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test Project2/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 708
+              }
+            ]
+          },
+          {
+            Path: /output/test-org/Test Project3,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test Project3/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test Project3/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project3/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 84
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project3/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 160
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test Project3/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 708
+              }
+            ]
+          },
+          {
+            Path: /output/test-org/Test Project4,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test Project4/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test Project4/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project4/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 84
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project4/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 160
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test Project4/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 708
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 1588
+          }
+        ]
+      }
+    ],
+    Files: []
+  }
+}

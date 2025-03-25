@@ -1,0 +1,15 @@
+﻿---
+title: Project
+summary: Project
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+## Build
+
+## Pipelines
+
+| Pipeline                                                         | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyPipeline.One](<Pipelines/MyPipeline.One>)                     | MyPipeline.One                   |
+| [MyPipeline.Two](<Pipelines/MyPipeline.Two>)                     | MyPipeline.Two                   |
+

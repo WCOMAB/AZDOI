@@ -3,18 +3,19 @@ using AZDOI.Services.Markdown;
 
 namespace AZDOI.Commands;
 
-public partial class InventoryRepositoriesCommand(
+public partial class InventoryPipelinesCommand(
     ICakeContext cakeContext,
     AzureDevOpsClientHandler clientHandler,
     OrganizationMarkdownService organizationMarkdownService,
     ProjectMarkdownService projectMarkdownService,
-    RepositoriesMarkdownService repositoriesMarkdownService,
-    RepositoryMarkdownService repositoryMarkdownService,
+    PipelineMarkdownService pipelineMarkdownService,
+    PipelinesMarkdownService pipelinesMarkdownService,
+    BuildsMarkdownService buildsMarkdownService,
     StopwatchProvider stopwatchProvider,
-    ILogger<InventoryRepositoriesCommand> logger)
-    : AsyncCommand<AZDOIRepositorySettings>
+    ILogger<InventoryPipelinesCommand> logger)
+    : AsyncCommand<AZDOIPipelinesSettings>
 {
-    public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOIRepositorySettings settings)
+    public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOIPipelinesSettings settings)
     {
         stopwatchProvider.Start();
 
@@ -28,12 +29,12 @@ public partial class InventoryRepositoriesCommand(
                 clientHandler
             );
 
-            logger.LogInformation("Executing Inventory Repositories Command...");
-            return await ProcessProjects(context);
+            logger.LogInformation("Executing Inventory Pipelines Command...");
+            return await ProcessProjectsPipeline(context);
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Failure during executing Inventory Repositories Command.");
+            logger.LogError(ex, "Failure during executing Inventory Pipelines Command.");
             return 1;
         }
         finally
