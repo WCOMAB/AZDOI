@@ -1,0 +1,58 @@
+﻿[
+  {
+    Id: 123,
+    Name: Test Pipeline,
+    Folder: \,
+    Revision: 3,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/pipelines/123?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=123
+      }
+    }
+  },
+  {
+    Id: 321,
+    Name: Test Pipeline2,
+    Folder: \,
+    Revision: 6,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/pipelines/321?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=321
+      }
+    }
+  },
+  {
+    Id: 999,
+    Name: Test Pipeline3,
+    Folder: \,
+    Revision: 9,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/pipelines/999?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=999
+      }
+    }
+  },
+  {
+    Id: 888,
+    Name: Test Pipeline4,
+    Folder: \,
+    Revision: 12,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/pipelines/888?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=888
+      }
+    }
+  }
+]

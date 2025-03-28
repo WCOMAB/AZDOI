@@ -12,9 +12,9 @@ public partial class InventoryRepositoriesCommand(
     RepositoryMarkdownService repositoryMarkdownService,
     StopwatchProvider stopwatchProvider,
     ILogger<InventoryRepositoriesCommand> logger)
-    : AsyncCommand<AZDOISettings>
+    : AsyncCommand<AZDOIRepositorySettings>
 {
-    public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOISettings settings)
+    public override async Task<int> ExecuteAsync(CommandContext cmdContext, AZDOIRepositorySettings settings)
     {
         stopwatchProvider.Start();
 

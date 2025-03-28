@@ -6,6 +6,7 @@ USAGE:
 
 EXAMPLES:
     AZDOI inventory repositories
+    AZDOI inventory pipelines
 
 OPTIONS:
     -h, --help       Prints help information   

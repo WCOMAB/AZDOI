@@ -575,7 +575,7 @@
                     Path: /output/test-org/Test Project/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 873
+                    Length: 926
                   }
                 ]
               }
@@ -604,7 +604,7 @@
                     Path: /output/test-org/Test Project2/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }
@@ -633,7 +633,7 @@
                     Path: /output/test-org/Test Project3/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }
@@ -662,7 +662,7 @@
                     Path: /output/test-org/Test Project4/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }

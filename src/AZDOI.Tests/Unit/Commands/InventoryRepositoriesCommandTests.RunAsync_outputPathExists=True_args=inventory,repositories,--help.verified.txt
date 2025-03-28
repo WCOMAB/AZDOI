@@ -1,0 +1,42 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput:
+DESCRIPTION:
+Example get repositories command.
+
+USAGE:
+    AZDOI inventory repositories <devopsorg> <outputpath> [OPTIONS]
+
+EXAMPLES:
+    AZDOI inventory repositories
+
+ARGUMENTS:
+    <devopsorg>     Azure DevOps organization name               
+    <outputpath>    Target directory for generated markdown files
+
+OPTIONS:
+    -h, --help                         Prints help information                  
+        --pat                          Personal Access Token for Azure Devops   
+                                       Autentication                            
+        --entra-id-auth                Use Entra Id for Azure Devops            
+                                       Autentication                            
+        --azure-tenant-id              Entra Azure Tenant Id for Azure Devops   
+                                       Autentication                            
+        --run-in-parallel              Flag for if generation should be         
+                                       parallelized                             
+        --include-project              Include specific projects                
+        --exclude-project              Exclude specific projects                
+        --include-repository           Include specific repositories            
+        --exclude-repository           Exclude specific repositories            
+        --include-repository-readme    Include specific repository README       
+        --exclude-repository-readme    Exclude specific repository README       
+,
+  LogOutput: [],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [],
+    Files: []
+  }
+}

@@ -473,7 +473,7 @@
                     Path: /output/test-org/Test Project/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 873
+                    Length: 926
                   }
                 ]
               }

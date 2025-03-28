@@ -24,6 +24,24 @@ public class AzureDevOpsClientTests
             await Verify(result);
         }
     }
+    
+    public class FilterPipelines
+    {
+        [Theory]
+        [InlineData("test-org", "123")]
+        public async Task GetPipelines(string organization, string project)
+        {
+            // Given
+            var azureDevOpsClient = ServiceProviderFixture
+                                        .GetRequiredService<AzureDevOpsClient>(services => services.AuthorizedClient());
+
+            // When
+            var result = await azureDevOpsClient.GetPipelines(organization, project);
+
+            // Then
+            await Verify(result);
+        }
+    }
 
     public class FilterRepositories
     {

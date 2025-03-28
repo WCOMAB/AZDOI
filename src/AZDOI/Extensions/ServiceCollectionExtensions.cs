@@ -99,7 +99,10 @@ public static class ServiceCollectionExtensions
             .AddSingleton<ProjectMarkdownService>()
             .AddSingleton<OrganizationMarkdownService>()
             .AddSingleton<RepositoriesMarkdownService>()
-            .AddSingleton<RepositoryMarkdownService>();
+            .AddSingleton<RepositoryMarkdownService>()
+            .AddSingleton<PipelineMarkdownService>()
+            .AddSingleton<PipelinesMarkdownService>()
+            .AddSingleton<BuildsMarkdownService>();
 
         return services;
     }
