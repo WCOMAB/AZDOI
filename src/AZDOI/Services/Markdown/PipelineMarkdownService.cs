@@ -19,7 +19,7 @@ public class PipelineMarkdownService(ICakeContext cakeContext, TimeProvider time
             [
                 GetKeyValue(pipeline.Id),
                 GetKeyValue(pipeline.Name),
-                GetKeyValue(pipeline.Url),
+                GetKeyValue(pipeline.WebUrl),
             ]
         );
     }

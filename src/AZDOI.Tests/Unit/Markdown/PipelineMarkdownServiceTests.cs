@@ -14,7 +14,10 @@ public class PipelineMarkdownServiceTests
             {
                 Id = 1,
                 Name = "DevOps Pipeline",
-                Url = "https://mypipeline.com",
+                Links = new(
+                            new("https://mypipeline.com"),
+                            new("https://mypipeline.com")
+                            )
             };
         
         // When

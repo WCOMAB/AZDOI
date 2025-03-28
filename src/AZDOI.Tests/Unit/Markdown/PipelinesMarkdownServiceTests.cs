@@ -10,18 +10,24 @@ public class PipelinesMarkdownServiceTests
         .GetRequiredService<FakeFileSystem, PipelinesMarkdownService>();
 
         AzureDevOpsPipeline[] pipelines = [
-        new AzureDevOpsPipeline
-        {
-            Id = 1,
-            Name = "MyPipeline.One",
-            Url = "https://mypipeline.com"
-        },
-        new AzureDevOpsPipeline
-        {
-            Id = 2,
-            Name = "MyPipeline.Two",
-            Url = "https://mypipeline.com"
-        },
+            new AzureDevOpsPipeline
+            {
+                Id = 1,
+                Name = "MyPipeline.One",
+                Links = new(
+                            new("https://mypipeline.com"),
+                            new("https://mypipeline.com")
+                            )
+            },
+            new AzureDevOpsPipeline
+            {
+                Id = 2,
+                Name = "MyPipeline.Two",
+                Links = new(
+                            new("https://mypipeline.com"),
+                            new("https://mypipeline.com")
+                            )
+            },
         ];
 
         //When

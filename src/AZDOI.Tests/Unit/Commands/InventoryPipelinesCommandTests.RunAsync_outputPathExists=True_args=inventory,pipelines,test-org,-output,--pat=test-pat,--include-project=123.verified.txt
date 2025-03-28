@@ -402,7 +402,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 758
+                            Length: 960
                           }
                         ]
                       },
@@ -416,7 +416,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline2/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       },
@@ -430,7 +430,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline3/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       },
@@ -444,7 +444,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline4/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       }
@@ -454,7 +454,7 @@
                         Path: /output/test-org/Test Project/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 678
+                        Length: 731
                       }
                     ]
                   }
@@ -464,7 +464,7 @@
                     Path: /output/test-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 753
+                    Length: 727
                   }
                 ]
               }

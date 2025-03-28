@@ -121,7 +121,7 @@
                         Path: /output/test-entraid-org/Test Project/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 84
+                        Length: 137
                       }
                     ]
                   }
@@ -131,7 +131,7 @@
                     Path: /output/test-entraid-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 159
+                    Length: 133
                   }
                 ]
               }

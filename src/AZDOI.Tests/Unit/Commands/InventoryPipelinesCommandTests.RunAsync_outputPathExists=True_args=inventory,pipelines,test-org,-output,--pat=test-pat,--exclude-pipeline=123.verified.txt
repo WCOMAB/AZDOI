@@ -435,7 +435,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline2/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       },
@@ -449,7 +449,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline3/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       },
@@ -463,7 +463,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline4/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 759
+                            Length: 963
                           }
                         ]
                       }
@@ -473,7 +473,7 @@
                         Path: /output/test-org/Test Project/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 575
+                        Length: 628
                       }
                     ]
                   }
@@ -483,7 +483,7 @@
                     Path: /output/test-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 650
+                    Length: 624
                   }
                 ]
               }
@@ -517,7 +517,7 @@
                         Path: /output/test-org/Test Project2/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 84
+                        Length: 137
                       }
                     ]
                   }
@@ -527,7 +527,7 @@
                     Path: /output/test-org/Test Project2/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 160
+                    Length: 133
                   }
                 ]
               }
@@ -561,7 +561,7 @@
                         Path: /output/test-org/Test Project3/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 84
+                        Length: 137
                       }
                     ]
                   }
@@ -571,7 +571,7 @@
                     Path: /output/test-org/Test Project3/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 160
+                    Length: 133
                   }
                 ]
               }
@@ -605,7 +605,7 @@
                         Path: /output/test-org/Test Project4/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 84
+                        Length: 137
                       }
                     ]
                   }
@@ -615,7 +615,7 @@
                     Path: /output/test-org/Test Project4/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 160
+                    Length: 133
                   }
                 ]
               }

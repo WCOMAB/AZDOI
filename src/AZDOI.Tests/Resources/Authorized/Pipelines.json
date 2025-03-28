@@ -1,24 +1,56 @@
 {
     "value": [
-        {
-            "id": "123",
-            "name": "Test Pipeline",
-            "url": "https://dev.azure.com/test-org/_apis/Pipelines/123"
+      {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/test-org/_apis/pipelines/123?revision=1"
+          },
+          "web": {
+            "href": "https://dev.azure.com/test-org/_build/definition?definitionId=123"
+          }
         },
-        {
-            "id": "321",
-            "name": "Test Pipeline2",
-            "url": "https://dev.azure.com/test-org/_apis/Pipelines/321"
+        "id": "123",
+        "name": "Test Pipeline",
+        "url": "https://dev.azure.com/test-org/_apis/Pipelines/123"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/test-org/_apis/pipelines/321?revision=1"
+          },
+          "web": {
+            "href": "https://dev.azure.com/test-org/_build/definition?definitionId=321"
+          }
         },
-        {
-            "id": "999",
-            "name": "Test Pipeline3",
-            "url": "https://dev.azure.com/test-org/_apis/Pipelines/999"
+        "id": "321",
+        "name": "Test Pipeline2",
+        "url": "https://dev.azure.com/test-org/_apis/Pipelines/321"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/test-org/_apis/pipelines/999?revision=1"
+          },
+          "web": {
+            "href": "https://dev.azure.com/test-org/_build/definition?definitionId=999"
+          }
         },
-        {
-            "id": "888",
-            "name": "Test Pipeline4",
-            "url": "https://dev.azure.com/test-org/_apis/Pipelines/888"
-        }
+        "id": "999",
+        "name": "Test Pipeline3",
+        "url": "https://dev.azure.com/test-org/_apis/Pipelines/999"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/test-org/_apis/pipelines/888?revision=1"
+          },
+          "web": {
+            "href": "https://dev.azure.com/test-org/_build/definition?definitionId=888"
+          }
+        },
+        "id": "888",
+        "name": "Test Pipeline4",
+        "url": "https://dev.azure.com/test-org/_apis/Pipelines/888"
+      }
     ]
 }

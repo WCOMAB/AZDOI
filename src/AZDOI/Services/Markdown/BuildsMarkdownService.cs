@@ -3,6 +3,9 @@
 public class BuildsMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsProject>(cakeContext, timeProvider)
 {
+    protected override string? Title => "Build";
+    protected override string? Summary => "Azure DevOps Builds";
+
     protected override async Task WriteIndex(FileTextWriter writer, AzureDevOpsProject project)
     {
         await writer.WriteLineAsync(

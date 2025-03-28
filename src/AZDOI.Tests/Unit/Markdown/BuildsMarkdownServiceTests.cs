@@ -20,13 +20,19 @@ public class BuildsMarkdownServiceTests
                     {
                         Id = 1, 
                         Name = "MyPipeline.One", 
-                        Url = "https://myproject.com" 
+                        Links = new (
+                            new ("https://myproject.com"),
+                            new ("https://myproject.com")
+                            )
                     },
                     new AzureDevOpsPipeline 
                     { 
                         Id = 2, 
                         Name = "MyPipeline.Two", 
-                        Url = "https://myproject.com" 
+                        Links = new (
+                            new ("https://myproject.com"),
+                            new ("https://myproject.com")
+                            )
                     }
                 ]
             };

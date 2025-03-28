@@ -1,4 +1,6 @@
 ﻿---
+title: DevOps Pipeline
+summary: DevOps Pipeline
 modifiedby: AZDOI
 modified: 2000-01-01 00:00
 ---
@@ -10,5 +12,5 @@ modified: 2000-01-01 00:00
 |----------------------------------|------------------------------------------------------------------|
 | Id                               | 1                                                                |
 | Name                             | DevOps Pipeline                                                  |
-| Url                              | [mypipeline.com](https://mypipeline.com)                         |
+| WebUrl                           | [mypipeline.com](https://mypipeline.com)                         |
 
