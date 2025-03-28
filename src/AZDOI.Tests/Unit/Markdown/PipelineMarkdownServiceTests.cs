@@ -14,6 +14,8 @@ public class PipelineMarkdownServiceTests
             {
                 Id = 1,
                 Name = "DevOps Pipeline",
+                Folder = "\\",
+                Revision = 3,
                 Links = new(
                             new("https://mypipeline.com"),
                             new("https://mypipeline.com")

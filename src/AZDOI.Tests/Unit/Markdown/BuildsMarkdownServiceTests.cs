@@ -19,7 +19,9 @@ public class BuildsMarkdownServiceTests
                     new AzureDevOpsPipeline 
                     {
                         Id = 1, 
-                        Name = "MyPipeline.One", 
+                        Name = "MyPipeline.One",
+                        Folder = "\\",
+                        Revision = 3,
                         Links = new (
                             new ("https://myproject.com"),
                             new ("https://myproject.com")
@@ -28,7 +30,9 @@ public class BuildsMarkdownServiceTests
                     new AzureDevOpsPipeline 
                     { 
                         Id = 2, 
-                        Name = "MyPipeline.Two", 
+                        Name = "MyPipeline.Two",
+                        Folder = "\\",
+                        Revision = 6,
                         Links = new (
                             new ("https://myproject.com"),
                             new ("https://myproject.com")

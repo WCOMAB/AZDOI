@@ -5,6 +5,8 @@ public record AzureDevOpsPipeline : IAzureDevOpsBase
     public required int Id { get; init; }
     public required string Name { get; init; }
     internal string WebUrl => Links.Web.Href;
+    public required string Folder { get; init; }
+    public required int Revision { get; init; }
 
     [JsonPropertyName("_links")]
     public required AzureDevOpsLinks Links { get; init; }

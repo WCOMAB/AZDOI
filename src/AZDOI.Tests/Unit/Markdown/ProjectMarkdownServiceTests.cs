@@ -25,6 +25,8 @@ public class ProjectMarkdownServiceTests
                     new AzureDevOpsPipeline {
                         Id = 1,
                         Name = "MyPipeline",
+                        Folder = "\\",
+                        Revision = 3,
                         Links = new(
                                     new("https://myproject.com/build/MyPipeline"),
                                     new("https://myproject.com/build/MyPipeline")

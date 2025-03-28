@@ -14,6 +14,8 @@ public class PipelinesMarkdownServiceTests
             {
                 Id = 1,
                 Name = "MyPipeline.One",
+                Folder = "\\",
+                Revision = 3,
                 Links = new(
                             new("https://mypipeline.com"),
                             new("https://mypipeline.com")
@@ -23,6 +25,8 @@ public class PipelinesMarkdownServiceTests
             {
                 Id = 2,
                 Name = "MyPipeline.Two",
+                Folder = "\\",
+                Revision = 6,
                 Links = new(
                             new("https://mypipeline.com"),
                             new("https://mypipeline.com")

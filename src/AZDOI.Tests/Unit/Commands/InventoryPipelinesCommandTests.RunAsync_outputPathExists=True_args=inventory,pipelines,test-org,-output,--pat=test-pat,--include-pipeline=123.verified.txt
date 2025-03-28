@@ -297,7 +297,7 @@
                             Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
                             Exists: true,
                             Hidden: false,
-                            Length: 960
+                            Length: 1294
                           }
                         ]
                       }
