@@ -166,5 +166,29 @@
                 "Basic YWRvOnRlc3QtcGF0"
             ]
         }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://dev.azure.com/test-org/123/_apis/pipelines?api-version=7.1"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Pipelines.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
     }
 ]

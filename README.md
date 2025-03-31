@@ -71,13 +71,43 @@ AZDOI uses the following environment variables for configuration:
 | `--pat`                        | Personal Access Token for authentication    | Environment variable: `AZDOI_PAT`               |
 | `--entra-id-auth`              | Use Entra Id for Azure Devops Autentication | False                                           |
 | `--azure-tenant-id`            | Entra Azure Tenant ID for authentication    | Environment variable: `AZURE_TENANT_ID`         |
+| `--run-in-parallel`            | Enable parallel processing of projects      | False                                           |
 | `--include-project`            | Include specific projects                   |                                                 |
 | `--exclude-project`            | Exclude specific projects                   |                                                 |
 | `--include-repository`         | Include specific repositories               |                                                 |
 | `--exclude-repository`         | Exclude specific repositories               |                                                 |
 | `--include-repository-readme`  | Include specific repository README          |                                                 |
 | `--exclude-repository-readme`  | Exclude specific repository README          |                                                 |
+
+### Inventory pipelines
+
+#### Usage
+
+```bash
+azdoi inventory pipelines <devopsorg> <outputpath> [OPTIONS]
+```
+
+#### Example
+
+```bash
+azdoi inventory pipelines MyOrg /path/to/output
+```
+
+### Parameters
+
+AZDOI uses the following environment variables for configuration:
+
+| Parameter                      | Description                                 | Default Value                                   |
+|--------------------------------|---------------------------------------------|-------------------------------------------------|
+| `--help`                       | Used to get help with parameters            |                                                 |
+| `--pat`                        | Personal Access Token for authentication    | Environment variable: `AZDOI_PAT`               |
+| `--entra-id-auth`              | Use Entra Id for Azure Devops Autentication | False                                           |
+| `--azure-tenant-id`            | Entra Azure Tenant ID for authentication    | Environment variable: `AZURE_TENANT_ID`         |
 | `--run-in-parallel`            | Enable parallel processing of projects      | False                                           |
+| `--include-project`            | Include specific projects                   |                                                 |
+| `--exclude-project`            | Exclude specific projects                   |                                                 |
+| `--include-pipeline`           | Include specific pipeline                   |                                                 |
+| `--exclude-pipeline`           | Exclude specific pipeline                   |                                                 |
 
 ## Setting environment variables
 
@@ -86,7 +116,6 @@ To set environment variables, use:
 Windows (PowerShell)
 
 ```powershell
-
 $env:AZDOI_PAT = "your_token_here"
 $env:AZURE_TENANT_ID = "your_tenant_id_here"
 ```

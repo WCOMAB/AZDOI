@@ -21,6 +21,10 @@ public partial class Program
                 branch.AddCommand<InventoryRepositoriesCommand>("repositories")
                                     .WithDescription("Example get repositories command.")
                                     .WithExample(["inventory", "repositories"]);
+
+                branch.AddCommand<InventoryPipelinesCommand>("pipelines")
+                                    .WithDescription("Example get pipelines command.")
+                                    .WithExample(["inventory", "pipelines"]);
             }
         );
     }

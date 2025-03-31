@@ -19,6 +19,7 @@
 	<ItemGroup>
 		<None Remove="Resources\Authorized\AnnotatedTags.json" />
 		<None Remove="Resources\Authorized\Branches.json" />
+		<None Remove="Resources\Authorized\Pipelines.json" />
 		<None Remove="Resources\Authorized\Projects.json" />
 		<None Remove="Resources\Authorized\README.md" />
 		<None Remove="Resources\Authorized\Repositories.json" />
@@ -31,6 +32,7 @@
 	<ItemGroup>
 		<EmbeddedResource Include="Resources\Authorized\AnnotatedTags.json" />
 		<EmbeddedResource Include="Resources\Authorized\Branches.json" />
+		<EmbeddedResource Include="Resources\Authorized\Pipelines.json" />
 		<EmbeddedResource Include="Resources\Authorized\Projects.json" />
 		<EmbeddedResource Include="Resources\Authorized\README.md" />
 		<EmbeddedResource Include="Resources\Authorized\Repositories.json" />

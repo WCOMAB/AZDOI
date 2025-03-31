@@ -1,0 +1,494 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput: ,
+  LogOutput: [
+    {
+      Information: Executing Inventory Pipelines Command...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Executing Inventory Pipelines Command...
+        }
+      ]
+    },
+    {
+      Information: Cleaning directory /output/test-org...,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-org
+        },
+        {
+          {OriginalFormat}: Cleaning directory {TargetPath}...
+        }
+      ]
+    },
+    {
+      Information: Done cleaning directory /output/test-org.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          TargetPath: /output/test-org
+        },
+        {
+          {OriginalFormat}: Done cleaning directory {TargetPath}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline2,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 321
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline2
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline2 - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 321
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline2
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline2.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 321
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline2
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline3,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline3
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline3 - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline3
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline3.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline3
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline4,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline4 - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Pipeline: Test Pipeline4.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Pipeline: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          PipelineName: Test Pipeline4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
+        }
+      ]
+    },
+    {
+      Information: Markdown index created for project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Markdown index created for project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Done executing Inventory Pipelines,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          {OriginalFormat}: Done executing Inventory Pipelines
+        }
+      ]
+    },
+    {
+      Information: Processed inventory in 00:00:00.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      State: [
+        {
+          Elapsed: 00:00:00
+        },
+        {
+          {OriginalFormat}: Processed inventory in {Elapsed}.
+        }
+      ]
+    }
+  ],
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-org/Test Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test Project/Build,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test Project/Build/Pipelines,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 1294
+                          }
+                        ]
+                      },
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline2,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline2/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 1297
+                          }
+                        ]
+                      },
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline3,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline3/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 1297
+                          }
+                        ]
+                      },
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline4,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline4/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 1297
+                          }
+                        ]
+                      }
+                    ],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Pipelines/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 731
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project/Build/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 727
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 1300
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 676
+          }
+        ]
+      }
+    ],
+    Files: []
+  }
+}

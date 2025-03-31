@@ -1,20 +1,28 @@
 {
-  "profiles": {
-    "AZDOIPat": {
-      "commandName": "Project",
-      "commandLineArgs": "inventory repositories AZDOI /temp/output"
-    },
-    "AZDOIEntraId": {
-      "commandName": "Project",
-      "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth"
-    },
-    "AZDOIPatParallel": {
-      "commandName": "Project",
-      "commandLineArgs": "inventory repositories AZDOI /temp/output --run-in-parallel"
-    },
-    "AZDOIEntraIdParallel": {
-      "commandName": "Project",
-      "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --run-in-parallel"
+    "profiles": {
+        "AZDOIPat": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory repositories AZDOI /temp/output"
+        },
+        "AZDOIEntraId": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth"
+        },
+        "AZDOIPatParallel": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --run-in-parallel"
+        },
+        "AZDOIEntraIdParallel": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --run-in-parallel"
+        },
+        "AZDOIPipelineEntraId": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory pipelines AZDOI /temp/output --entra-id-auth"
+        },
+        "AZDOIPipelinePat": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory pipelines AZDOI /temp/output"
+        }
     }
-  }
 }
