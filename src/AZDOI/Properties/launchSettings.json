@@ -2,23 +2,23 @@
     "profiles": {
         "AZDOIPat": {
             "commandName": "Project",
-            "commandLineArgs": "inventory repositories AZDOI /temp/output"
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --skip-org-graph"
         },
         "AZDOIEntraId": {
             "commandName": "Project",
-            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth"
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --skip-org-graph"
         },
         "AZDOIPatParallel": {
             "commandName": "Project",
-            "commandLineArgs": "inventory repositories AZDOI /temp/output --run-in-parallel"
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --run-in-parallel --skip-org-graph"
         },
         "AZDOIEntraIdParallel": {
             "commandName": "Project",
-            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --run-in-parallel"
+            "commandLineArgs": "inventory repositories AZDOI /temp/output --entra-id-auth --run-in-parallel --skip-org-graph"
         },
         "AZDOIPipelineEntraId": {
             "commandName": "Project",
-            "commandLineArgs": "inventory pipelines AZDOI /temp/output --entra-id-auth"
+            "commandLineArgs": "inventory pipelines AZDOI /temp/output --entra-id-auth --skip-org-graph"
         },
         "AZDOIPipelinePat": {
             "commandName": "Project",
@@ -27,6 +27,7 @@
         "AZDOIAllEntraId": {
             "commandName": "Project",
             "commandLineArgs": "inventory all AZDOI /temp/output --entra-id-auth"
+            "commandLineArgs": "inventory pipelines AZDOI /temp/output --skip-org-graph"
         }
     }
 }
