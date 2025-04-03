@@ -46,7 +46,7 @@ public abstract class AZDOISettings(
 
     [Description("Skip generating the org graph")]
     [CommandOption("--skip-org-graph")]
-    public bool SkipOrgGraph { get; set; } = false;
+    public bool SkipOrgGraph { get; set; }
 
     public virtual string[]? IncludeRepositories { get; set; }
 

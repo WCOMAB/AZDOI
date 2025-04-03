@@ -24,6 +24,7 @@ OPTIONS:
         --run-in-parallel     Flag for if generation should be parallelized     
         --include-project     Include specific projects                         
         --exclude-project     Exclude specific projects                         
+        --skip-org-graph      Skip generating the org graph                     
         --include-pipeline    Include specific pipelines                        
         --exclude-pipeline    Exclude specific pipelines                        
 ,

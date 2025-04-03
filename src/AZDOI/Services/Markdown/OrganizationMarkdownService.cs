@@ -14,8 +14,10 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
 
         await WriteChildren(writer, organization.Children, "Project");
 
-        await WriteMermaidDiagram(writer, organization);
-
+        if (!organization.SkipOrgGraph)
+        {
+            await WriteMermaidDiagram(writer, organization);
+        }
     }
     public async Task WriteMermaidDiagram(FileTextWriter writer, AzureDevOpsOrganization organization)
     {
