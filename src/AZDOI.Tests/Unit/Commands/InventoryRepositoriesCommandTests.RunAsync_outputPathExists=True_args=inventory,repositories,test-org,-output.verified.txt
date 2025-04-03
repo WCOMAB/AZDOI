@@ -7,7 +7,10 @@
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       State: [
         {
-          {OriginalFormat}: Executing Inventory Repositories Command...
+          commandName: Repositories
+        },
+        {
+          {OriginalFormat}: Executing Inventory {commandName} Command...
         }
       ]
     },
@@ -472,15 +475,6 @@
       ]
     },
     {
-      Information: Done executing Inventory Repositories,
-      Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      State: [
-        {
-          {OriginalFormat}: Done executing Inventory Repositories
-        }
-      ]
-    },
-    {
       Information: Processed inventory in 00:00:00.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       State: [
@@ -575,7 +569,7 @@
                     Path: /output/test-org/Test Project/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 873
+                    Length: 926
                   }
                 ]
               }
@@ -604,7 +598,7 @@
                     Path: /output/test-org/Test Project2/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }
@@ -633,7 +627,7 @@
                     Path: /output/test-org/Test Project3/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }
@@ -662,7 +656,7 @@
                     Path: /output/test-org/Test Project4/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 90
+                    Length: 143
                   }
                 ]
               }

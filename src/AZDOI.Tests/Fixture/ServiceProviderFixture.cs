@@ -48,7 +48,9 @@ public static partial class ServiceProviderFixture
 
     static partial void InitServiceProvider(IServiceCollection services)
     {
-        var logger = new FakeLogger<InventoryRepositoriesCommand>();
+        var repoLogger = new FakeLogger<InventoryRepositoriesCommand>();
+        var pipelinesLogger = new FakeLogger<InventoryPipelinesCommand>();
+        var allLogger = new FakeLogger<InventoryAllCommand>();
 
         services
             .AddCakeFakes()
@@ -56,14 +58,27 @@ public static partial class ServiceProviderFixture
             .AddSingleton<AzureDevOpsClient>()
             .AddSingleton<TestMarkdownService>()
             .AddMarkdownServices()
+            .AddSingleton<InventoryCommandServices>()
             .AddSingleton<FakeStopwatch>()
             .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>());
 
         services
-            .AddSingleton(logger)
+            .AddSingleton(repoLogger)
             .AddSingleton<ILogger<InventoryRepositoriesCommand>>(
                provider => provider.GetRequiredService<FakeLogger<InventoryRepositoriesCommand>>()
             );
+
+        services
+        .AddSingleton(pipelinesLogger)
+        .AddSingleton<ILogger<InventoryPipelinesCommand>>(
+            provider => provider.GetRequiredService<FakeLogger<InventoryPipelinesCommand>>()
+        );
+
+        services
+        .AddSingleton(allLogger)
+        .AddSingleton<ILogger<InventoryAllCommand>>(
+            provider => provider.GetRequiredService<FakeLogger<InventoryAllCommand>>()
+        );
 
         services
                 .AddCommandApp(new TestConsole());

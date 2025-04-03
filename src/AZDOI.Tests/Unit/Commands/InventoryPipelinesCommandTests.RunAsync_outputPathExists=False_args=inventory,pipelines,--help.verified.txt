@@ -1,0 +1,38 @@
+﻿{
+  ExitCode: 0,
+  ConsoleOutput:
+DESCRIPTION:
+Example get pipelines command.
+
+USAGE:
+    AZDOI inventory pipelines <devopsorg> <outputpath> [OPTIONS]
+
+EXAMPLES:
+    AZDOI inventory pipelines
+
+ARGUMENTS:
+    <devopsorg>     Azure DevOps organization name               
+    <outputpath>    Target directory for generated markdown files
+
+OPTIONS:
+    -h, --help                Prints help information                           
+        --pat                 Personal Access Token for Azure Devops            
+                              Autentication                                     
+        --entra-id-auth       Use Entra Id for Azure Devops Autentication       
+        --azure-tenant-id     Entra Azure Tenant Id for Azure Devops            
+                              Autentication                                     
+        --run-in-parallel     Flag for if generation should be parallelized     
+        --include-project     Include specific projects                         
+        --exclude-project     Exclude specific projects                         
+        --include-pipeline    Include specific pipelines                        
+        --exclude-pipeline    Exclude specific pipelines                        
+,
+  LogOutput: [],
+  FileSystem: {
+    Path: /output,
+    Exists: false,
+    Hidden: false,
+    Directories: [],
+    Files: []
+  }
+}
