@@ -78,6 +78,7 @@ AZDOI uses the following environment variables for configuration:
 | `--exclude-repository`         | Exclude specific repositories               |                                                 |
 | `--include-repository-readme`  | Include specific repository README          |                                                 |
 | `--exclude-repository-readme`  | Exclude specific repository README          |                                                 |
+| `--skip-org-graph`              | Skip generating the org graph              |                                                 |
 
 ### Inventory pipelines
 
@@ -108,6 +109,7 @@ AZDOI uses the following environment variables for configuration:
 | `--exclude-project`            | Exclude specific projects                   |                                                 |
 | `--include-pipeline`           | Include specific pipeline                   |                                                 |
 | `--exclude-pipeline`           | Exclude specific pipeline                   |                                                 |
+| `--skip-org-graph`              | Skip generating the org graph              |                                                 |
 
 ### Inventory all
 
@@ -142,6 +144,7 @@ AZDOI uses the following environment variables for configuration:
 | `--exclude-repository`         | Exclude specific repositories               |                                                 |
 | `--include-repository-readme`  | Include specific repository README          |                                                 |
 | `--exclude-repository-readme`  | Exclude specific repository README          |                                                 |
+| `--skip-org-graph`              | Skip generating the org graph              |                                                 |
 
 
 ## Setting environment variables
