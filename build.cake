@@ -199,7 +199,7 @@ Task("Clean")
                                                         .Append("--")
                                                         .Append("AZDOI")
                                                         .Append("inventory")
-                                                        .Append("repositories")
+                                                        .Append("all")
                                                         .Append("AZDOI")
                                                         .AppendQuoted(data.IntegrationTestPath.FullPath)
                                                         .Append("--entra-id-auth")
@@ -216,7 +216,7 @@ Task("Clean")
             var resultPath = data.IntegrationTestPath;
             await GitHubActions.Commands.UploadArtifact(
                 resultPath,
-                $"{data.AzureDomain}_{GitHubActions.Environment.Runner.ImageOS ?? GitHubActions.Environment.Runner.OS}_{context.Environment.Runtime.BuiltFramework.Identifier}_{context.Environment.Runtime.BuiltFramework.Version}"
+                $"{GitHubActions.Environment.Runner.ImageOS ?? GitHubActions.Environment.Runner.OS}_{context.Environment.Runtime.BuiltFramework.Identifier}_{context.Environment.Runtime.BuiltFramework.Version}"
             );
             GitHubActions.Commands.SetStepSummary(
                 string.Join(

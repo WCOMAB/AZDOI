@@ -50,7 +50,6 @@ jobs:
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           AZURE_AUTHORITY_HOST: "https://login.microsoftonline.com"
-          AZURE_DOMAIN: ${{ secrets.AZURE_DOMAIN }}
 
         with:
           cake-version: tool-manifest
