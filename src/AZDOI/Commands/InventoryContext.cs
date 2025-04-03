@@ -3,7 +3,7 @@ using AZDOI.Services.AzureDevOps;
 
 namespace AZDOI.Commands;
 
-public record InventoryRepositoriesContext(
+public record InventoryContext(
     AZDOISettings Settings,
     DirectoryPath OutputDirectory,
     AzureDevOpsClientHandler AzureDevOpsClientHandler

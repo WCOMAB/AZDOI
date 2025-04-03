@@ -9,6 +9,7 @@ public partial class Program
             .AddMarkdownServices()
             .AddSingleton(TimeProvider.System)
             .AddAzureDevOpsClient()
+            .AddSingleton<InventoryCommandServices>()
             .AddSingleton<StopwatchProvider, SystemStopwatch>();
     }
     static partial void ConfigureApp(AppServiceConfig appServiceConfig)
@@ -25,6 +26,10 @@ public partial class Program
                 branch.AddCommand<InventoryPipelinesCommand>("pipelines")
                                     .WithDescription("Example get pipelines command.")
                                     .WithExample(["inventory", "pipelines"]);
+
+                branch.AddCommand<InventoryAllCommand>("all")
+                                   .WithDescription("Example get repositories and pipelines command.")
+                                   .WithExample(["inventory", "all"]);
             }
         );
     }

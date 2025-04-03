@@ -23,6 +23,10 @@
         "AZDOIPipelinePat": {
             "commandName": "Project",
             "commandLineArgs": "inventory pipelines AZDOI /temp/output"
+        },
+        "AZDOIAllEntraId": {
+            "commandName": "Project",
+            "commandLineArgs": "inventory all AZDOI /temp/output --entra-id-auth"
         }
     }
 }
