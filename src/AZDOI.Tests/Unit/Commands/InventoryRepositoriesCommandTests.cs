@@ -29,6 +29,8 @@ public class InventoryRepositoriesCommandTests
     [InlineData(true, "inventory", "repositories", "test-entraid-org", "/output", "--entra-id-auth", "--include-project=123")]
     [InlineData(true, "inventory", "repositories", "test-entraid-org", "/output", "--entra-id-auth", "--include-project=123", "--include-repository-readme=Test Repository")]
     [InlineData(true, "inventory", "repositories", "test-entraid-org", "/output", "--entra-id-auth", "--include-project=123", "--exclude-repository-readme=Test Repository")]
+    [InlineData(true, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--skip-org-graph")]
+    [InlineData(false, "inventory", "repositories", "test-org", "/output", "--pat=test-pat", "--skip-org-graph")]
     public async Task RunAsync(bool outputPathExists, params string[] args)
     {
         // Given
