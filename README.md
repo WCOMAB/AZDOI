@@ -109,6 +109,41 @@ AZDOI uses the following environment variables for configuration:
 | `--include-pipeline`           | Include specific pipeline                   |                                                 |
 | `--exclude-pipeline`           | Exclude specific pipeline                   |                                                 |
 
+### Inventory all
+
+#### Usage
+
+```bash
+azdoi inventory all <devopsorg> <outputpath> [OPTIONS]
+```
+
+#### Example
+
+```bash
+azdoi inventory all MyOrg /path/to/output
+```
+
+### Parameters
+
+AZDOI uses the following environment variables for configuration:
+
+| Parameter                      | Description                                 | Default Value                                   |
+|--------------------------------|---------------------------------------------|-------------------------------------------------|
+| `--help`                       | Used to get help with parameters            |                                                 |
+| `--pat`                        | Personal Access Token for authentication    | Environment variable: `AZDOI_PAT`               |
+| `--entra-id-auth`              | Use Entra Id for Azure Devops Autentication | False                                           |
+| `--azure-tenant-id`            | Entra Azure Tenant ID for authentication    | Environment variable: `AZURE_TENANT_ID`         |
+| `--run-in-parallel`            | Enable parallel processing of projects      | False                                           |
+| `--include-project`            | Include specific projects                   |                                                 |
+| `--exclude-project`            | Exclude specific projects                   |                                                 |
+| `--include-pipeline`           | Include specific pipeline                   |                                                 |
+| `--exclude-pipeline`           | Exclude specific pipeline                   |                                                 |
+| `--include-repository`         | Include specific repositories               |                                                 |
+| `--exclude-repository`         | Exclude specific repositories               |                                                 |
+| `--include-repository-readme`  | Include specific repository README          |                                                 |
+| `--exclude-repository-readme`  | Exclude specific repository README          |                                                 |
+
+
 ## Setting environment variables
 
 To set environment variables, use:
