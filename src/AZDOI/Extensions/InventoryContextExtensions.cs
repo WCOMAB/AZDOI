@@ -5,10 +5,10 @@ using AZDOI.Services.AzureDevOps;
 
 namespace AZDOI.Extensions;
 
-public static class InventoryRepositoriesContextExtensions
+public static class InventoryContextExtensions
 {
     public static async Task<TResult> InvokeDevOpsClient<TResult>(
-        this InventoryRepositoriesContext context,
+        this InventoryContext context,
         Func<AzureDevOpsClient, AZDOISettings, Task<TResult>> clientFunc)
     {
         using var client = await context.AzureDevOpsClientHandler(context.Settings);
@@ -18,7 +18,7 @@ public static class InventoryRepositoriesContextExtensions
     static readonly int maxDegreeOfParallelism = Environment.ProcessorCount;
 
     public static async IAsyncEnumerable<TSource> ForEachAsync<TSource>(
-        this InventoryRepositoriesContext context,
+        this InventoryContext context,
         IEnumerable<TSource> source,
         Func<TSource, CancellationToken, Task<TSource>> body,
         [EnumeratorCancellation] CancellationToken cancellationToken = default
@@ -50,7 +50,7 @@ public static class InventoryRepositoriesContextExtensions
     }
 
     public static async IAsyncEnumerable<TSource> ForEachAsync<TSource>(
-        this InventoryRepositoriesContext context,
+        this InventoryContext context,
         IAsyncEnumerable<TSource> source,
         Func<TSource, CancellationToken, Task<TSource>> body,
         [EnumeratorCancellation] CancellationToken cancellationToken = default

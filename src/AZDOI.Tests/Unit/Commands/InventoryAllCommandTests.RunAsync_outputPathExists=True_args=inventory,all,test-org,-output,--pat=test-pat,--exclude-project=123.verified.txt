@@ -3,11 +3,11 @@
   ConsoleOutput: ,
   LogOutput: [
     {
-      Information: Executing Inventory Pipelines Command...,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Information: Executing Inventory Repositories,Pipelines Command...,
+      Category: AZDOI.Commands.InventoryAllCommand,
       State: [
         {
-          commandName: Pipelines
+          commandName: Repositories,Pipelines
         },
         {
           {OriginalFormat}: Executing Inventory {commandName} Command...
@@ -16,7 +16,7 @@
     },
     {
       Information: Cleaning directory /output/test-org...,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       State: [
         {
           TargetPath: /output/test-org
@@ -28,7 +28,7 @@
     },
     {
       Information: Done cleaning directory /output/test-org.,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       State: [
         {
           TargetPath: /output/test-org
@@ -39,16 +39,16 @@
       ]
     },
     {
-      Information: Project: Test Project,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Information: Project: Test Project2,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
-          ProjectId: 123
+          ProjectId: 321
         }
       ],
       State: [
         {
-          ProjectName: Test Project
+          ProjectName: Test Project2
         },
         {
           {OriginalFormat}: Project: {ProjectName}
@@ -56,94 +56,8 @@
       ]
     },
     {
-      Information: Project: Test Project - Pipeline: Test Pipeline,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Pipeline: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          PipelineName: Test Pipeline
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Pipeline: Test Pipeline - Markdown index created.,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Pipeline: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          PipelineName: Test Pipeline
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName} - Markdown index created.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Pipeline: Test Pipeline.,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Pipeline: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          PipelineName: Test Pipeline
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Pipeline: {PipelineName}.
-        }
-      ]
-    },
-    {
-      Information: Markdown index created for project: Test Project,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          {OriginalFormat}: Markdown index created for project: {ProjectName}
-        }
-      ]
-    },
-    {
       Information: Project: Test Project2,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 321
@@ -160,7 +74,7 @@
     },
     {
       Information: Markdown index created for project: Test Project2,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 321
@@ -177,7 +91,24 @@
     },
     {
       Information: Project: Test Project3,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
+      Scopes: [
+        {
+          ProjectId: 999
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project3
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project3,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 999
@@ -194,7 +125,7 @@
     },
     {
       Information: Markdown index created for project: Test Project3,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 999
@@ -211,7 +142,24 @@
     },
     {
       Information: Project: Test Project4,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
+      Scopes: [
+        {
+          ProjectId: 888
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project4
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project4,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 888
@@ -228,7 +176,7 @@
     },
     {
       Information: Markdown index created for project: Test Project4,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
           ProjectId: 888
@@ -245,7 +193,7 @@
     },
     {
       Information: Processed inventory in 00:00:00.,
-      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Category: AZDOI.Commands.InventoryAllCommand,
       State: [
         {
           Elapsed: 00:00:00
@@ -266,65 +214,6 @@
         Exists: true,
         Hidden: false,
         Directories: [
-          {
-            Path: /output/test-org/Test Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test Project/Build,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test Project/Build/Pipelines,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [
-                      {
-                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline,
-                        Exists: true,
-                        Hidden: false,
-                        Directories: [],
-                        Files: [
-                          {
-                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
-                            Exists: true,
-                            Hidden: false,
-                            Length: 1294
-                          }
-                        ]
-                      }
-                    ],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test Project/Build/Pipelines/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 326
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test Project/Build/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 418
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 991
-              }
-            ]
-          },
           {
             Path: /output/test-org/Test Project2,
             Exists: true,
@@ -358,6 +247,20 @@
                     Length: 133
                   }
                 ]
+              },
+              {
+                Path: /output/test-org/Test Project2/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project2/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 143
+                  }
+                ]
               }
             ],
             Files: [
@@ -365,7 +268,7 @@
                 Path: /output/test-org/Test Project2/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 708
+                Length: 750
               }
             ]
           },
@@ -402,6 +305,20 @@
                     Length: 133
                   }
                 ]
+              },
+              {
+                Path: /output/test-org/Test Project3/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project3/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 143
+                  }
+                ]
               }
             ],
             Files: [
@@ -409,7 +326,7 @@
                 Path: /output/test-org/Test Project3/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 708
+                Length: 750
               }
             ]
           },
@@ -446,6 +363,20 @@
                     Length: 133
                   }
                 ]
+              },
+              {
+                Path: /output/test-org/Test Project4/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [],
+                Files: [
+                  {
+                    Path: /output/test-org/Test Project4/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 143
+                  }
+                ]
               }
             ],
             Files: [
@@ -453,7 +384,7 @@
                 Path: /output/test-org/Test Project4/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 708
+                Length: 750
               }
             ]
           }
@@ -463,7 +394,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 1588
+            Length: 1287
           }
         ]
       }
