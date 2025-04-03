@@ -27,7 +27,6 @@
         "AZDOIAllEntraId": {
             "commandName": "Project",
             "commandLineArgs": "inventory all AZDOI /temp/output --entra-id-auth"
-            "commandLineArgs": "inventory pipelines AZDOI /temp/output --skip-org-graph"
         }
     }
 }
