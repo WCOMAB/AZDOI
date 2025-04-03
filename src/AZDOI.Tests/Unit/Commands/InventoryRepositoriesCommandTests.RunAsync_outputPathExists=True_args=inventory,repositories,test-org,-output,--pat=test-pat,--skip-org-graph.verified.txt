@@ -7,7 +7,10 @@
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
       State: [
         {
-          {OriginalFormat}: Executing Inventory Repositories Command...
+          commandName: Repositories
+        },
+        {
+          {OriginalFormat}: Executing Inventory {commandName} Command...
         }
       ]
     },
@@ -468,15 +471,6 @@
         },
         {
           {OriginalFormat}: Markdown index created for project: {ProjectName}
-        }
-      ]
-    },
-    {
-      Information: Done executing Inventory Repositories,
-      Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      State: [
-        {
-          {OriginalFormat}: Done executing Inventory Repositories
         }
       ]
     },
