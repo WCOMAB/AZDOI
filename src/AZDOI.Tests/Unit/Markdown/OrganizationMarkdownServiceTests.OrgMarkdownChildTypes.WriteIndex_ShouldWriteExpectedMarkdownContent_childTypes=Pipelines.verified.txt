@@ -1,0 +1,30 @@
+﻿---
+title: Test Organization
+summary: Test Organization
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# Test Organization DevOps Organization
+
+## Projects
+
+| Project                          | Description                      |
+|----------------------------------|----------------------------------|
+| [Test Project](<Test Project>)   |                                  |
+
+```mermaid
+graph TD
+    Org_Org1(Test Organization)
+
+    %% Test Project project
+    subgraph Proj_Proj1[Test Project]
+        direction TB
+        %% Test Project pipelines
+        subgraph Pipelines_Proj1[Pipelines]
+            Pipeline_Proj1_1[MyPipeline.One]
+            click Pipeline_Proj1_1 href "Test Project/Build/Pipelines/MyPipeline.One/" "MyPipeline.One"
+        end
+    end
+
+    Org_Org1 --> Proj_Proj1
+```
