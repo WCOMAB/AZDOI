@@ -11,5 +11,7 @@ public record InventoryCommandServices(
     PipelineMarkdownService PipelineMarkdownService,
     PipelinesMarkdownService PipelinesMarkdownService,
     BuildsMarkdownService BuildsMarkdownService,
-    StopwatchProvider StopwatchProvider
+    StopwatchProvider StopwatchProvider,
+    ReleaseMarkdownService ReleaseMarkdownService,
+    ReleasesMarkdownService ReleasesMarkdownService
     );

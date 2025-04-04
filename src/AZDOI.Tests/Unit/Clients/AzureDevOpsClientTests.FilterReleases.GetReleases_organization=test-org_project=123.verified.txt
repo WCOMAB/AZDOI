@@ -1,0 +1,46 @@
+﻿[
+  {
+    Name: Test Release,
+    Id: 123,
+    Revision: 3,
+    Path: \,
+    Description: Release description one,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/releases/123?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=123
+      }
+    }
+  },
+  {
+    Name: Test Release,
+    Id: 222,
+    Revision: 5,
+    Path: \,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/releases/123?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=222
+      }
+    }
+  },
+  {
+    Name: Test Release,
+    Id: 583,
+    Revision: 7,
+    Path: \,
+    Description: Release description two,
+    Links: {
+      Self: {
+        Href: https://dev.azure.com/test-org/_apis/releases/123?revision=1
+      },
+      Web: {
+        Href: https://dev.azure.com/test-org/_build/definition?definitionId=583
+      }
+    }
+  }
+]

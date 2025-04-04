@@ -1,0 +1,51 @@
+﻿{
+    "value": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://dev.azure.com/test-org/_apis/releases/123?revision=1"
+                },
+                "web": {
+                    "href": "https://dev.azure.com/test-org/_build/definition?definitionId=123"
+                }
+            },
+            "id": "123",
+            "name": "Test Release",
+            "url": "https://dev.azure.com/test-org/_apis/releases/123",
+            "path": "\\",
+            "description": "Release description one",
+            "revision": "3"
+        },
+        {
+            "_links": {
+                "self": {
+                    "href": "https://dev.azure.com/test-org/_apis/releases/123?revision=1"
+                },
+                "web": {
+                    "href": "https://dev.azure.com/test-org/_build/definition?definitionId=222"
+                }
+            },
+            "id": "222",
+            "name": "Test Release",
+            "url": "https://dev.azure.com/test-org/_apis/releases/222",
+            "path": "\\",
+            "revision": "5"
+        },
+        {
+            "_links": {
+                "self": {
+                    "href": "https://dev.azure.com/test-org/_apis/releases/123?revision=1"
+                },
+                "web": {
+                    "href": "https://dev.azure.com/test-org/_build/definition?definitionId=583"
+                }
+            },
+            "id": "583",
+            "name": "Test Release",
+            "url": "https://dev.azure.com/test-org/_apis/releases/583",
+            "description": "Release description two",
+            "path": "\\",
+            "revision": "7"
+        }
+    ]
+}

@@ -26,6 +26,8 @@ public class InventoryPipelinesCommandTests
     [InlineData(true, "inventory", "pipelines", "test-org", "/output", "--pat=test-pat", "--exclude-pipeline=123")]
     [InlineData(true, "inventory", "pipelines", "test-org", "/output", "--pat=test-pat", "--include-project=123")]
     [InlineData(true, "inventory", "pipelines", "test-entraid-org", "/output", "--entra-id-auth", "--include-project=123")]
+    [InlineData(true, "inventory", "pipelines", "test-org", "/output", "--pat=test-pat", "--include-release=123")]
+    [InlineData(true, "inventory", "pipelines", "test-org", "/output", "--pat=test-pat", "--exclude-release=123")]
     public async Task RunAsync(bool outputPathExists, params string[] args)
     {
         // Given

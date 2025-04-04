@@ -332,6 +332,230 @@
       ]
     },
     {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 222
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 222
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 222
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 583
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release - Markdown index created.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 583
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
+        }
+      ]
+    },
+    {
+      Information: Project: Test Project - Release: Test Release.,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        },
+        {
+          Release: 583
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          ReleaseName: Test Release
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
+        }
+      ]
+    },
+    {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
       Scopes: [
@@ -451,6 +675,35 @@
                         Length: 731
                       }
                     ]
+                  },
+                  {
+                    Path: /output/test-org/Test Project/Build/Releases,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Releases/Test Release,
+                        Exists: true,
+                        Hidden: false,
+                        Directories: [],
+                        Files: [
+                          {
+                            Path: /output/test-org/Test Project/Build/Releases/Test Release/index.md,
+                            Exists: true,
+                            Hidden: false,
+                            Length: 1301
+                          }
+                        ]
+                      }
+                    ],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test Project/Build/Releases/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 465
+                      }
+                    ]
                   }
                 ],
                 Files: [
@@ -458,7 +711,7 @@
                     Path: /output/test-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 727
+                    Length: 1253
                   }
                 ]
               }
@@ -468,7 +721,7 @@
                 Path: /output/test-org/Test Project/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 1300
+                Length: 1826
               }
             ]
           }

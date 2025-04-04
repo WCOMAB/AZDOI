@@ -13,6 +13,8 @@ public class InventoryAllCommandTests
     [InlineData(true, "inventory", "all", "test-entraid-org", "/output", "--entra-id-auth")]
     [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--include-pipeline=123")]
     [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--exclude-pipeline=123")]
+    [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--include-release=123")]
+    [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--exclude-release=123")]
     [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--include-project=123")]
     [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--exclude-project=123")]
     [InlineData(true, "inventory", "all", "test-org", "/output", "--pat=test-pat", "--include-repository=456")]

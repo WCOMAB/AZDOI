@@ -59,4 +59,8 @@ public abstract class AZDOISettings(
     public virtual string[]? IncludePipelines { get; set; }
 
     public virtual string[]? ExcludePipelines { get; set; }
+
+    public virtual string[]? IncludeReleases { get; set; }
+
+    public virtual string[]? ExcludeReleases { get; set; }
 }

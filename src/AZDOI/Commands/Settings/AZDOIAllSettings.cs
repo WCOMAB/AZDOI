@@ -31,4 +31,12 @@ public class AZDOIAllSettings(ICakeEnvironment environment)
     [Description("Exclude specific pipelines")]
     [CommandOption("--exclude-pipeline")]
     public override string[]? ExcludePipelines { get; set; }
+
+    [Description("Include specific releases")]
+    [CommandOption("--include-release")]
+    public override string[]? IncludeReleases { get; set; }
+
+    [Description("Exclude specific releases")]
+    [CommandOption("--exclude-release")]
+    public override string[]? ExcludeReleases { get; set; }
 }
