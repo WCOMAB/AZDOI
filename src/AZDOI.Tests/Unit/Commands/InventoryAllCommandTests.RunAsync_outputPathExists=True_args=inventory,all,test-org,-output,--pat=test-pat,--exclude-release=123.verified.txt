@@ -102,7 +102,7 @@
       ]
     },
     {
-      Information: Project: Test Project - Repository: Test Repository - README Excluded.,
+      Information: Project: Test Project - Repository: Test Repository - README Exists: True, Length: 101 characters,
       Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
         {
@@ -120,7 +120,13 @@
           RepoName: Test Repository
         },
         {
-          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Excluded.
+          Exists: True
+        },
+        {
+          Length: 101
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName} - Repository: {RepoName} - README Exists: {Exists}, Length: {Length} characters
         }
       ]
     },
@@ -667,75 +673,6 @@
           ProjectId: 123
         },
         {
-          Release: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release - Markdown index created.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 123
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
           Release: 222
         }
       ],
@@ -1216,7 +1153,7 @@
                         Path: /output/test-org/Test Project/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 465
+                        Length: 394
                       }
                     ]
                   }
@@ -1226,7 +1163,7 @@
                     Path: /output/test-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 1253
+                    Length: 1150
                   }
                 ]
               },
@@ -1245,7 +1182,7 @@
                         Path: /output/test-org/Test Project/Repositories/Test Repository/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 2544
+                        Length: 2625
                       }
                     ]
                   },
@@ -1307,7 +1244,7 @@
                 Path: /output/test-org/Test Project/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 2651
+                Length: 2548
               }
             ]
           },

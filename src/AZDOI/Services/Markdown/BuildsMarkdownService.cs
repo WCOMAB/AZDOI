@@ -22,5 +22,13 @@ public class BuildsMarkdownService(ICakeContext cakeContext, TimeProvider timePr
             "Pipelines",
             urlSelector: pipeline => $"Pipelines/{pipeline.Name}"
             );
+
+        await WriteChildren(
+            writer,
+            project.Releases,
+            "Release",
+            "Releases",
+            urlSelector: release => $"Releases/{release.Name}"
+            );
     }
 }

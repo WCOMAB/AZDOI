@@ -44,7 +44,14 @@ public partial class InventoryCommand<TSettings>
                                                     OutputDirectory = buildDirectory,
                                                 },
                                                 sourceProject
-                                    )
+                                    ),
+                                    Releases = await ProcessReleases(
+                                               context with
+                                               {
+                                                   OutputDirectory = buildDirectory,
+                                               },
+                                               sourceProject
+                                        )
                                 };
 
                                 await services.ProjectMarkdownService.WriteIndex(projectOutputDirectory, project);

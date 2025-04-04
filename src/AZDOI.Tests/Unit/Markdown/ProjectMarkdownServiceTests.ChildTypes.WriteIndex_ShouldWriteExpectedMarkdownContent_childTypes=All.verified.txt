@@ -29,3 +29,9 @@ modified: 2000-01-01 00:00
 |------------------------------------------------------------------|----------------------------------|
 | [MyPipeline](<Build/Pipelines/MyPipeline>)                       | MyPipeline                       |
 
+## Releases
+
+| Release                                                          | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyRelease.One](<Build/Pipelines/MyRelease.One>)                 | Release Description              |
+

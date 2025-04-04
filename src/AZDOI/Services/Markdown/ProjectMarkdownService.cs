@@ -50,7 +50,15 @@ public class ProjectMarkdownService(ICakeContext cakeContext, TimeProvider timeP
                 "Pipeline",
                 "Pipelines",
                 urlSelector: pipeline => $"Build/Pipelines/{pipeline.Name}"
-                );
+            );
+
+            await WriteChildren(
+                writer,
+                project.Releases,
+                "Release",
+                "Releases",
+                urlSelector: release => $"Build/Pipelines/{release.Name}"
+            );
         }
     }
 }

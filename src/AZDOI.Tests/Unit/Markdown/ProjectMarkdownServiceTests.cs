@@ -8,31 +8,44 @@ public class ProjectMarkdownServiceTests
         Name = "DevOps Project",
         Description = "DevOps Project Description",
         Url = "https://myproject.com",
-        Children =
-            [
-                new AzureDevOpsRepository
-                {
-                    Id = "1",
-                    Name = "MyRepository",
-                    Description = "MyRepository Description",
-                    Size = 100,
-                    RemoteUrl = "https://myproject.com",
-                    WebUrl = "https://myproject.com",
-                    Url = "https://myproject.com"
-                }
-            ],
+        Children =[
+            new AzureDevOpsRepository
+            {
+                Id = "1",
+                Name = "MyRepository",
+                Description = "MyRepository Description",
+                Size = 100,
+                RemoteUrl = "https://myproject.com",
+                WebUrl = "https://myproject.com",
+                Url = "https://myproject.com"
+            }
+        ],
         Pipelines = [
-                    new AzureDevOpsPipeline {
-                        Id = 1,
-                        Name = "MyPipeline",
-                        Folder = "\\",
-                        Revision = 3,
-                        Links = new(
-                                    new("https://myproject.com/build/MyPipeline"),
-                                    new("https://myproject.com/build/MyPipeline")
-                                    )
-                    }
-                ]
+            new AzureDevOpsPipeline {
+                Id = 1,
+                Name = "MyPipeline",
+                Folder = "\\",
+                Revision = 3,
+                Links = new(
+                    new("https://myproject.com/build/MyPipeline"),
+                    new("https://myproject.com/build/MyPipeline")
+                )
+            }
+        ],
+        Releases = [
+            new AzureDevOpsRelease
+            {
+                Id = 1,
+                Name = "MyRelease.One",
+                Path = "\\",
+                Revision = 5,
+                Description = "Release Description",
+                Links = new (
+                    new ("https://myproject.com"),
+                    new ("https://myproject.com")
+                )
+            },
+        ]
     };
 
     [Fact]

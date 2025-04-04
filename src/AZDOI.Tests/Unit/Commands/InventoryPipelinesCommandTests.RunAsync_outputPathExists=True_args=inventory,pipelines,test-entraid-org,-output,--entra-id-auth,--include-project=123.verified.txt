@@ -56,6 +56,23 @@
       ]
     },
     {
+      Information: Project: Test Project,
+      Category: AZDOI.Commands.InventoryPipelinesCommand,
+      Scopes: [
+        {
+          ProjectId: 123
+        }
+      ],
+      State: [
+        {
+          ProjectName: Test Project
+        },
+        {
+          {OriginalFormat}: Project: {ProjectName}
+        }
+      ]
+    },
+    {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
       Scopes: [
@@ -118,6 +135,20 @@
                         Length: 137
                       }
                     ]
+                  },
+                  {
+                    Path: /output/test-entraid-org/Test Project/Build/Releases,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-entraid-org/Test Project/Build/Releases/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 133
+                      }
+                    ]
                   }
                 ],
                 Files: [
@@ -125,7 +156,7 @@
                     Path: /output/test-entraid-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 133
+                    Length: 167
                   }
                 ]
               }
@@ -135,7 +166,7 @@
                 Path: /output/test-entraid-org/Test Project/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 706
+                Length: 740
               }
             ]
           }

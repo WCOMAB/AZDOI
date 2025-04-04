@@ -13,3 +13,10 @@ modified: 2000-01-01 00:00
 | [MyPipeline.One](<Pipelines/MyPipeline.One>)                     | MyPipeline.One                   |
 | [MyPipeline.Two](<Pipelines/MyPipeline.Two>)                     | MyPipeline.Two                   |
 
+## Releases
+
+| Release                                                          | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [MyRelease.One](<Releases/MyRelease.One>)                        | MyRelease.One                    |
+| [MyRelease.Two](<Releases/MyRelease.Two>)                        | This is a Release descriptions   |
+
