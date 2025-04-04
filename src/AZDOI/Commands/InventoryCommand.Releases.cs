@@ -1,5 +1,5 @@
-﻿
-namespace AZDOI.Commands;
+﻿namespace AZDOI.Commands;
+
 public partial class InventoryCommand<TSettings>
 {
     private async Task<AzureDevOpsRelease[]> ProcessReleases(InventoryContext context, AzureDevOpsProject project)
@@ -57,4 +57,3 @@ public partial class InventoryCommand<TSettings>
         return sourceRelease;
     }
 }
-

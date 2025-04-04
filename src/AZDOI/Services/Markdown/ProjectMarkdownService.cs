@@ -57,7 +57,7 @@ public class ProjectMarkdownService(ICakeContext cakeContext, TimeProvider timeP
                 project.Releases,
                 "Release",
                 "Releases",
-                urlSelector: release => $"Build/Pipelines/{release.Name}"
+                urlSelector: release => $"Build/Releases/{release.Name}"
             );
         }
     }

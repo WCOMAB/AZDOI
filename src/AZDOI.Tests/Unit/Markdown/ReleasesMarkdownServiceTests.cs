@@ -1,4 +1,5 @@
 ﻿namespace AZDOI.Tests.Unit.Markdown;
+
 public class ReleasesMarkdownServiceTests
 {
     [Fact]
