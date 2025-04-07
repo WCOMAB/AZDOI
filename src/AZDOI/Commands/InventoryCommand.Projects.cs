@@ -15,6 +15,7 @@ public partial class InventoryCommand<TSettings>
             Id = context.Settings.DevOpsOrg,
             Name = context.Settings.DevOpsOrg,
             Url = string.Empty,
+            SkipOrgGraph = context.Settings.SkipOrgGraph,
             Children = await context.ForEachAsync(
                             await context.InvokeDevOpsClient(
                                 (client, settings) => client.GetProjects(settings.DevOpsOrg, settings.IncludeProjects, settings.ExcludeProjects)
@@ -43,7 +44,14 @@ public partial class InventoryCommand<TSettings>
                                                     OutputDirectory = buildDirectory,
                                                 },
                                                 sourceProject
-                                    )
+                                    ),
+                                    Releases = await ProcessReleases(
+                                               context with
+                                               {
+                                                   OutputDirectory = buildDirectory,
+                                               },
+                                               sourceProject
+                                        )
                                 };
 
                                 await services.ProjectMarkdownService.WriteIndex(projectOutputDirectory, project);

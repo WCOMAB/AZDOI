@@ -44,15 +44,23 @@ public abstract class AZDOISettings(
     [CommandOption("--exclude-project")]
     public string[]? ExcludeProjects { get; set; }
 
+    [Description("Skip generating the org graph")]
+    [CommandOption("--skip-org-graph")]
+    public bool SkipOrgGraph { get; set; }
+
     public virtual string[]? IncludeRepositories { get; set; }
-           
+
     public virtual string[]? ExcludeRepositories { get; set; }
-           
+
     public virtual string[]? IncludeRepositoriesReadme { get; set; }
-           
+
     public virtual string[]? ExcludeRepositoriesReadme { get; set; }
 
     public virtual string[]? IncludePipelines { get; set; }
 
     public virtual string[]? ExcludePipelines { get; set; }
+
+    public virtual string[]? IncludeReleases { get; set; }
+
+    public virtual string[]? ExcludeReleases { get; set; }
 }

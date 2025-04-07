@@ -26,6 +26,7 @@ OPTIONS:
                                        parallelized                             
         --include-project              Include specific projects                
         --exclude-project              Exclude specific projects                
+        --skip-org-graph               Skip generating the org graph            
         --include-repository           Include specific repositories            
         --exclude-repository           Exclude specific repositories            
         --include-repository-readme    Include specific repository README       

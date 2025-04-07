@@ -19,7 +19,7 @@ graph TD
     %% MyProject project
     subgraph Proj_1[MyProject]
         direction TB
-        %% MyProject repos
+        Repos_1
         subgraph Repos_1[Repositories]
         end
     end

@@ -1,0 +1,15 @@
+{
+  ExitCode: -1,
+  ConsoleOutput:
+Spectre.Console.Cli.CommandRuntimeException: Invalid OutputPath (/output) 
+specified.
+,
+  LogOutput: [],
+  FileSystem: {
+    Path: /output,
+    Exists: false,
+    Hidden: false,
+    Directories: [],
+    Files: []
+  }
+}
