@@ -190,5 +190,29 @@
                 "Basic YWRvOnRlc3QtcGF0"
             ]
         }
+    },
+    {
+        "Request": {
+            "Methods": [
+                {
+                    "Method": "GET"
+                }
+            ],
+            "AbsoluteUri": "https://vsrm.dev.azure.com/test-org/123/_apis/release/definitions?api-version=7.2-preview.4"
+        },
+        "Responses": [
+            {
+                "RequestHeaders": {},
+                "ContentResource": "Authorized.Releases.json",
+                "ContentType": "application/json",
+                "ContentHeaders": {},
+                "StatusCode": 200
+            }
+        ],
+        "Authorization": {
+            "Authorization": [
+                "Basic YWRvOnRlc3QtcGF0"
+            ]
+        }
     }
 ]

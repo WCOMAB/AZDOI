@@ -735,144 +735,6 @@
       ]
     },
     {
-      Information: Project: Test Project - Release: Test Release,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 222
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release - Markdown index created.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 222
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 222
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 583
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release - Markdown index created.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 583
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName} - Markdown index created.
-        }
-      ]
-    },
-    {
-      Information: Project: Test Project - Release: Test Release.,
-      Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Release: 583
-        }
-      ],
-      State: [
-        {
-          ProjectName: Test Project
-        },
-        {
-          ReleaseName: Test Release
-        },
-        {
-          {OriginalFormat}: Project: {ProjectName} - Release: {ReleaseName}.
-        }
-      ]
-    },
-    {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryAllCommand,
       Scopes: [
@@ -1222,7 +1084,7 @@
                         Path: /output/test-org/Test Project/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 465
+                        Length: 323
                       }
                     ]
                   }
@@ -1232,7 +1094,7 @@
                     Path: /output/test-org/Test Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
-                    Length: 1253
+                    Length: 1047
                   }
                 ]
               },
@@ -1313,7 +1175,7 @@
                 Path: /output/test-org/Test Project/index.md,
                 Exists: true,
                 Hidden: false,
-                Length: 2651
+                Length: 2445
               }
             ]
           },
@@ -1539,7 +1401,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 3438
+            Length: 3162
           }
         ]
       }

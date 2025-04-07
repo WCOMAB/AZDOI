@@ -19,12 +19,11 @@ graph TD
     %% Test Project project
     subgraph Proj_Proj1[Test Project]
         direction TB
-        %% Test Project repos
+        Repos_Proj1~~~Pipelines_Proj1
         subgraph Repos_Proj1[Repositories]
             Repo_Proj1_1[MyRepository]
             click Repo_Proj1_1 href "Test Project/Repositories/MyRepository/" "MyRepository"
         end
-        %% Test Project pipelines
         subgraph Pipelines_Proj1[Pipelines]
             Pipeline_Proj1_1[MyPipeline.One]
             click Pipeline_Proj1_1 href "Test Project/Build/Pipelines/MyPipeline.One/" "MyPipeline.One"

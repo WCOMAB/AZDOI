@@ -43,6 +43,24 @@ public class AzureDevOpsClientTests
         }
     }
 
+    public class FilterReleases
+    {
+        [Theory]
+        [InlineData("test-org", "123")]
+        public async Task GetReleases(string organization, string project)
+        {
+            // Given
+            var azureDevOpsClient = ServiceProviderFixture
+                                        .GetRequiredService<AzureDevOpsClient>(services => services.AuthorizedClient());
+
+            // When
+            var result = await azureDevOpsClient.GetReleases(organization, project);
+
+            // Then
+            await Verify(result);
+        }
+    }
+
     public class FilterRepositories
     {
         [Theory]
