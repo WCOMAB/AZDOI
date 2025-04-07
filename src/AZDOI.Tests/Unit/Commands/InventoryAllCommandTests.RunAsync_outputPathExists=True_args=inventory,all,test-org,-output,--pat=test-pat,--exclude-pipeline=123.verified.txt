@@ -1456,7 +1456,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 2937
+            Length: 3294
           }
         ]
       }

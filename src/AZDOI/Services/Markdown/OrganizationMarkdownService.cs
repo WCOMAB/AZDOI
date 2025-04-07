@@ -32,9 +32,24 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
             await writer.WriteLineAsync($"    subgraph Proj_{project.Id}[{project.Name}]");
             await writer.WriteLineAsync("        direction TB");
 
+            var visibleNodes = new[]
+            {
+                new { Condition = project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Repositories), Node = $"Repos_{project.Id}" },
+                new { Condition = project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Pipelines), Node = $"Pipelines_{project.Id}" },
+                new { Condition = project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Pipelines) && project.Releases != null && project.Releases.Length > 0, Node = $"Releases_{project.Id}" }
+            }
+            .Where(item => item.Condition)
+            .Select(item => item.Node)
+            .ToList();
+
+            if (visibleNodes.Count > 0)
+            {
+                var combinedLabel = string.Join("~~~", visibleNodes);
+                await writer.WriteLineAsync($"        {combinedLabel}");
+            }
+
             if (project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Repositories))
             {
-                await writer.WriteLineAsync($"        %% {project.Name} repos");
                 await writer.WriteLineAsync($"        subgraph Repos_{project.Id}[Repositories]");
                 foreach (var repo in project.Children)
                 {
@@ -48,9 +63,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
 
             if (project.ChildTypes.HasFlag(AzureDevOpsProjectChildTypes.Pipelines))
             {
-                await writer.WriteLineAsync($"        %% {project.Name} pipelines");
                 await writer.WriteLineAsync($"        subgraph Pipelines_{project.Id}[Pipelines]");
-
                 foreach (var pipeline in project.Pipelines)
                 {
                     var nodeId = $"Pipeline_{project.Id}_{pipeline.Id}";
@@ -59,6 +72,19 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                     await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{pipeline.Name}\"");
                 }
                 await writer.WriteLineAsync("        end");
+
+                if (project.Releases != null && project.Releases.Length > 0)
+                {
+                    await writer.WriteLineAsync($"        subgraph Releases_{project.Id}[Releases]");
+                    foreach (var release in project.Releases)
+                    {
+                        var nodeId = $"Release_{project.Id}_{release.Id}";
+                        var relativeUrl = $"{release.Name}/Build/Releases/{release.Name}/";
+                        await writer.WriteLineAsync($"            {nodeId}[{release.Name}]");
+                        await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{release.Name}\"");
+                    }
+                    await writer.WriteLineAsync("        end");
+                }
             }
 
             await writer.WriteLineAsync("    end");

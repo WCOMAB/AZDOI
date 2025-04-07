@@ -627,7 +627,7 @@
             Path: /output/test-entraid-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 2003
+            Length: 1881
           }
         ]
       }
