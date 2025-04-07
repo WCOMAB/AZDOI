@@ -79,7 +79,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                     foreach (var release in project.Releases)
                     {
                         var nodeId = $"Release_{project.Id}_{release.Id}";
-                        var relativeUrl = $"{release.Name}/Build/Releases/{release.Name}/";
+                        var relativeUrl = $"{project.Name}/Build/Releases/{release.Name}/";
                         await writer.WriteLineAsync($"            {nodeId}[{release.Name}]");
                         await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{release.Name}\"");
                     }
