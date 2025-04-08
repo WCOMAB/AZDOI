@@ -14,14 +14,14 @@ modified: 2000-01-01 00:00
 
 ```mermaid
 graph TD
-    Org_Org1(Test Organization)
+    Org_Org1("Test Organization")
 
     %% Test Project project
-    subgraph Proj_Proj1[Test Project]
+    subgraph Proj_Proj1["Test Project"]
         direction TB
         Pipelines_Proj1
         subgraph Pipelines_Proj1[Pipelines]
-            Pipeline_Proj1_1[MyPipeline.One]
+            Pipeline_Proj1_1["MyPipeline.One"]
             click Pipeline_Proj1_1 href "Test0x20Project/Build/Pipelines/MyPipeline.One/" "MyPipeline.One"
         end
     end
