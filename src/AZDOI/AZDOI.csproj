@@ -26,6 +26,7 @@
 		<PackageReference Include="Devlead.Console" />
 		<PackageReference Include="Microsoft.Extensions.Http" />
 		<PackageReference Include="System.Linq.Async" />
+		<PackageReference Include="YamlDotNet" />
 	</ItemGroup>
 
 	<ItemGroup>

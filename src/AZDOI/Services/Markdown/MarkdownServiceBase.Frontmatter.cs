@@ -1,10 +1,16 @@
-﻿namespace AZDOI.Services.Markdown;
+﻿using YamlDotNet.Serialization.NamingConventions;
+using YamlDotNet.Serialization;
+
+namespace AZDOI.Services.Markdown;
 
 public abstract partial class MarkdownServiceBase<TValue>
 {
     protected virtual string? Title { get; }
     protected virtual string? Summary { get; }
 
+    private static readonly ISerializer YamlSeralizer = new SerializerBuilder()
+                                                            .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                                                            .Build();
 
     protected virtual async Task WriteFrontMatter(FileTextWriter writer, TValue value)
     {
@@ -15,13 +21,21 @@ public abstract partial class MarkdownServiceBase<TValue>
             string.IsNullOrEmpty(azureDevOps?.Description) ? azureDevOps?.Name : azureDevOps?.Description
             );
 
+
         if (!string.IsNullOrWhiteSpace(title) )
         {
-            await writer.WriteLineAsync($"title: {title}");
+            YamlSeralizer.Serialize(writer, new
+            {
+                title
+            });
         }
+
         if (!string.IsNullOrWhiteSpace(summary))
         {
-            await writer.WriteLineAsync($"summary: {summary}");
+            YamlSeralizer.Serialize(writer, new
+            {
+                summary
+            });
         }
 
         await writer.WriteLineAsync($"modifiedby: AZDOI");

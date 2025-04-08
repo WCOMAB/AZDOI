@@ -13,9 +13,9 @@ public partial class InventoryCommand<TSettings>
 
         var pipelinesDirectory = context.OutputDirectory.Combine("Pipelines");
 
-        var pipelines = 
+        var pipelines =
             await context.InvokeDevOpsClient(
-                async (client, settings) => 
+                async (client, settings) =>
                     await context.ForEachAsync(
                         await client.GetPipelines(settings.DevOpsOrg, project.Id, settings.IncludePipelines, settings.ExcludePipelines),
                         (pipeline, ct) => ProcessPipeline(
@@ -42,7 +42,7 @@ public partial class InventoryCommand<TSettings>
             Logger.LogInformation("Project: {ProjectName} - Pipeline: {PipelineName}", project.Name, sourcePipe.Name);
 
             await services.PipelineMarkdownService.WriteIndex(
-                context.OutputDirectory.Combine(sourcePipe.Name),
+                context.OutputDirectory.CombineEscapeUri(sourcePipe.Name),
                 sourcePipe
             );
 

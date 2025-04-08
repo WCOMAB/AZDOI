@@ -26,7 +26,7 @@ public abstract partial class MarkdownServiceBase<TValue>
             children
                 .Select(child =>
                     new KeyValuePair<string, string>(
-                        $"[{child.Name}](<{urlSelector?.Invoke(child) ?? child.ChildUrl}>)",
+                        $"[{child.Name}](<{(urlSelector?.Invoke(child) ?? child.ChildUrl).PathEscapeUriString()}>)",
                         child.Description
                     )
                 )
