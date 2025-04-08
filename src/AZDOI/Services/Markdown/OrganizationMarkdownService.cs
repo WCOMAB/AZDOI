@@ -23,13 +23,13 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
     {
         await writer.WriteLineAsync("```mermaid");
         await writer.WriteLineAsync("graph TD");
-        await writer.WriteLineAsync($"    Org_{organization.Id}({organization.Name.HtmlEncode()})");
+        await writer.WriteLineAsync($"    Org_{organization.Id}({organization.Name.HtmlEncode().Quote()})");
         await writer.WriteLineAsync();
 
         foreach (var project in organization.Children)
         {
             await writer.WriteLineAsync($"    %% {project.Name} project");
-            await writer.WriteLineAsync($"    subgraph Proj_{project.Id}[{project.Name.HtmlEncode()}]");
+            await writer.WriteLineAsync($"    subgraph Proj_{project.Id}[{project.Name.HtmlEncode().Quote()}]");
             await writer.WriteLineAsync("        direction TB");
 
             var visibleNodes = new[]
@@ -55,7 +55,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                 {
                     var nodeId = $"Repo_{project.Id}_{repo.Id}";
                     var relativeUrl = $"{project.Name}/Repositories/{repo.Name}/";
-                    await writer.WriteLineAsync($"            {nodeId}[{repo.Name.HtmlEncode()}]");
+                    await writer.WriteLineAsync($"            {nodeId}[{repo.Name.HtmlEncode().Quote()}]");
                     await writer.WriteClickNode(nodeId, relativeUrl, repo.Name);
                 }
                 await writer.WriteLineAsync("        end");
@@ -68,7 +68,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                 {
                     var nodeId = $"Pipeline_{project.Id}_{pipeline.Id}";
                     var relativeUrl = $"{project.Name}/Build/Pipelines/{pipeline.Name}/";
-                    await writer.WriteLineAsync($"            {nodeId}[{pipeline.Name.HtmlEncode()}]");
+                    await writer.WriteLineAsync($"            {nodeId}[{pipeline.Name.HtmlEncode().Quote()}]");
                     await writer.WriteClickNode(nodeId, relativeUrl, pipeline.Name);
                 }
                 await writer.WriteLineAsync("        end");
@@ -80,7 +80,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                     {
                         var nodeId = $"Release_{project.Id}_{release.Id}";
                         var relativeUrl = $"{project.Name}/Build/Releases/{release.Name}/";
-                        await writer.WriteLineAsync($"            {nodeId}[{release.Name.HtmlEncode()}]");
+                        await writer.WriteLineAsync($"            {nodeId}[{release.Name.HtmlEncode().Quote()}]");
                         await writer.WriteClickNode(nodeId, relativeUrl, release.Name);
                     }
                     await writer.WriteLineAsync("        end");

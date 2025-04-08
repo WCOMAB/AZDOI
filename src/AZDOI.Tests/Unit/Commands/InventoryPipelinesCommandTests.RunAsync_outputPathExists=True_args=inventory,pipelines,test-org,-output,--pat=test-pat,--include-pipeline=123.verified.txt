@@ -809,7 +809,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 2396
+            Length: 2414
           }
         ]
       }
