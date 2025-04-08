@@ -2,7 +2,7 @@
   ExitCode: 0,
   ConsoleOutput:
 DESCRIPTION:
-Example get pipelines command.
+Example get pipelines command
 
 USAGE:
     AZDOI inventory pipelines <devopsorg> <outputpath> [OPTIONS]
