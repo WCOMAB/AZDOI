@@ -113,23 +113,23 @@
         Hidden: false,
         Directories: [
           {
-            Path: /output/test-entraid-org/Test Project,
+            Path: /output/test-entraid-org/Test0x20Project,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-entraid-org/Test Project/Build,
+                Path: /output/test-entraid-org/Test0x20Project/Build,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-entraid-org/Test Project/Build/Pipelines,
+                    Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-entraid-org/Test Project/Build/Pipelines/index.md,
+                        Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 137
@@ -137,13 +137,13 @@
                     ]
                   },
                   {
-                    Path: /output/test-entraid-org/Test Project/Build/Releases,
+                    Path: /output/test-entraid-org/Test0x20Project/Build/Releases,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-entraid-org/Test Project/Build/Releases/index.md,
+                        Path: /output/test-entraid-org/Test0x20Project/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 133
@@ -153,7 +153,7 @@
                 ],
                 Files: [
                   {
-                    Path: /output/test-entraid-org/Test Project/Build/index.md,
+                    Path: /output/test-entraid-org/Test0x20Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 167
@@ -163,7 +163,7 @@
             ],
             Files: [
               {
-                Path: /output/test-entraid-org/Test Project/index.md,
+                Path: /output/test-entraid-org/Test0x20Project/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 740
@@ -176,7 +176,7 @@
             Path: /output/test-entraid-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 717
+            Length: 813
           }
         ]
       }

@@ -21,13 +21,13 @@ modified: 2000-01-01 00:00
 
 | Branch                                                           | ObjectId                         |
 |------------------------------------------------------------------|----------------------------------|
-| [main](<https://myproject.com?version=GBmain>)                   | 1573218                          |
+| [main](<https0x3A//myproject.com0x3Fversion0x3DGBmain>)          | 1573218                          |
 
 ## Tags
 
 | Tag                                                              | ObjectId                         |
 |------------------------------------------------------------------|----------------------------------|
-| [v0.1](<https://myproject.com?version=GTv0.1>)                   | 12345                            |
+| [v0.1](<https0x3A//myproject.com0x3Fversion0x3DGTv0.1>)          | 12345                            |
 
 ## README
 

@@ -396,51 +396,37 @@
         Hidden: false,
         Directories: [
           {
-            Path: /output/test-org/Test Project,
+            Path: /output/test-org/Test0x20Project,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-org/Test Project/Repositories,
+                Path: /output/test-org/Test0x20Project/Repositories,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-org/Test Project/Repositories/Test Repository,
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project/Repositories/Test Repository/index.md,
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 2625
+                        Length: 2721
                       }
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project/Repositories/Test Repository2,
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project/Repositories/Test Repository2/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1596
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test Project/Repositories/Test Repository3,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test Project/Repositories/Test Repository3/index.md,
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 1596
@@ -448,13 +434,27 @@
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project/Repositories/Test Repository4,
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project/Repositories/Test Repository4/index.md,
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 1596
+                      }
+                    ]
+                  },
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 1596
@@ -464,7 +464,7 @@
                 ],
                 Files: [
                   {
-                    Path: /output/test-org/Test Project/Repositories/index.md,
+                    Path: /output/test-org/Test0x20Project/Repositories/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 926
@@ -474,7 +474,7 @@
             ],
             Files: [
               {
-                Path: /output/test-org/Test Project/index.md,
+                Path: /output/test-org/Test0x20Project/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 1487
@@ -487,7 +487,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 1229
+            Length: 1349
           }
         ]
       }

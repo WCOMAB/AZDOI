@@ -56,7 +56,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                     var nodeId = $"Repo_{project.Id}_{repo.Id}";
                     var relativeUrl = $"{project.Name}/Repositories/{repo.Name}/";
                     await writer.WriteLineAsync($"            {nodeId}[{repo.Name}]");
-                    await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{repo.Name}\"");
+                    await writer.WriteClickNode(nodeId, relativeUrl, repo.Name);
                 }
                 await writer.WriteLineAsync("        end");
             }
@@ -69,7 +69,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                     var nodeId = $"Pipeline_{project.Id}_{pipeline.Id}";
                     var relativeUrl = $"{project.Name}/Build/Pipelines/{pipeline.Name}/";
                     await writer.WriteLineAsync($"            {nodeId}[{pipeline.Name}]");
-                    await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{pipeline.Name}\"");
+                    await writer.WriteClickNode(nodeId, relativeUrl, pipeline.Name);
                 }
                 await writer.WriteLineAsync("        end");
 
@@ -81,7 +81,7 @@ public class OrganizationMarkdownService(ICakeContext cakeContext, TimeProvider 
                         var nodeId = $"Release_{project.Id}_{release.Id}";
                         var relativeUrl = $"{project.Name}/Build/Releases/{release.Name}/";
                         await writer.WriteLineAsync($"            {nodeId}[{release.Name}]");
-                        await writer.WriteLineAsync($"            click {nodeId} href \"{relativeUrl}\" \"{release.Name}\"");
+                        await writer.WriteClickNode(nodeId, relativeUrl, release.Name);
                     }
                     await writer.WriteLineAsync("        end");
                 }
