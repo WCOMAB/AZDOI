@@ -42,7 +42,7 @@ public partial class InventoryCommand<TSettings>
             Logger.LogInformation("Project: {ProjectName} - Release: {ReleaseName}", project.Name, sourceRelease.Name);
 
             await services.ReleaseMarkdownService.WriteIndex(
-                context.OutputDirectory.Combine(sourceRelease.Name),
+                context.OutputDirectory.CombineEscapeUri(sourceRelease.Name),
                 sourceRelease
             );
 

@@ -542,28 +542,28 @@
         Hidden: false,
         Directories: [
           {
-            Path: /output/test-org/Test Project,
+            Path: /output/test-org/Test0x20Project,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-org/Test Project/Build,
+                Path: /output/test-org/Test0x20Project/Build,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-org/Test Project/Build/Pipelines,
+                    Path: /output/test-org/Test0x20Project/Build/Pipelines,
                     Exists: true,
                     Hidden: false,
                     Directories: [
                       {
-                        Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline,
+                        Path: /output/test-org/Test0x20Project/Build/Pipelines/Test0x20Pipeline,
                         Exists: true,
                         Hidden: false,
                         Directories: [],
                         Files: [
                           {
-                            Path: /output/test-org/Test Project/Build/Pipelines/Test Pipeline/index.md,
+                            Path: /output/test-org/Test0x20Project/Build/Pipelines/Test0x20Pipeline/index.md,
                             Exists: true,
                             Hidden: false,
                             Length: 1294
@@ -573,26 +573,26 @@
                     ],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project/Build/Pipelines/index.md,
+                        Path: /output/test-org/Test0x20Project/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 326
+                        Length: 422
                       }
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project/Build/Releases,
+                    Path: /output/test-org/Test0x20Project/Build/Releases,
                     Exists: true,
                     Hidden: false,
                     Directories: [
                       {
-                        Path: /output/test-org/Test Project/Build/Releases/Test Release,
+                        Path: /output/test-org/Test0x20Project/Build/Releases/Test0x20Release,
                         Exists: true,
                         Hidden: false,
                         Directories: [],
                         Files: [
                           {
-                            Path: /output/test-org/Test Project/Build/Releases/Test Release/index.md,
+                            Path: /output/test-org/Test0x20Project/Build/Releases/Test0x20Release/index.md,
                             Exists: true,
                             Hidden: false,
                             Length: 1301
@@ -602,17 +602,17 @@
                     ],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project/Build/Releases/index.md,
+                        Path: /output/test-org/Test0x20Project/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
-                        Length: 465
+                        Length: 625
                       }
                     ]
                   }
                 ],
                 Files: [
                   {
-                    Path: /output/test-org/Test Project/Build/index.md,
+                    Path: /output/test-org/Test0x20Project/Build/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 944
@@ -622,7 +622,7 @@
             ],
             Files: [
               {
-                Path: /output/test-org/Test Project/index.md,
+                Path: /output/test-org/Test0x20Project/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 1517
@@ -630,23 +630,23 @@
             ]
           },
           {
-            Path: /output/test-org/Test Project2,
+            Path: /output/test-org/Test0x20Project2,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-org/Test Project2/Build,
+                Path: /output/test-org/Test0x20Project2/Build,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-org/Test Project2/Build/Pipelines,
+                    Path: /output/test-org/Test0x20Project2/Build/Pipelines,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project2/Build/Pipelines/index.md,
+                        Path: /output/test-org/Test0x20Project2/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 137
@@ -654,13 +654,13 @@
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project2/Build/Releases,
+                    Path: /output/test-org/Test0x20Project2/Build/Releases,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project2/Build/Releases/index.md,
+                        Path: /output/test-org/Test0x20Project2/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 133
@@ -670,7 +670,7 @@
                 ],
                 Files: [
                   {
-                    Path: /output/test-org/Test Project2/Build/index.md,
+                    Path: /output/test-org/Test0x20Project2/Build/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 167
@@ -680,7 +680,7 @@
             ],
             Files: [
               {
-                Path: /output/test-org/Test Project2/index.md,
+                Path: /output/test-org/Test0x20Project2/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 742
@@ -688,23 +688,23 @@
             ]
           },
           {
-            Path: /output/test-org/Test Project3,
+            Path: /output/test-org/Test0x20Project3,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-org/Test Project3/Build,
+                Path: /output/test-org/Test0x20Project3/Build,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-org/Test Project3/Build/Pipelines,
+                    Path: /output/test-org/Test0x20Project3/Build/Pipelines,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project3/Build/Pipelines/index.md,
+                        Path: /output/test-org/Test0x20Project3/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 137
@@ -712,13 +712,13 @@
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project3/Build/Releases,
+                    Path: /output/test-org/Test0x20Project3/Build/Releases,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project3/Build/Releases/index.md,
+                        Path: /output/test-org/Test0x20Project3/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 133
@@ -728,7 +728,7 @@
                 ],
                 Files: [
                   {
-                    Path: /output/test-org/Test Project3/Build/index.md,
+                    Path: /output/test-org/Test0x20Project3/Build/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 167
@@ -738,7 +738,7 @@
             ],
             Files: [
               {
-                Path: /output/test-org/Test Project3/index.md,
+                Path: /output/test-org/Test0x20Project3/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 742
@@ -746,23 +746,23 @@
             ]
           },
           {
-            Path: /output/test-org/Test Project4,
+            Path: /output/test-org/Test0x20Project4,
             Exists: true,
             Hidden: false,
             Directories: [
               {
-                Path: /output/test-org/Test Project4/Build,
+                Path: /output/test-org/Test0x20Project4/Build,
                 Exists: true,
                 Hidden: false,
                 Directories: [
                   {
-                    Path: /output/test-org/Test Project4/Build/Pipelines,
+                    Path: /output/test-org/Test0x20Project4/Build/Pipelines,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project4/Build/Pipelines/index.md,
+                        Path: /output/test-org/Test0x20Project4/Build/Pipelines/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 137
@@ -770,13 +770,13 @@
                     ]
                   },
                   {
-                    Path: /output/test-org/Test Project4/Build/Releases,
+                    Path: /output/test-org/Test0x20Project4/Build/Releases,
                     Exists: true,
                     Hidden: false,
                     Directories: [],
                     Files: [
                       {
-                        Path: /output/test-org/Test Project4/Build/Releases/index.md,
+                        Path: /output/test-org/Test0x20Project4/Build/Releases/index.md,
                         Exists: true,
                         Hidden: false,
                         Length: 133
@@ -786,7 +786,7 @@
                 ],
                 Files: [
                   {
-                    Path: /output/test-org/Test Project4/Build/index.md,
+                    Path: /output/test-org/Test0x20Project4/Build/index.md,
                     Exists: true,
                     Hidden: false,
                     Length: 167
@@ -796,7 +796,7 @@
             ],
             Files: [
               {
-                Path: /output/test-org/Test Project4/index.md,
+                Path: /output/test-org/Test0x20Project4/index.md,
                 Exists: true,
                 Hidden: false,
                 Length: 742
@@ -809,7 +809,7 @@
             Path: /output/test-org/index.md,
             Exists: true,
             Hidden: false,
-            Length: 2180
+            Length: 2396
           }
         ]
       }

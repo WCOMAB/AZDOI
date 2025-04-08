@@ -8,9 +8,9 @@ modified: 2000-01-01 00:00
 
 ## Projects
 
-| Project                          | Description                      |
-|----------------------------------|----------------------------------|
-| [Test Project](<Test Project>)   |                                  |
+| Project                                                          | Description                      |
+|------------------------------------------------------------------|----------------------------------|
+| [Test Project](<Test0x20Project>)                                |                                  |
 
 ```mermaid
 graph TD
@@ -22,7 +22,7 @@ graph TD
         Repos_Proj1
         subgraph Repos_Proj1[Repositories]
             Repo_Proj1_1[MyRepository]
-            click Repo_Proj1_1 href "Test Project/Repositories/MyRepository/" "MyRepository"
+            click Repo_Proj1_1 href "Test0x20Project/Repositories/MyRepository/" "MyRepository"
         end
     end
 

@@ -53,7 +53,7 @@ public partial class InventoryCommand<TSettings>
 
                         Children = await client
                                     .GetBranchesAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
-                                    .OrderBy(_ => !StringComparer.OrdinalIgnoreCase.Equals(sourceRepo.DefaultBranch,  _.Name))
+                                    .OrderBy(_ => !StringComparer.OrdinalIgnoreCase.Equals(sourceRepo.DefaultBranch, _.Name))
                                     .ThenBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
                                     .ToArrayAsync(),
 
@@ -64,8 +64,8 @@ public partial class InventoryCommand<TSettings>
                                         {
                                             Message = (await client.GetAnnotatedTagsAsync(
                                                 settings.DevOpsOrg,
-                                                project.Id, 
-                                                sourceRepo.Id, 
+                                                project.Id,
+                                                sourceRepo.Id,
                                                 tag.ObjectId)
                                             )
                                             ?.Message
@@ -77,7 +77,7 @@ public partial class InventoryCommand<TSettings>
             );
 
             await services.RepositoryMarkdownService.WriteIndex(
-                context.OutputDirectory.Combine(repo.Name),
+                context.OutputDirectory.CombineEscapeUri(repo.Name),
                 repo
             );
 
@@ -85,7 +85,7 @@ public partial class InventoryCommand<TSettings>
 
             if (shouldProcessRepoReadme)
             {
-                var (Exists, Length) =  repo.ReadmeContent?.ReplaceLineEndings("\n").Length is int length
+                var (Exists, Length) = repo.ReadmeContent?.ReplaceLineEndings("\n").Length is int length
                                         &&
                                         length > 0
                                         ? (true, length)

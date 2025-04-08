@@ -19,14 +19,14 @@ public abstract partial class InventoryCommand<TSettings>(
         {
             AzureDevOpsProjectChildTypes.Repositories => nameof(AzureDevOpsProjectChildTypes.Repositories),
             AzureDevOpsProjectChildTypes.Pipelines => nameof(AzureDevOpsProjectChildTypes.Pipelines),
-            AzureDevOpsProjectChildTypes.Repositories | AzureDevOpsProjectChildTypes.Pipelines => 
+            AzureDevOpsProjectChildTypes.Repositories | AzureDevOpsProjectChildTypes.Pipelines =>
             string.Join(",", nameof(AzureDevOpsProjectChildTypes.Repositories), nameof(AzureDevOpsProjectChildTypes.Pipelines)),
             _ => "Unknown"
         };
 
         try
         {
-            var orgOutputDirectory = settings.OutputPath.Combine(settings.DevOpsOrg);
+            var orgOutputDirectory = settings.OutputPath.CombineEscapeUri(settings.DevOpsOrg);
 
             var context = new InventoryContext(
                 settings,
