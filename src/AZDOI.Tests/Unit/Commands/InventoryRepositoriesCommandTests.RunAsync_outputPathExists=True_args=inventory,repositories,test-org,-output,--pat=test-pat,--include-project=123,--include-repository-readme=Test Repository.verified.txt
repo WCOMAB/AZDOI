@@ -1,6 +1,115 @@
 ﻿{
   ExitCode: 0,
   ConsoleOutput: ,
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-org/Test0x20Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-org/Test0x20Project/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 2721
+                      }
+                    ]
+                  },
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 1586
+                      }
+                    ]
+                  },
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 1586
+                      }
+                    ]
+                  },
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4,
+                    Exists: true,
+                    Hidden: false,
+                    Directories: [],
+                    Files: [
+                      {
+                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4/index.md,
+                        Exists: true,
+                        Hidden: false,
+                        Length: 1586
+                      }
+                    ]
+                  }
+                ],
+                Files: [
+                  {
+                    Path: /output/test-org/Test0x20Project/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 926
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-org/Test0x20Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 1487
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 1361
+          }
+        ]
+      }
+    ],
+    Files: []
+  },
   LogOutput: [
     {
       Information: Executing Inventory Repositories Command...,
@@ -366,114 +475,5 @@
         }
       ]
     }
-  ],
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-org/Test0x20Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test0x20Project/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 2721
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1586
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1586
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1586
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 926
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test0x20Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 1487
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 1361
-          }
-        ]
-      }
-    ],
-    Files: []
-  }
+  ]
 }

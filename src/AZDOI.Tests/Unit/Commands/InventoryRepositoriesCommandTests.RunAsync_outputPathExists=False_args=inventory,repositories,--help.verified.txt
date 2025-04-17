@@ -32,12 +32,12 @@ OPTIONS:
         --include-repository-readme    Include specific repository README       
         --exclude-repository-readme    Exclude specific repository README       
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,
     Hidden: false,
     Directories: [],
     Files: []
-  }
+  },
+  LogOutput: []
 }

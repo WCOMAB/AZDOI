@@ -1,6 +1,58 @@
 ﻿{
   ExitCode: 0,
   ConsoleOutput: ,
+  FileSystem: {
+    Path: /output,
+    Exists: true,
+    Hidden: false,
+    Directories: [
+      {
+        Path: /output/test-entraid-org,
+        Exists: true,
+        Hidden: false,
+        Directories: [
+          {
+            Path: /output/test-entraid-org/Test0x20Project,
+            Exists: true,
+            Hidden: false,
+            Directories: [
+              {
+                Path: /output/test-entraid-org/Test0x20Project/Repositories,
+                Exists: true,
+                Hidden: false,
+                Directories: [],
+                Files: [
+                  {
+                    Path: /output/test-entraid-org/Test0x20Project/Repositories/index.md,
+                    Exists: true,
+                    Hidden: false,
+                    Length: 143
+                  }
+                ]
+              }
+            ],
+            Files: [
+              {
+                Path: /output/test-entraid-org/Test0x20Project/index.md,
+                Exists: true,
+                Hidden: false,
+                Length: 704
+              }
+            ]
+          }
+        ],
+        Files: [
+          {
+            Path: /output/test-entraid-org/index.md,
+            Exists: true,
+            Hidden: false,
+            Length: 812
+          }
+        ]
+      }
+    ],
+    Files: []
+  },
   LogOutput: [
     {
       Information: Executing Inventory Repositories Command...,
@@ -84,57 +136,5 @@
         }
       ]
     }
-  ],
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-entraid-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-entraid-org/Test0x20Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [],
-                Files: [
-                  {
-                    Path: /output/test-entraid-org/Test0x20Project/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 143
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 704
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-entraid-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 812
-          }
-        ]
-      }
-    ],
-    Files: []
-  }
+  ]
 }

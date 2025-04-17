@@ -16,12 +16,12 @@ OPTIONS:
 COMMANDS:
     inventory     
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,
     Hidden: false,
     Directories: [],
     Files: []
-  }
+  },
+  LogOutput: []
 }

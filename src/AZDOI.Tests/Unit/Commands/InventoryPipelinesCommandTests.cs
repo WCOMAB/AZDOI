@@ -50,8 +50,8 @@ public class InventoryPipelinesCommandTests
                 {
                     ExitCode = result,
                     ConsoleOutput = testConsole.Output,
-                    LogOutput = fakeLog.Collector.GetSnapshot(),
-                    FileSystem = fakeFileSystem.FromDirectoryPath("/output")
+                    FileSystem = fakeFileSystem.FromDirectoryPath("/output"),
+                    LogOutput = fakeLog.Collector.GetSnapshot()
                 }
             )
             .DontIgnoreEmptyCollections()

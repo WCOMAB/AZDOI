@@ -4,12 +4,12 @@
 Spectre.Console.Cli.CommandRuntimeException: Command 'pipelines' is missing 
 required argument 'devopsorg'.
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,
     Hidden: false,
     Directories: [],
     Files: []
-  }
+  },
+  LogOutput: []
 }
