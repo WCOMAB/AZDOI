@@ -8,6 +8,7 @@ public static class VerifyConfig
     public static void Init()
     {
         VerifierSettings.DontIgnoreEmptyCollections();
+        VerifierSettings.IgnoreStackTrace();
         VerifierSettings.AddExtraSettings(settings =>
         {
             settings.DefaultValueHandling = Argon.DefaultValueHandling.Include;

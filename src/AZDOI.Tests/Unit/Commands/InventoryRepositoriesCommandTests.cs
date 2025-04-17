@@ -56,7 +56,6 @@ public class InventoryRepositoriesCommandTests
                     LogOutput = fakeLog.Collector.GetSnapshot(),
                     FileSystem = fakeFileSystem.FromDirectoryPath("/output")
                 }
-            )
-            .IgnoreStackTrace();
+            );
     }
 }
