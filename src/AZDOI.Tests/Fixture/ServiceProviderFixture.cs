@@ -10,9 +10,9 @@ using Devlead.Console.Extensions;
 using Devlead.Testing.MockHttp;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Testing;
 using NSubstitute;
 using Spectre.Console.Testing;
+using VerifyTests.MicrosoftLogging;
 
 public static partial class ServiceProviderFixture
 {
@@ -48,10 +48,6 @@ public static partial class ServiceProviderFixture
 
     static partial void InitServiceProvider(IServiceCollection services)
     {
-        var repoLogger = new FakeLogger<InventoryRepositoriesCommand>();
-        var pipelinesLogger = new FakeLogger<InventoryPipelinesCommand>();
-        var allLogger = new FakeLogger<InventoryAllCommand>();
-
         services
             .AddCakeFakes()
             .AddMockHttpClient<Constants>()
@@ -60,25 +56,8 @@ public static partial class ServiceProviderFixture
             .AddMarkdownServices()
             .AddSingleton<InventoryCommandServices>()
             .AddSingleton<FakeStopwatch>()
-            .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>());
-
-        services
-            .AddSingleton(repoLogger)
-            .AddSingleton<ILogger<InventoryRepositoriesCommand>>(
-               provider => provider.GetRequiredService<FakeLogger<InventoryRepositoriesCommand>>()
-            );
-
-        services
-        .AddSingleton(pipelinesLogger)
-        .AddSingleton<ILogger<InventoryPipelinesCommand>>(
-            provider => provider.GetRequiredService<FakeLogger<InventoryPipelinesCommand>>()
-        );
-
-        services
-        .AddSingleton(allLogger)
-        .AddSingleton<ILogger<InventoryAllCommand>>(
-            provider => provider.GetRequiredService<FakeLogger<InventoryAllCommand>>()
-        );
+            .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>())
+            .AddSingleton<ILoggerProvider>(new RecordingProvider());
 
         services
                 .AddCommandApp(new TestConsole());

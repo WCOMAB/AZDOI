@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging.Testing;
-using Spectre.Console.Cli;
+﻿using Spectre.Console.Cli;
 using Spectre.Console.Testing;
 
 namespace AZDOI.Tests.Unit.Commands;
@@ -16,14 +15,15 @@ public class ValidateOrgAttributeTest
     public async Task RunAsync(params string[] args)
     {
         // Given
-        var (commandApp, testConsole, fakeLog, fakeFileSystem) = ServiceProviderFixture
-                                           .GetRequiredService<ICommandApp, TestConsole, FakeLogger<InventoryRepositoriesCommand>, FakeFileSystem>(
+        var (commandApp, testConsole, fakeFileSystem) = ServiceProviderFixture
+                                           .GetRequiredService<ICommandApp, TestConsole, FakeFileSystem>(
                                                services => services.AuthorizedClient()
                                                                    .EntraIdAuthorizedClient()
                                            );
 
         // When
         fakeFileSystem.CreateDirectory("/output");
+        Recording.Start();
         var result = await commandApp.RunAsync(args);
 
         // Then
@@ -32,8 +32,7 @@ public class ValidateOrgAttributeTest
                 {
                     ExitCode = result,
                     ConsoleOutput = testConsole.Output,
-                    FileSystem = fakeFileSystem.FromDirectoryPath("/output"),
-                    LogOutput = fakeLog.Collector.GetSnapshot()
+                    FileSystem = fakeFileSystem.FromDirectoryPath("/output")
                 }
             )
             .DontIgnoreEmptyCollections()

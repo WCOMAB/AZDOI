@@ -1,59 +1,61 @@
 ﻿{
-  ExitCode: 0,
-  ConsoleOutput: ,
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-entraid-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-entraid-org/Test0x20Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [],
-                Files: [
-                  {
-                    Path: /output/test-entraid-org/Test0x20Project/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 143
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 704
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-entraid-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 812
-          }
-        ]
-      }
-    ],
-    Files: []
+  target: {
+    ExitCode: 0,
+    ConsoleOutput: ,
+    FileSystem: {
+      Path: /output,
+      Exists: true,
+      Hidden: false,
+      Directories: [
+        {
+          Path: /output/test-entraid-org,
+          Exists: true,
+          Hidden: false,
+          Directories: [
+            {
+              Path: /output/test-entraid-org/Test0x20Project,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-entraid-org/Test0x20Project/Repositories,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [],
+                  Files: [
+                    {
+                      Path: /output/test-entraid-org/Test0x20Project/Repositories/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 143
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-entraid-org/Test0x20Project/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 704
+                }
+              ]
+            }
+          ],
+          Files: [
+            {
+              Path: /output/test-entraid-org/index.md,
+              Exists: true,
+              Hidden: false,
+              Length: 812
+            }
+          ]
+        }
+      ],
+      Files: []
+    }
   },
-  LogOutput: [
+  log: [
     {
       Information: Executing Inventory Repositories Command...,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
@@ -91,13 +93,14 @@
       ]
     },
     {
+      Message: StartScope,
+      State: {
+        ProjectId: 123
+      }
+    },
+    {
       Information: Project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -110,11 +113,6 @@
     {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -123,6 +121,10 @@
           {OriginalFormat}: Markdown index created for project: {ProjectName}
         }
       ]
+    },
+    {
+      Message: EndScope,
+      State: null
     },
     {
       Information: Processed inventory in 00:00:00.,

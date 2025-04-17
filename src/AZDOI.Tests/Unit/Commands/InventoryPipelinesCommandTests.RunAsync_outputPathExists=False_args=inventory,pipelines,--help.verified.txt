@@ -36,6 +36,5 @@ OPTIONS:
     Hidden: false,
     Directories: [],
     Files: []
-  },
-  LogOutput: []
+  }
 }

@@ -1,88 +1,90 @@
 ﻿{
-  ExitCode: 0,
-  ConsoleOutput: ,
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-entraid-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-entraid-org/Test0x20Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/Build,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 137
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-entraid-org/Test0x20Project/Build/Releases,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-entraid-org/Test0x20Project/Build/Releases/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 133
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-entraid-org/Test0x20Project/Build/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 167
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-entraid-org/Test0x20Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 740
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-entraid-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 817
-          }
-        ]
-      }
-    ],
-    Files: []
+  target: {
+    ExitCode: 0,
+    ConsoleOutput: ,
+    FileSystem: {
+      Path: /output,
+      Exists: true,
+      Hidden: false,
+      Directories: [
+        {
+          Path: /output/test-entraid-org,
+          Exists: true,
+          Hidden: false,
+          Directories: [
+            {
+              Path: /output/test-entraid-org/Test0x20Project,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-entraid-org/Test0x20Project/Build,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [
+                    {
+                      Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-entraid-org/Test0x20Project/Build/Pipelines/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 137
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-entraid-org/Test0x20Project/Build/Releases,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-entraid-org/Test0x20Project/Build/Releases/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 133
+                        }
+                      ]
+                    }
+                  ],
+                  Files: [
+                    {
+                      Path: /output/test-entraid-org/Test0x20Project/Build/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 167
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-entraid-org/Test0x20Project/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 740
+                }
+              ]
+            }
+          ],
+          Files: [
+            {
+              Path: /output/test-entraid-org/index.md,
+              Exists: true,
+              Hidden: false,
+              Length: 817
+            }
+          ]
+        }
+      ],
+      Files: []
+    }
   },
-  LogOutput: [
+  log: [
     {
       Information: Executing Inventory Pipelines Command...,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
@@ -120,13 +122,14 @@
       ]
     },
     {
+      Message: StartScope,
+      State: {
+        ProjectId: 123
+      }
+    },
+    {
       Information: Project: Test Project,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -139,11 +142,6 @@
     {
       Information: Project: Test Project,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -156,11 +154,6 @@
     {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryPipelinesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -169,6 +162,10 @@
           {OriginalFormat}: Markdown index created for project: {ProjectName}
         }
       ]
+    },
+    {
+      Message: EndScope,
+      State: null
     },
     {
       Information: Processed inventory in 00:00:00.,

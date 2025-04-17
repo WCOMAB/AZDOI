@@ -1,246 +1,248 @@
 ﻿{
-  ExitCode: 0,
-  ConsoleOutput: ,
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-org/Test0x20Project2,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test0x20Project2/Build,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test0x20Project2/Build/Pipelines,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project2/Build/Pipelines/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 137
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project2/Build/Releases,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project2/Build/Releases/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 133
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project2/Build/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 167
-                  }
-                ]
-              },
-              {
-                Path: /output/test-org/Test0x20Project2/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project2/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 143
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test0x20Project2/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 784
-              }
-            ]
-          },
-          {
-            Path: /output/test-org/Test0x20Project3,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test0x20Project3/Build,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test0x20Project3/Build/Pipelines,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project3/Build/Pipelines/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 137
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project3/Build/Releases,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project3/Build/Releases/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 133
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project3/Build/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 167
-                  }
-                ]
-              },
-              {
-                Path: /output/test-org/Test0x20Project3/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project3/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 143
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test0x20Project3/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 784
-              }
-            ]
-          },
-          {
-            Path: /output/test-org/Test0x20Project4,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test0x20Project4/Build,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test0x20Project4/Build/Pipelines,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project4/Build/Pipelines/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 137
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project4/Build/Releases,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project4/Build/Releases/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 133
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project4/Build/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 167
-                  }
-                ]
-              },
-              {
-                Path: /output/test-org/Test0x20Project4/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project4/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 143
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test0x20Project4/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 784
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 1620
-          }
-        ]
-      }
-    ],
-    Files: []
+  target: {
+    ExitCode: 0,
+    ConsoleOutput: ,
+    FileSystem: {
+      Path: /output,
+      Exists: true,
+      Hidden: false,
+      Directories: [
+        {
+          Path: /output/test-org,
+          Exists: true,
+          Hidden: false,
+          Directories: [
+            {
+              Path: /output/test-org/Test0x20Project2,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-org/Test0x20Project2/Build,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [
+                    {
+                      Path: /output/test-org/Test0x20Project2/Build/Pipelines,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project2/Build/Pipelines/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 137
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project2/Build/Releases,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project2/Build/Releases/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 133
+                        }
+                      ]
+                    }
+                  ],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project2/Build/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 167
+                    }
+                  ]
+                },
+                {
+                  Path: /output/test-org/Test0x20Project2/Repositories,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project2/Repositories/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 143
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-org/Test0x20Project2/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 784
+                }
+              ]
+            },
+            {
+              Path: /output/test-org/Test0x20Project3,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-org/Test0x20Project3/Build,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [
+                    {
+                      Path: /output/test-org/Test0x20Project3/Build/Pipelines,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project3/Build/Pipelines/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 137
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project3/Build/Releases,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project3/Build/Releases/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 133
+                        }
+                      ]
+                    }
+                  ],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project3/Build/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 167
+                    }
+                  ]
+                },
+                {
+                  Path: /output/test-org/Test0x20Project3/Repositories,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project3/Repositories/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 143
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-org/Test0x20Project3/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 784
+                }
+              ]
+            },
+            {
+              Path: /output/test-org/Test0x20Project4,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-org/Test0x20Project4/Build,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [
+                    {
+                      Path: /output/test-org/Test0x20Project4/Build/Pipelines,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project4/Build/Pipelines/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 137
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project4/Build/Releases,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project4/Build/Releases/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 133
+                        }
+                      ]
+                    }
+                  ],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project4/Build/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 167
+                    }
+                  ]
+                },
+                {
+                  Path: /output/test-org/Test0x20Project4/Repositories,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project4/Repositories/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 143
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-org/Test0x20Project4/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 784
+                }
+              ]
+            }
+          ],
+          Files: [
+            {
+              Path: /output/test-org/index.md,
+              Exists: true,
+              Hidden: false,
+              Length: 1620
+            }
+          ]
+        }
+      ],
+      Files: []
+    }
   },
-  LogOutput: [
+  log: [
     {
       Information: Executing Inventory Repositories,Pipelines Command...,
       Category: AZDOI.Commands.InventoryAllCommand,
@@ -278,13 +280,14 @@
       ]
     },
     {
+      Message: StartScope,
+      State: {
+        ProjectId: 321
+      }
+    },
+    {
       Information: Project: Test Project2,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 321
-        }
-      ],
       State: [
         {
           ProjectName: Test Project2
@@ -297,11 +300,6 @@
     {
       Information: Project: Test Project2,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 321
-        }
-      ],
       State: [
         {
           ProjectName: Test Project2
@@ -314,11 +312,6 @@
     {
       Information: Project: Test Project2,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 321
-        }
-      ],
       State: [
         {
           ProjectName: Test Project2
@@ -331,11 +324,6 @@
     {
       Information: Markdown index created for project: Test Project2,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 321
-        }
-      ],
       State: [
         {
           ProjectName: Test Project2
@@ -346,13 +334,18 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
+      Message: StartScope,
+      State: {
+        ProjectId: 999
+      }
+    },
+    {
       Information: Project: Test Project3,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 999
-        }
-      ],
       State: [
         {
           ProjectName: Test Project3
@@ -365,11 +358,6 @@
     {
       Information: Project: Test Project3,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 999
-        }
-      ],
       State: [
         {
           ProjectName: Test Project3
@@ -382,11 +370,6 @@
     {
       Information: Project: Test Project3,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 999
-        }
-      ],
       State: [
         {
           ProjectName: Test Project3
@@ -399,11 +382,6 @@
     {
       Information: Markdown index created for project: Test Project3,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 999
-        }
-      ],
       State: [
         {
           ProjectName: Test Project3
@@ -414,13 +392,18 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
+      Message: StartScope,
+      State: {
+        ProjectId: 888
+      }
+    },
+    {
       Information: Project: Test Project4,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 888
-        }
-      ],
       State: [
         {
           ProjectName: Test Project4
@@ -433,11 +416,6 @@
     {
       Information: Project: Test Project4,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 888
-        }
-      ],
       State: [
         {
           ProjectName: Test Project4
@@ -450,11 +428,6 @@
     {
       Information: Project: Test Project4,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 888
-        }
-      ],
       State: [
         {
           ProjectName: Test Project4
@@ -467,11 +440,6 @@
     {
       Information: Markdown index created for project: Test Project4,
       Category: AZDOI.Commands.InventoryAllCommand,
-      Scopes: [
-        {
-          ProjectId: 888
-        }
-      ],
       State: [
         {
           ProjectName: Test Project4
@@ -480,6 +448,10 @@
           {OriginalFormat}: Markdown index created for project: {ProjectName}
         }
       ]
+    },
+    {
+      Message: EndScope,
+      State: null
     },
     {
       Information: Processed inventory in 00:00:00.,

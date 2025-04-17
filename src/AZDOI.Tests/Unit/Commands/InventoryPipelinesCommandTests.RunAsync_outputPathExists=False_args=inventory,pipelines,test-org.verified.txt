@@ -10,6 +10,5 @@ required argument 'outputpath'.
     Hidden: false,
     Directories: [],
     Files: []
-  },
-  LogOutput: []
+  }
 }

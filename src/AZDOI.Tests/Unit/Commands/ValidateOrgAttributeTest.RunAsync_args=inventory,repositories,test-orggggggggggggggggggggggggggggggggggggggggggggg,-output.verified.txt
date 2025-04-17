@@ -12,6 +12,5 @@ may only contain letters, numbers, and hyphens (-).
     Hidden: false,
     Directories: [],
     Files: []
-  },
-  LogOutput: []
+  }
 }

@@ -7,9 +7,6 @@ public static class VerifyConfig
     [ModuleInitializer]
     public static void Init()
     {
-        VerifierSettings.AddExtraSettings(settings =>
-        {
-            settings.Converters.Add(new FakeLogRecordConverter());
-        });
+        VerifierSettings.InitializePlugins();
     }
 }

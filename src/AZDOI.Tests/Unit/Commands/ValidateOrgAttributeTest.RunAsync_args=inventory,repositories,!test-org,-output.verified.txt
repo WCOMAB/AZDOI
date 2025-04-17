@@ -12,6 +12,5 @@ hyphens (-).
     Hidden: false,
     Directories: [],
     Files: []
-  },
-  LogOutput: []
+  }
 }

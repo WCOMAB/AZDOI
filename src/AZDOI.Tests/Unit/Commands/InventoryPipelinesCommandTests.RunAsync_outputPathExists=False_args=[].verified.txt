@@ -22,6 +22,5 @@ COMMANDS:
     Hidden: false,
     Directories: [],
     Files: []
-  },
-  LogOutput: []
+  }
 }
