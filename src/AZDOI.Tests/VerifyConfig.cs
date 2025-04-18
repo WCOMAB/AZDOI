@@ -15,7 +15,6 @@ public static class VerifyConfig
         VerifierSettings.AddExtraSettings(settings =>
         {
             settings.DefaultValueHandling = Argon.DefaultValueHandling.Include;
-            settings.Converters.Add(new FakeLogRecordConverter());
         });
     }
 }
