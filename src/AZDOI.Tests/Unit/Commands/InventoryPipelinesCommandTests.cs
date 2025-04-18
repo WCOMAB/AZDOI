@@ -53,9 +53,6 @@ public class InventoryPipelinesCommandTests
                     LogOutput = fakeLog.Collector.GetSnapshot(),
                     FileSystem = fakeFileSystem.FromDirectoryPath("/output")
                 }
-            )
-            .DontIgnoreEmptyCollections()
-            .AddExtraSettings(setting => setting.DefaultValueHandling = Argon.DefaultValueHandling.Include)
-            .IgnoreStackTrace();
+            );
     }
 }
