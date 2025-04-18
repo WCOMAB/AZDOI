@@ -58,10 +58,10 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Devlead.Testing.MockHttp" />
-		<PackageReference Include="Microsoft.Extensions.Diagnostics.Testing" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" />
 		<PackageReference Include="NSubstitute" />
 		<PackageReference Include="Spectre.Console.Testing" />
+		<PackageReference Include="Verify.MicrosoftLogging" />
 		<PackageReference Include="Verify.DiffPlex" />
 		<PackageReference Include="Verify.XunitV3" />
 		<PackageReference Include="xunit.v3" />

@@ -8,13 +8,13 @@ public static class VerifyConfig
     [ModuleInitializer]
     public static void Init()
     {
+        VerifyDiffPlex.Initialize(OutputType.Compact);
+        VerifierSettings.InitializePlugins();
         VerifierSettings.DontIgnoreEmptyCollections();
         VerifierSettings.IgnoreStackTrace();
-        VerifyDiffPlex.Initialize(OutputType.Compact);
         VerifierSettings.AddExtraSettings(settings =>
         {
             settings.DefaultValueHandling = Argon.DefaultValueHandling.Include;
-            settings.Converters.Add(new FakeLogRecordConverter());
         });
     }
 }
