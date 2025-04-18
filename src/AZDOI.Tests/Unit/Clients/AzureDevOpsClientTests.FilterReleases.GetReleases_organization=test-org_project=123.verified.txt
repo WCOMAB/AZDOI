@@ -19,6 +19,7 @@
     Id: 222,
     Revision: 5,
     Path: \,
+    Description: null,
     Links: {
       Self: {
         Href: https://dev.azure.com/test-org/_apis/releases/123?revision=1

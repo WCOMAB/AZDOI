@@ -45,9 +45,6 @@ public class InventoryAllCommandTests
                     ConsoleOutput = testConsole.Output,
                     FileSystem = fakeFileSystem.FromDirectoryPath("/output")
                 }
-            )
-            .DontIgnoreEmptyCollections()
-            .AddExtraSettings(setting => setting.DefaultValueHandling = Argon.DefaultValueHandling.Include)
-            .IgnoreStackTrace();
+            );
     }
 }
