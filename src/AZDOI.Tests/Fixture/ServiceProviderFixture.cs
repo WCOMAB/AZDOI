@@ -57,7 +57,7 @@ public static partial class ServiceProviderFixture
             .AddSingleton<InventoryCommandServices>()
             .AddSingleton<FakeStopwatch>()
             .AddSingleton<StopwatchProvider>(provider => provider.GetRequiredService<FakeStopwatch>())
-            .AddSingleton<ILoggerProvider>(new RecordingProvider());
+            .AddSingleton<ILoggerProvider, RecordingProvider>();
 
         services
                 .AddCommandApp(new TestConsole());
