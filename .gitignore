@@ -368,3 +368,6 @@ FodyWeavers.xsd
 
 # Static Site
 cache/
+
+# JetBrains
+/src/.idea
