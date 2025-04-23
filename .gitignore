@@ -36,7 +36,7 @@ bld/
 !src/AZDOI/Services/Markdown/Builds/Releases/
 !src/AZDOI/Services/Markdown/Builds/Releases/**
 !src/AZDOI.Tests/Unit/Markdown/Builds/Releases/
-src/AZDOI.Tests/Unit/Markdown/Builds/Releases/**
+!src/AZDOI.Tests/Unit/Markdown/Builds/Releases/**
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
