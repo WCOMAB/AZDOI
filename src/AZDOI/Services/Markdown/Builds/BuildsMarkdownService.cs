@@ -1,4 +1,4 @@
-﻿namespace AZDOI.Services.Markdown;
+﻿namespace AZDOI.Services.Markdown.Builds;
 
 public class BuildsMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsProject>(cakeContext, timeProvider)

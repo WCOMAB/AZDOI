@@ -1,4 +1,6 @@
-﻿namespace AZDOI.Tests.Unit.Markdown;
+﻿using AZDOI.Services.Markdown.Pipelines;
+
+namespace AZDOI.Tests.Unit.Markdown;
 
 public class PipelinesMarkdownServiceTests
 {
