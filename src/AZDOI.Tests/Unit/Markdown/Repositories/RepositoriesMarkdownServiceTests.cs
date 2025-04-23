@@ -1,4 +1,6 @@
-﻿namespace AZDOI.Tests.Unit.Markdown;
+﻿using AZDOI.Services.Markdown.Repositories;
+
+namespace AZDOI.Tests.Unit.Markdown;
 
 public class RepositoriesMarkdownServiceTests
 {

@@ -1,4 +1,4 @@
-﻿namespace AZDOI.Services.Markdown;
+﻿namespace AZDOI.Services.Markdown.Builds.MarkdownReleases;
 
 public class ReleasesMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsRelease[]>(cakeContext, timeProvider)
