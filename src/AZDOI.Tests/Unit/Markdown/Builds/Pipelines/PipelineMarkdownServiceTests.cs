@@ -1,6 +1,6 @@
 ﻿using AZDOI.Services.Markdown.Builds.Pipelines;
 
-namespace AZDOI.Tests.Unit.Markdown;
+namespace AZDOI.Tests.Unit.Markdown.Builds.Pipelines;
 
 public class PipelineMarkdownServiceTests
 {
