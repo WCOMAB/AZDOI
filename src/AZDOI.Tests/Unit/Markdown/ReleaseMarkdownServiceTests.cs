@@ -1,4 +1,4 @@
-﻿using AZDOI.Services.Markdown.Releases;
+﻿using AZDOI.Services.Markdown.Builds.MarkdownReleases;
 
 namespace AZDOI.Tests.Unit.Markdown;
 

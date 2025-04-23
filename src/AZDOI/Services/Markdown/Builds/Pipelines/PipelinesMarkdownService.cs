@@ -1,4 +1,4 @@
-﻿namespace AZDOI.Services.Markdown.Pipelines;
+﻿namespace AZDOI.Services.Markdown.Builds.Pipelines;
 
 public class PipelinesMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsPipeline[]>(cakeContext, timeProvider)
