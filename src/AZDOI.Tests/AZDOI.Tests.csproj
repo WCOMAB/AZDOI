@@ -52,6 +52,7 @@
 		<Using Include="AZDOI.Tests.Services;" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="Cake.Bridge.DependencyInjection.Testing" />
 		<PackageReference Include="Cake.Testing" />
 		<PackageReference Include="coverlet.collector">
 			<PrivateAssets>all</PrivateAssets>
