@@ -1,4 +1,6 @@
-﻿namespace AZDOI.Tests.Unit.Markdown;
+﻿using AZDOI.Services.Markdown.Builds.MarkdownReleases;
+
+namespace AZDOI.Tests.Unit.Markdown.Builds.Releases;
 
 public class ReleasesMarkdownServiceTests
 {

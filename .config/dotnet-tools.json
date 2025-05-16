@@ -10,14 +10,14 @@
       "rollForward": false
     },
     "dpi": {
-      "version": "2025.3.13.140",
+      "version": "2025.5.14.183",
       "commands": [
         "dpi"
       ],
       "rollForward": false
     },
     "wcom.staticsitegenerator.console": {
-      "version": "2025.3.18.2",
+      "version": "2025.5.15.2",
       "commands": [
         "dotnet-wcomsite"
       ],

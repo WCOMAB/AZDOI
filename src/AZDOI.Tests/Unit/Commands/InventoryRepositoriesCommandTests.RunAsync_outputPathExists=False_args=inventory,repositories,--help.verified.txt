@@ -2,7 +2,7 @@
   ExitCode: 0,
   ConsoleOutput:
 DESCRIPTION:
-Example get repositories command.
+Example get repositories command
 
 USAGE:
     AZDOI inventory repositories <devopsorg> <outputpath> [OPTIONS]
@@ -32,7 +32,6 @@ OPTIONS:
         --include-repository-readme    Include specific repository README       
         --exclude-repository-readme    Exclude specific repository README       
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,

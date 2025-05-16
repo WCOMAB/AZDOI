@@ -1,7 +1,118 @@
 ﻿{
-  ExitCode: 0,
-  ConsoleOutput: ,
-  LogOutput: [
+  target: {
+    ExitCode: 0,
+    ConsoleOutput: ,
+    FileSystem: {
+      Path: /output,
+      Exists: true,
+      Hidden: false,
+      Directories: [
+        {
+          Path: /output/test-org,
+          Exists: true,
+          Hidden: false,
+          Directories: [
+            {
+              Path: /output/test-org/Test0x20Project,
+              Exists: true,
+              Hidden: false,
+              Directories: [
+                {
+                  Path: /output/test-org/Test0x20Project/Repositories,
+                  Exists: true,
+                  Hidden: false,
+                  Directories: [
+                    {
+                      Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 2721
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 1596
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 1596
+                        }
+                      ]
+                    },
+                    {
+                      Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4,
+                      Exists: true,
+                      Hidden: false,
+                      Directories: [],
+                      Files: [
+                        {
+                          Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4/index.md,
+                          Exists: true,
+                          Hidden: false,
+                          Length: 1596
+                        }
+                      ]
+                    }
+                  ],
+                  Files: [
+                    {
+                      Path: /output/test-org/Test0x20Project/Repositories/index.md,
+                      Exists: true,
+                      Hidden: false,
+                      Length: 926
+                    }
+                  ]
+                }
+              ],
+              Files: [
+                {
+                  Path: /output/test-org/Test0x20Project/index.md,
+                  Exists: true,
+                  Hidden: false,
+                  Length: 1487
+                }
+              ]
+            }
+          ],
+          Files: [
+            {
+              Path: /output/test-org/index.md,
+              Exists: true,
+              Hidden: false,
+              Length: 1361
+            }
+          ]
+        }
+      ],
+      Files: []
+    }
+  },
+  log: [
     {
       Information: Executing Inventory Repositories Command...,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
@@ -39,13 +150,14 @@
       ]
     },
     {
+      Message: StartScope,
+      State: {
+        ProjectId: 123
+      }
+    },
+    {
       Information: Project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -56,16 +168,14 @@
       ]
     },
     {
+      Message: StartScope,
+      State: {
+        Repository: 456
+      }
+    },
+    {
       Information: Project: Test Project - Repository: Test Repository,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 456
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -81,14 +191,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 456
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -104,14 +206,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository - README Exists: True, Length: 101 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 456
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -120,7 +214,7 @@
           RepoName: Test Repository
         },
         {
-          Exists: True
+          Exists: true
         },
         {
           Length: 101
@@ -131,16 +225,18 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
+      Message: StartScope,
+      State: {
+        Repository: 654
+      }
+    },
+    {
       Information: Project: Test Project - Repository: Test Repository2,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 654
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -156,14 +252,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository2 - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 654
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -179,14 +267,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository2 - README Exists: False, Length: 0 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 654
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -195,7 +275,7 @@
           RepoName: Test Repository2
         },
         {
-          Exists: False
+          Exists: false
         },
         {
           Length: 0
@@ -206,16 +286,18 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
+      Message: StartScope,
+      State: {
+        Repository: 666
+      }
+    },
+    {
       Information: Project: Test Project - Repository: Test Repository3,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 666
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -231,14 +313,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository3 - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 666
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -254,14 +328,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository3 - README Exists: False, Length: 0 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 666
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -270,7 +336,7 @@
           RepoName: Test Repository3
         },
         {
-          Exists: False
+          Exists: false
         },
         {
           Length: 0
@@ -281,16 +347,18 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
+      Message: StartScope,
+      State: {
+        Repository: 777
+      }
+    },
+    {
       Information: Project: Test Project - Repository: Test Repository4,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -306,14 +374,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository4 - Markdown index created.,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -329,14 +389,6 @@
     {
       Information: Project: Test Project - Repository: Test Repository4 - README Exists: False, Length: 0 characters,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        },
-        {
-          Repository: 777
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -345,7 +397,7 @@
           RepoName: Test Repository4
         },
         {
-          Exists: False
+          Exists: false
         },
         {
           Length: 0
@@ -356,13 +408,12 @@
       ]
     },
     {
+      Message: EndScope,
+      State: null
+    },
+    {
       Information: Markdown index created for project: Test Project,
       Category: AZDOI.Commands.InventoryRepositoriesCommand,
-      Scopes: [
-        {
-          ProjectId: 123
-        }
-      ],
       State: [
         {
           ProjectName: Test Project
@@ -371,6 +422,10 @@
           {OriginalFormat}: Markdown index created for project: {ProjectName}
         }
       ]
+    },
+    {
+      Message: EndScope,
+      State: null
     },
     {
       Information: Processed inventory in 00:00:00.,
@@ -384,114 +439,5 @@
         }
       ]
     }
-  ],
-  FileSystem: {
-    Path: /output,
-    Exists: true,
-    Hidden: false,
-    Directories: [
-      {
-        Path: /output/test-org,
-        Exists: true,
-        Hidden: false,
-        Directories: [
-          {
-            Path: /output/test-org/Test0x20Project,
-            Exists: true,
-            Hidden: false,
-            Directories: [
-              {
-                Path: /output/test-org/Test0x20Project/Repositories,
-                Exists: true,
-                Hidden: false,
-                Directories: [
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 2721
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository2/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1596
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository3/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1596
-                      }
-                    ]
-                  },
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4,
-                    Exists: true,
-                    Hidden: false,
-                    Directories: [],
-                    Files: [
-                      {
-                        Path: /output/test-org/Test0x20Project/Repositories/Test0x20Repository4/index.md,
-                        Exists: true,
-                        Hidden: false,
-                        Length: 1596
-                      }
-                    ]
-                  }
-                ],
-                Files: [
-                  {
-                    Path: /output/test-org/Test0x20Project/Repositories/index.md,
-                    Exists: true,
-                    Hidden: false,
-                    Length: 926
-                  }
-                ]
-              }
-            ],
-            Files: [
-              {
-                Path: /output/test-org/Test0x20Project/index.md,
-                Exists: true,
-                Hidden: false,
-                Length: 1487
-              }
-            ]
-          }
-        ],
-        Files: [
-          {
-            Path: /output/test-org/index.md,
-            Exists: true,
-            Hidden: false,
-            Length: 1361
-          }
-        ]
-      }
-    ],
-    Files: []
-  }
+  ]
 }

@@ -32,6 +32,12 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Un-ignore the specific path
+!src/AZDOI/Services/Markdown/Builds/Releases/
+!src/AZDOI/Services/Markdown/Builds/Releases/**
+!src/AZDOI.Tests/Unit/Markdown/Builds/Releases/
+!src/AZDOI.Tests/Unit/Markdown/Builds/Releases/**
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -368,3 +374,6 @@ FodyWeavers.xsd
 
 # Static Site
 cache/
+
+# JetBrains
+/src/.idea

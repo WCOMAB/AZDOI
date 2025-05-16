@@ -1,4 +1,4 @@
-﻿namespace AZDOI.Services.Markdown;
+﻿namespace AZDOI.Services.Markdown.Repositories;
 
 public class RepositoriesMarkdownService(ICakeContext cakeContext, TimeProvider timeProvider)
     : MarkdownServiceBase<AzureDevOpsRepository[]>(cakeContext, timeProvider)

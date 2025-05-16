@@ -4,7 +4,6 @@
 Spectre.Console.Cli.CommandRuntimeException: Command 'pipelines' is missing 
 required argument 'outputpath'.
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,

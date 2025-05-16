@@ -16,7 +16,6 @@ OPTIONS:
 COMMANDS:
     inventory     
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: false,

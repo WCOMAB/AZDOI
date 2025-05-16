@@ -4,7 +4,6 @@
 Spectre.Console.Cli.CommandRuntimeException: Command 'repositories' is missing 
 required argument 'outputpath'.
 ,
-  LogOutput: [],
   FileSystem: {
     Path: /output,
     Exists: true,
