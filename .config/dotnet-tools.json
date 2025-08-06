@@ -17,7 +17,7 @@
       "rollForward": false
     },
     "wcom.staticsitegenerator.console": {
-      "version": "2025.8.6.2",
+      "version": "2025.8.6.4",
       "commands": [
         "dotnet-wcomsite"
       ],
