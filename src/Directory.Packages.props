@@ -5,7 +5,7 @@
     <NoWarn>$(NoWarn);NU1507</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Azure.Identity" Version="1.15.0" />
+    <PackageVersion Include="Azure.Identity" Version="1.16.0" />
     <PackageVersion Include="Cake.Bridge.DependencyInjection.Testing" Version="2025.9.7.243" />
     <PackageVersion Include="Cake.Bridge.DependencyInjection" Version="2025.9.7.243" />
     <PackageVersion Include="Cake.Common" Version="5.0.0" />
