@@ -59,8 +59,8 @@ public partial class InventoryCommand<TSettings>
 
                         Tags = await client
                                     .GetTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
-                                    .SelectAwait(
-                                        async tag => tag with
+                                    .Select(
+                                        async (tag, _, ct) => tag with
                                         {
                                             Message = (await client.GetAnnotatedTagsAsync(
                                                 settings.DevOpsOrg,
