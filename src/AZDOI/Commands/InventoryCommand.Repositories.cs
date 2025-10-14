@@ -57,22 +57,25 @@ public partial class InventoryCommand<TSettings>
                                     .ThenBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
                                     .ToArrayAsync(),
 
-                        Tags = await client
-                                    .GetTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id)
-                                    .SelectAwait(
-                                        async tag => tag with
-                                        {
-                                            Message = (await client.GetAnnotatedTagsAsync(
-                                                settings.DevOpsOrg,
-                                                project.Id,
-                                                sourceRepo.Id,
-                                                tag.ObjectId)
-                                            )
-                                            ?.Message
-                                        }
-                                    )
-                                    .OrderBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
-                                    .ToArrayAsync()
+                        Tags = await Task.Run(async () =>
+                        {
+                            var tagsList = new List<AzureDevOpsRepositoryTag>();
+                            await foreach (var tag in client.GetTagsAsync(settings.DevOpsOrg, project.Id, sourceRepo.Id))
+                            {
+                                var annotatedTag = await client.GetAnnotatedTagsAsync(
+                                    settings.DevOpsOrg,
+                                    project.Id,
+                                    sourceRepo.Id,
+                                    tag.ObjectId
+                                );
+
+                                tagsList.Add(tag with { Message = annotatedTag?.Message });
+                            }
+
+                            return tagsList
+                                .OrderBy(tag => tag.Name, StringComparer.OrdinalIgnoreCase)
+                                .ToArray();
+                        })
                     }
             );
 
