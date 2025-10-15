@@ -72,6 +72,7 @@ public partial class InventoryCommand<TSettings>
                                 tagsList.Add(tag with { Message = annotatedTag?.Message });
                             }
 
+
                             return tagsList
                                 .OrderBy(tag => tag.Name, StringComparer.OrdinalIgnoreCase)
                                 .ToArray();
