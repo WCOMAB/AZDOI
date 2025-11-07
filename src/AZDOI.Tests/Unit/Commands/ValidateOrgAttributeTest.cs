@@ -24,7 +24,7 @@ public class ValidateOrgAttributeTest
         // When
         fakeFileSystem.CreateDirectory("/output");
         Recording.Start();
-        var result = await commandApp.RunAsync(args);
+        var result = await commandApp.RunAsync(args, TestContext.Current.CancellationToken);
 
         // Then
         await Verify(
