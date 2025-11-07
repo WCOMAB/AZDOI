@@ -11,7 +11,7 @@ public abstract partial class InventoryCommand<TSettings>(
     protected ICakeContext CakeContext { get; } = services.CakeContext;
     protected ILogger Logger { get; } = logger;
 
-    public override async Task<int> ExecuteAsync(CommandContext cmdContext, TSettings settings)
+    public override async Task<int> ExecuteAsync(CommandContext cmdContext, TSettings settings, CancellationToken cancellationToken)
     {
         services.StopwatchProvider.Start();
 
