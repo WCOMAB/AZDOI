@@ -1,15 +1,15 @@
-#tool dotnet:?package=GitVersion.Tool&version=6.5.1
-#load "build/records.cake"
-#load "build/helpers.cake"
-using System.Xml.Linq;
-using System.Xml.XPath;
+#:sdk Cake.Sdk@6.0.0
+#:property IncludeAdditionalFiles=./build/*.cs
 
 /*****************************
  * Setup
  *****************************/
 Setup(
     static context => {
-         var assertedVersions = context.GitVersion(new GitVersionSettings
+        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=GitVersion.Tool&version=6.5.1");
+        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=DPI&version=2025.12.17.349");
+        InstallTool("dotnet:https://pkgs.dev.azure.com/wcom-public/Public/_packaging/wcom/nuget/v3/index.json?package=wcom.staticsitegenerator.console&version=2025.12.10.2");
+        var assertedVersions = context.GitVersion(new GitVersionSettings
             {
                 OutputType = GitVersionOutput.Json
             });
@@ -17,10 +17,9 @@ Setup(
         var branchName = assertedVersions.BranchName;
         var isMainBranch = StringComparer.OrdinalIgnoreCase.Equals("main", branchName);
 
-        var gh = context.GitHubActions();
         var buildDate = DateTime.UtcNow;
-        var runNumber = gh.IsRunningOnGitHubActions
-                            ? gh.Environment.Workflow.RunNumber
+        var runNumber = GitHubActions.IsRunningOnGitHubActions
+                            ? GitHubActions.Environment.Workflow.RunNumber
                             : (short)((buildDate - buildDate.Date).TotalSeconds/3);
 
         var version = FormattableString
@@ -43,7 +42,7 @@ Setup(
             version,
             isMainBranch,
             !context.IsRunningOnLinux(),
-            context.BuildSystem().IsLocalBuild,
+            BuildSystem.IsLocalBuild,
             projectRoot,
             projectPath,
             new DotNetMSBuildSettings()
@@ -56,7 +55,7 @@ Setup(
                 .WithProperty("PackageTags", "tool;devops;docs;azure")
                 .WithProperty("PackageDescription", "Azure DevOps Inventory .NET Tool – Inventories and documents an Azure DevOps organization by generating a set of Markdown files for the specified organization and saving them to a specified folder.")
                 .WithProperty("RepositoryUrl", "https://github.com/WCOMAB/AZDOI.git")
-                .WithProperty("ContinuousIntegrationBuild", gh.IsRunningOnGitHubActions ? "true" : "false")
+                .WithProperty("ContinuousIntegrationBuild", GitHubActions.IsRunningOnGitHubActions ? "true" : "false")
                 .WithProperty("EmbedUntrackedSources", "true"),
             artifactsPath,
             artifactsPath.Combine(version)
@@ -82,27 +81,25 @@ Task("Clean")
     )
 .Then("DPI")
     .Does<BuildData>(
-        static (context, data) => context.DotNetTool(
-                "tool",
-                new DotNetToolSettings {
-                    ArgumentCustomization = args => args
-                                                        .Append("run")
-                                                        .Append("dpi")
-                                                        .Append("nuget")
-                                                        .Append("--silent")
-                                                        .AppendSwitchQuoted("--output", "table")
-                                                        .Append(
-                                                            (
-                                                                !string.IsNullOrWhiteSpace(context.EnvironmentVariable("NuGetReportSettings_SharedKey"))
-                                                                &&
-                                                                !string.IsNullOrWhiteSpace(context.EnvironmentVariable("NuGetReportSettings_WorkspaceId"))
-                                                            )
-                                                                ? "report"
-                                                                : "analyze"
-                                                            )
-                                                        .AppendSwitchQuoted("--buildversion", data.Version)
-                }
-            )
+        static (context, data) => {
+            Command(
+                ["dpi", "dpi.exe"],
+                new ProcessArgumentBuilder()
+                    .Append("nuget")
+                    .Append("--silent")
+                    .AppendSwitchQuoted("--output", "table")
+                    .Append(
+                        (
+                            !string.IsNullOrWhiteSpace(context.EnvironmentVariable("NuGetReportSettings_SharedKey"))
+                            &&
+                            !string.IsNullOrWhiteSpace(context.EnvironmentVariable("NuGetReportSettings_WorkspaceId"))
+                        )
+                            ? "report"
+                            : "analyze"
+                        )
+                    .AppendSwitchQuoted("--buildversion", data.Version)
+            );
+        }
     )
 .Then("Build")
     .DoesForEach<BuildData, FilePath>(
@@ -143,11 +140,9 @@ Task("Clean")
 .Then("Upload-Artifacts")
     .WithCriteria(BuildSystem.IsRunningOnGitHubActions, nameof(BuildSystem.IsRunningOnGitHubActions))
     .Does<BuildData>(
-        static (context, data) => context
-            .GitHubActions() is var gh && gh != null
-                ?   gh.Commands
-                    .UploadArtifact(data.ArtifactsPath,  $"Artifact_{gh.Environment.Runner.ImageOS ?? gh.Environment.Runner.OS}_{context.Environment.Runtime.BuiltFramework.Identifier}_{context.Environment.Runtime.BuiltFramework.Version}")
-                : throw new Exception("GitHubActions not available")
+        static (context, data) => 
+            GitHubActions.Commands
+                    .UploadArtifact(data.ArtifactsPath,  $"Artifact_{GitHubActions.Environment.Runner.ImageOS ?? GitHubActions.Environment.Runner.OS}_{context.Environment.Runtime.BuiltFramework.Identifier}_{context.Environment.Runtime.BuiltFramework.Version}")
     )
     .Then("Integration-Tests-Tool-Manifest")
     .Does<BuildData>(
@@ -256,20 +251,21 @@ Task("Clean")
         var preview = context.Argument<bool>("preview", false);
         var port = context.Argument("port", "5080");
         context.EnsureDirectoryExists(data.StatiqWebOutputPath.FullPath);
-        context.DotNetTool("wcomsite", new DotNetToolSettings
-        {
-            ArgumentCustomization = args => args
-                .Append(preview ? "preview" : string.Empty)
-                .AppendSwitchQuoted("-i", " ", "./src/site/theme")
-                .AppendSwitchQuoted("-i", " ", "./src/site/AZDOI")
-                .AppendSwitchQuoted("-i", " ", data.IntegrationTestPath.FullPath)
-                .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
-                .AppendSwitchQuoted("--port", " ", port)
-                .AppendSwitchQuoted("--virtual-dir", " ", "/AZDOI"),
-                EnvironmentVariables = { 
-                                            { "BUILD_BUILDNUMBER", data.Version } 
-                                        }
-        });
+        context.Command(
+                new CommandSettings {
+                    ToolName = "WCOM Static Site Generator",
+                    ToolExecutableNames = new []{ "dotnet-wcomsite.exe", "dotnet-wcomsite" },
+                    EnvironmentVariables = { { "BUILD_BUILDNUMBER", data.Version } }
+                },
+                new ProcessArgumentBuilder()
+                    .Append(preview ? "preview" : string.Empty)
+                    .AppendSwitchQuoted("-i", " ", "./src/site/theme")
+                    .AppendSwitchQuoted("-i", " ", "./src/site/AZDOI")
+                    .AppendSwitchQuoted("-i", " ", data.IntegrationTestPath.FullPath)
+                    .AppendSwitchQuoted("-o", " ", data.StatiqWebOutputPath.FullPath)
+                    .AppendSwitchQuoted("--port", " ", port)
+                    .AppendSwitchQuoted("--virtual-dir", " ", "/AZDOI")
+            );
         
         if (!context.IsRunningOnWindows())
         {
