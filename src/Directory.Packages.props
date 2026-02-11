@@ -6,21 +6,21 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Azure.Identity" Version="1.17.1" />
-    <PackageVersion Include="Cake.Bridge.DependencyInjection.Testing" Version="2026.1.14.460" />
-    <PackageVersion Include="Cake.Bridge.DependencyInjection" Version="2026.1.14.460" />
+    <PackageVersion Include="Cake.Bridge.DependencyInjection.Testing" Version="2026.2.11.478" />
+    <PackageVersion Include="Cake.Bridge.DependencyInjection" Version="2026.2.11.478" />
     <PackageVersion Include="Cake.Common" Version="6.0.0" />
     <PackageVersion Include="Cake.Testing" Version="6.0.0" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-    <PackageVersion Include="Devlead.Console" Version="2026.1.14.558" />
-    <PackageVersion Include="Devlead.Testing.MockHttp" Version="2026.1.14.568" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.2" />
+    <PackageVersion Include="Devlead.Console" Version="2026.2.11.575" />
+    <PackageVersion Include="Devlead.Testing.MockHttp" Version="2026.2.11.605" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.3" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
     <PackageVersion Include="Spectre.Console.Testing" Version="0.54.0" />
     <PackageVersion Include="System.Linq.Async" Version="7.0.0" />
     <PackageVersion Include="Verify.MicrosoftLogging" Version="4.0.1" />
     <PackageVersion Include="Verify.DiffPlex" Version="3.1.2" />
-    <PackageVersion Include="Verify.XunitV3" Version="31.12.3" />
+    <PackageVersion Include="Verify.XunitV3" Version="31.12.4" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="YamlDotNet" Version="16.3.0" />
