@@ -1,4 +1,4 @@
-#:sdk Cake.Sdk@6.0.0
+#:sdk Cake.Sdk@6.1.1
 #:property IncludeAdditionalFiles=./build/*.cs
 
 /*****************************
@@ -6,9 +6,9 @@
  *****************************/
 Setup(
     static context => {
-        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=GitVersion.Tool&version=6.5.1");
-        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=DPI&version=2025.12.17.349");
-        InstallTool("dotnet:https://pkgs.dev.azure.com/wcom-public/Public/_packaging/wcom/nuget/v3/index.json?package=wcom.staticsitegenerator.console&version=2025.12.10.2");
+        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=GitVersion.Tool&version=6.7.0");
+        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=DPI&version=2026.5.18.419");
+        InstallTool("dotnet:https://pkgs.dev.azure.com/wcom-public/Public/_packaging/wcom/nuget/v3/index.json?package=wcom.staticsitegenerator.console&version=2026.4.22.7");
         var assertedVersions = context.GitVersion(new GitVersionSettings
             {
                 OutputType = GitVersionOutput.Json
