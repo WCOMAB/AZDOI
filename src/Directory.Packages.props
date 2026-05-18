@@ -11,7 +11,7 @@
     <PackageVersion Include="Cake.Common" Version="6.1.0" />
     <PackageVersion Include="Cake.Testing" Version="6.1.0" />
     <PackageVersion Include="coverlet.collector" Version="10.0.0" />
-    <PackageVersion Include="Devlead.Console" Version="2026.4.8.657" />
+    <PackageVersion Include="Devlead.Console" Version="2026.5.15.709" />
     <PackageVersion Include="Devlead.Testing.MockHttp" Version="2026.5.15.777" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.8" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
