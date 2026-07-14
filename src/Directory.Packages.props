@@ -13,7 +13,7 @@
     <PackageVersion Include="coverlet.collector" Version="10.0.1" />
     <PackageVersion Include="Devlead.Console" Version="2026.6.30.782" />
     <PackageVersion Include="Devlead.Testing.MockHttp" Version="2026.6.29.843" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.10" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
     <PackageVersion Include="NSubstitute" Version="6.0.0" />
     <PackageVersion Include="Spectre.Console.Testing" Version="0.57.2" />
