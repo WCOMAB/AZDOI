@@ -3,6 +3,8 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
     <NoWarn>$(NoWarn);NU1507</NoWarn>
+    <Verify_GitHubSponsorAccount>wcomab</Verify_GitHubSponsorAccount>
+    <Verify_SponsorshipStart>2026-09-13</Verify_SponsorshipStart>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Azure.Identity" Version="1.21.0" />
