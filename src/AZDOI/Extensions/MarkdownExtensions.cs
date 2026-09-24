@@ -7,6 +7,9 @@ public static partial class MarkdownExtensions
     [GeneratedRegex(@"^(#+)(.*)$", RegexOptions.Multiline)]
     private static partial Regex HeaderRegex();
 
+    [GeneratedRegex(@"\r\n|\r|\n")]
+    private static partial Regex LineBreakRegex();
+
     public static string IncreaseMarkdownHeaders(this string? markdown, int increment = 2)
     {
         if (string.IsNullOrEmpty(markdown))
@@ -23,6 +26,16 @@ public static partial class MarkdownExtensions
                 return newHeader + m.Groups[2].Value;
             }
         );
+    }
+
+    public static string ToMarkdownTableCell(this string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return string.Empty;
+        }
+
+        return LineBreakRegex().Replace(value.Trim().Replace("|", @"\|"), "<br>");
     }
 
     public static string CleanBranchName(this string branchName)
