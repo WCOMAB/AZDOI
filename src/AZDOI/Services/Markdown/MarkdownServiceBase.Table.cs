@@ -31,7 +31,15 @@ public abstract partial class MarkdownServiceBase<TValue>
         if (keyValue == null || keyValue.Length == 0)
             return;
 
-        (int keyPadding, int valuePadding) = CalculatePadding(keyValue);
+        var cells = Array.ConvertAll(
+            keyValue,
+            kvp => new KeyValuePair<string, string>(
+                kvp.Key.ToMarkdownTableCell(),
+                kvp.Value.ToMarkdownTableCell()
+                )
+            );
+
+        (int keyPadding, int valuePadding) = CalculatePadding(cells);
 
         await writer.WriteLineAsync(
             $"""
@@ -40,7 +48,7 @@ public abstract partial class MarkdownServiceBase<TValue>
             """
         );
 
-        foreach (var kvp in keyValue)
+        foreach (var kvp in cells)
         {
             await writer.WriteLineAsync($"| {kvp.Key.PadRight(keyPadding)} | {kvp.Value.PadRight(valuePadding)} |");
         }

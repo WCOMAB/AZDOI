@@ -1,0 +1,38 @@
+﻿---
+title: DevOps Organization
+summary: DevOps Organization
+modifiedby: AZDOI
+modified: 2000-01-01 00:00
+---
+# DevOps Organization DevOps Organization
+
+## Projects
+
+| Project                                                          | Description                                                                                      |
+|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [MultiLineProject](<MultiLineProject>)                           | Vision:<br>A description \| with a pipe<br><br>Mission:<br>Spanning several lines                |
+| [SingleLineProject](<SingleLineProject>)                         | SingleLineProject Description                                                                    |
+
+```mermaid
+graph TD
+    Org_1("DevOps Organization")
+
+    %% MultiLineProject project
+    subgraph Proj_1["MultiLineProject"]
+        direction TB
+        Repos_1
+        subgraph Repos_1[Repositories]
+        end
+    end
+
+    Org_1 --> Proj_1
+    %% SingleLineProject project
+    subgraph Proj_2["SingleLineProject"]
+        direction TB
+        Repos_2
+        subgraph Repos_2[Repositories]
+        end
+    end
+
+    Org_1 --> Proj_2
+```

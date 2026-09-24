@@ -32,6 +32,42 @@ public class OrganizationMarkdownServiceTests
         await Verify(result);
     }
 
+    [Fact]
+    public async Task WriteIndex_ShouldKeepMultiLineDescriptionOnSingleTableRow()
+    {
+        // Given
+        var (fileSystem, service) = ServiceProviderFixture
+            .GetRequiredService<FakeFileSystem, OrganizationMarkdownService>();
+
+        var organization = new AzureDevOpsOrganization
+        {
+            Id = "1",
+            Url = "",
+            Name = "DevOps Organization",
+            Children = [
+                new AzureDevOpsProject
+                {
+                    Id = "1",
+                    Name = "MultiLineProject",
+                    Description = "Vision:\r\nA description | with a pipe\n\nMission:\nSpanning several lines\n",
+                    Url = "https://myproject.com"
+                },
+                new AzureDevOpsProject
+                {
+                    Id = "2",
+                    Name = "SingleLineProject",
+                    Description = "SingleLineProject Description",
+                    Url = "https://myproject.com"
+                } ]
+        };
+
+        // When
+        var result = await service.TestWriteIndex(organization);
+
+        // Then
+        await Verify(result);
+    }
+
     public class OrgMarkdownChildTypes
     {
         [Theory]
