@@ -58,13 +58,15 @@ public record BuildData(
 
     public AzureCredentials AzureCredentials { get; } = new AzureCredentials(
                                                             System.Environment.GetEnvironmentVariable("AZURE_TENANT_ID"),
-                                                            System.Environment.GetEnvironmentVariable("AZURE_CLIENT_ID"),
-                                                            System.Environment.GetEnvironmentVariable("AZURE_CLIENT_SECRET"),
-                                                            System.Environment.GetEnvironmentVariable("AZURE_AUTHORITY_HOST")
+                                                            System.Environment.GetEnvironmentVariable("AZURE_CLIENT_ID")
                                                         );
 
     public string? AzureTenantId { get; } = System.Environment.GetEnvironmentVariable("AZURE_TENANT_ID");
     public string? AzureDomain { get; } = System.Environment.GetEnvironmentVariable("AZURE_DOMAIN");
+
+    public bool ShouldReportDPI() =>
+        !string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable("NuGetReportSettings_Endpoint"))
+        && !string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable("NuGetReportSettings_RuleId"));
 
     public bool ShouldRunIntegrationTests() =>  !string.IsNullOrWhiteSpace(AzureDomain) &&
                                                 (
@@ -75,15 +77,11 @@ public record BuildData(
 
 public record AzureCredentials(
     string? TenantId,
-    string? ClientId,
-    string? ClientSecret,
-    string? AuthorityHost = "login.microsoftonline.com"
+    string? ClientId
 )
 {
     public bool AzureCredentialsSpecified { get; } = !string.IsNullOrWhiteSpace(TenantId) &&
-                                                     !string.IsNullOrWhiteSpace(ClientId) &&
-                                                     !string.IsNullOrWhiteSpace(ClientSecret) &&
-                                                     !string.IsNullOrWhiteSpace(AuthorityHost);
+                                                     !string.IsNullOrWhiteSpace(ClientId);
 }
 
 internal record ExtensionHelper(Func<string, CakeTaskBuilder> TaskCreate, Func<CakeReport> Run);
