@@ -1,7 +1,6 @@
 name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: coolify
 
 trigger:
   branches:
@@ -31,8 +30,7 @@ stages:
         Endpoint: $(NUGETREPORTSETTINGS_ENDPOINT)
         RuleId: $(NUGETREPORTSETTINGS_RULEID)
       useDotNetSDK: 
-        useGlobalJson: true
-        includePreviewVersions: true
+        skipTask: true
       postBuildScript:
         displayName: "AZDOI Integration tests"
         azureSubscription: "azure-devops-inventory-tool"
