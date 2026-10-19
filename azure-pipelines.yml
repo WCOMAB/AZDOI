@@ -31,6 +31,7 @@ stages:
         RuleId: $(NUGETREPORTSETTINGS_RULEID)
       useDotNetSDK: 
         skipTask: true
+      testMode: 'solution'
       postBuildScript:
         displayName: "AZDOI Integration tests"
         azureSubscription: "azure-devops-inventory-tool"
