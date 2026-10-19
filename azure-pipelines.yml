@@ -27,8 +27,12 @@ stages:
       shouldPublish: eq(variables['Build.SourceBranch'], 'refs/heads/main')
       dpi:
         report: true
-        WorkspaceId: $(DPI.WorkspaceId)
-        SharedKey: $(DPI.Key)
+        azureSubscription: azure-devops-inventory-tool
+        Endpoint: $(NUGETREPORTSETTINGS_ENDPOINT)
+        RuleId: $(NUGETREPORTSETTINGS_RULEID)
+      useDotNetSDK: 
+        useGlobalJson: true
+        includePreviewVersions: true
       postBuildScript:
         displayName: "AZDOI Integration tests"
         azureSubscription: "azure-devops-inventory-tool"
