@@ -1,6 +1,6 @@
 #!/usr/bin/env dotnet
 #:sdk Cake.Sdk@6.3.0
-#:package System.Security.Cryptography.Pkcs@10.0.13
+#:package System.Security.Cryptography.Pkcs@10.0.14
 #:property IncludeAdditionalFiles=./build/*.cs
 
 /*****************************
