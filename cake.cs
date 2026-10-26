@@ -9,7 +9,7 @@
 Setup(
     static context => {
         InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=GitVersion.Tool&version=6.7.0");
-        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=DPI&version=2026.10.16.523");
+        InstallTool("dotnet:https://api.nuget.org/v3/index.json?package=DPI&version=2026.10.26.544");
         InstallTool("dotnet:https://pkgs.dev.azure.com/wcom-public/Public/_packaging/wcom/nuget/v3/index.json?package=wcom.staticsitegenerator.console&version=2026.6.2.2");
         var assertedVersions = context.GitVersion(new GitVersionSettings
             {
