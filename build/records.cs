@@ -68,6 +68,9 @@ public record BuildData(
         !string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable("NuGetReportSettings_Endpoint"))
         && !string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable("NuGetReportSettings_RuleId"));
 
+    public bool ShouldPrepareAzureWorkloadIdentity() => IsRunningOnGitHubActions &&
+                                                        AzureCredentials.AzureCredentialsSpecified;
+
     public bool ShouldRunIntegrationTests() =>  !string.IsNullOrWhiteSpace(AzureDomain) &&
                                                 (
                                                     AzureCredentials.AzureCredentialsSpecified ||
